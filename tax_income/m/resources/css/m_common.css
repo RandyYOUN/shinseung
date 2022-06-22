@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/* base */
+html {overflow-y:scroll;}
+html, body {height:100%;}
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, strong, sub, sup, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, embed, input, select, textarea, button {margin:0;padding:0; vertical-align: top;}
+body {color:#111;font-size:0.875em;line-height:1.5;font-family:"맑은 고딕","Malgun Gothic",'돋움',Dotum,AppleGothic,Tahoma,Helvetica,sans-serif; letter-spacing: -0.5px;}
+h1, h2, h3, h4, h5, h6 {font-size:1em;font-weight:normal;font-family:"맑은 고딕","Malgun Gothic",'돋움',Dotum,AppleGothic,Tahoma,Helvetica,sans-serif;}
+input, button, textarea, select {font-size:1em;font-family:"맑은 고딕","Malgun Gothic",'돋움',Dotum,AppleGothic,Tahoma,Helvetica,sans-serif;}
+code, pre {font-size:1em;}
+address, em, cite {font-style:normal;}
+img {border:0 none;vertical-align:top;}
+hr {display:none;}
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;width:auto;width:100%;}
+caption, legend {position:absolute;overflow:hidden;text-indent:-9999px;}
+th, td {font-weight:normal;}
+li {list-style-type:none;}
+fieldset {border:0 none;}
+select {height:28px;padding:6px 4px 5px 7px;font-size:1em;line-height:1.5;color:#646464;border:1px solid #646464;}
+textarea {padding:5px;border:1px solid #646464;line-height:1.167;}
+label, button {cursor:pointer;}
+button {overflow:visible;margin:0;padding:0;border:none;background:none;cursor:pointer;}
+button::-moz-focus-inner {border:0;padding:0;}
+label {overflow:visible;border:none;background:none;background:transparent;vertical-align:top;font-family:inherit;white-space:nowrap;text-decoration:none;/*outline:0;*/}
+input {border:1px solid #666;padding:3px 5px;height:20px;background:transparent;vertical-align:middle;color:#666;}
+input[type="button"] {cursor:pointer;}
+
+a {color:#111;text-decoration:none;}
+a:hover, a:focus, a:active {color:#000;text-decoration:none;}
+
+
+.wrap {display:table;min-width:100%;width:100%;min-height:100%;max-height:100%;height:100%;;}
+.loginWrap{ display:table;min-width:100%;width:100%;min-height:100%;max-height:100%;height:100%;background:url("../images/loginBg.png")left top no-repeat; }
+
+/* main */
+.buMain{ width:100%; padding:0 0 50px 0; background: url("../images/m_buMain.png")50% 50% no-repeat; }
+.buMain  div{ width:90%; margin:0 auto;}
+.buMain  div h1{ padding:40px 0 0 0; color:#fff; font-size: 22px; font-weight: bold;}
+.buMain  div h2{ padding:20px 0 0 0; color:#fff; font-size: 20px; line-height: 36px;}
+.buMain  div h3{ padding:10px 0 0 0; color:#fff; font-size: 15px; line-height: 26px;}
+.buMain  div h4{ padding:0px 0 0 0; color:#BEBEBE; font-size: 12px; line-height: 26px;}
+.buMain  div p{ color:#fff; margin:30px 0 0 0;}
+.buMain  div p span{ display: inline-block; color:#fff; width:6%; text-align: center; height: 5px; line-height: 65px;}
+.buMain  div p input[type="text"],.buMain  div p input[type="password"]{ display: inline-block; width:47%; height: 55px; color:#777; margin:5px 0 10px; padding:0 0 0 15px; border:0; box-sizing: border-box; background: #fff;}
+.buMain  div input[type="button"]{ display: block; width:100%; height: 65px; font-size: 16px; color:#fff; margin:10px 0 0;  background: #386dc6; }
+.buMain  div .checkbox {margin: 10px 0 10px 0px; display: inline-block; height: 16px; position: relative;}
+.buMain  div .checkbox input[type='checkbox'] {left: -9999px; top: 0px; position: absolute;}
+.buMain  div .checkbox label {background: url("../images/checkbox_off.jpg") no-repeat; height: 16px; line-height: 16px; padding:0 0 0 25px; border:0px; display: inline-block; color:#fff;}
+.buMain  div .checkbox input[type='checkbox']:checked + label {background: url("../images/checkbox_on.jpg") no-repeat;}
+
+/*popup */
+.layer_bg{position:fixed; width:100%; height:100%; background: rgba(0,0,0,0.7); left:0; top:0; z-index: 2;}
+.layer_wrap{position:absolute; width:100%;  margin:auto 0; text-align: right;  z-index: 3;}
+.layer_wrap a{ display: inline-block; position:absolute; right:5%; top:0; width:37px; height:45px; background: url("../images/buClose.png")left top no-repeat; cursor: pointer; }
+.layer_wrap div{border:1px solid #aaa; background: #fff; width:90%; margin:45px auto 0; height: 330px; }
+.layer_wrap div h1{ text-align: left; font-size:15px; line-height: 28px; width:85%; margin:0 auto; padding:40px 0 0 0;}
+.layer_wrap div input[type="button"]{ display: block; width:85%;  height: 55px; font-size: 15px; color:#fff; margin:20px auto 0; border:0px;  background: #386dc6; }
+.layer_wrap div input[type="button"].darkblueBtn{ background: #74839d; margin:15px auto 0;}
+
+.step01{ width: 100%; margin:0 auto; padding: 0 0 60px 0px;  overflow: hidden;}
+.step01 > h1{ width:90%; margin:0 auto; padding: 30px 0 0 0; font-size:20px; font-weight: bold; }
+.step01 > h1 span{ display: block; font-size:20px; color:#1d5bb0; padding:0 0 2px;}
+.step01 div {width: 90%; padding:30px 0 0 0px; margin:0 auto; box-sizing: border-box;}
+.step01 div > h2{ font-size:16px; font-weight: bold; padding:18px 0 0 0;}
+.step01 div > h3{ font-size:12px; color:#7A97AA; margin:10px 0 20px 0;}
+.step01 div > label{ display: block; font-size: 14px; font-weight: bold; padding:20px 0 0 0;}
+.step01 div input[type="text"],.step01 div input[type="password"]{ display: block; width:100%; height: 50px; color:#777; margin:10px 0 10px; padding:0 0 0 20px; border:1px solid #bfbfbf; box-sizing: border-box; background: #fff;}
+.step01 div input[type="button"]{ display: block;  width:100%;  height: 65px; font-size: 16px; color:#fff; margin:30px 0 0;  background: #386dc6; }
+.step01 div input[type="button"].darkblueBtn{ background: #74839d; margin:15px 0 0;}
+.step01 div input[type="button"].grayBtn{ display: block;  width:100%; height: 45px; font-size: 14px; color:#fff; margin:0px 0 20px;  border:1px solid rgb(201, 201, 201); color:#777; background: #f8f8f8;}
+.step01 div .checkbox {margin: 10px 0 50px 0px; display: inline-block; height: 16px; position: relative;}
+.step01 div .checkbox input[type='checkbox'] {left: -9999px; top: 0px; position: absolute;}
+.step01 div .checkbox label {background: url("../images/checkbox_off.jpg") no-repeat; height: 16px; line-height: 16px; padding:0 0 0 20px; display: inline-block;}
+.step01 div .checkbox input[type='checkbox']:checked + label {background: url("../images/checkbox_on.jpg") no-repeat;}
+
+.step02{ width: 100%; margin:0 auto; padding:0 0 100px 0;  overflow: hidden;}
+.step02 > h1{ width:90%; margin:0 auto; padding: 30px 0 0 0; font-size:20px; font-weight: bold; }
+.step02 > h1 span{ display: block; font-size:20px; color:#1d5bb0; padding:0 0 2px;}
+.step02 > div {width: 100%; padding:30px 0 0 0px; margin:0 auto; box-sizing: border-box;}
+.step02 > div > h1{ margin:30px 0 30px 0; width:90%; margin:0 auto;  font-size: 0;}
+.step02 > div > h1 strong{ position: relative; display: inline-block; font-size:20px; padding:0 20px 10px 0;}
+.step02 > div > h1 strong:after{ position: absolute; content: ""; width: 100%; height: 5px; background: #333; left:0px; bottom:0px;}
+.step02 > div > h1 span{ display: inline-block; font-size:12px; padding:8px 0 10px 0px; }
+.step02 > div > h2 {position: relative;  background: #F5F4E7; width:90%; margin:20px auto; box-sizing: border-box; border-radius:23px; padding:7px 20px 7px 55px; font-size: 12px; color:#391b1b; font-weight: bold;}
+.step02 > div > h2:after{ content: ""; position: absolute; width:60px; height: 60px; left:13px; top:11px; background: url("../images/kakaoIcon.png")left top no-repeat;}
+.step02 > div .total{ width:100%; background: #F1F5F8; width:90%;  overflow: hidden; margin:40px auto 0; box-sizing: border-box; padding:0 15px;}
+.step02 > div .total span{ display: inline-block;  height: 60px; line-height: 60px; font-weight: bold;}
+.step02 > div .total span:first-child{ float: left; font-size:14px;  color:#505050; height: 60px; line-height: 60px; }
+.step02 > div .total span:last-child{ float: right; font-size:20px;}
+.step02 > div .total span:last-child em{ font-size:26px; font-weight: bold; padding:0 10px 0 0;}
+.step02 > div h3{ width:90%; margin:0 auto; font-size: 12px; color:#333; padding:22px 0 0px 0; line-height: 22px;}
+.step02 > div h3 em{ display: block; font-size: 13px; color:#386dc6;}
+.step02 > div input[type="button"]{ display: block; width:90%;  height: 65px; font-size: 16px; color:#fff; margin:30px auto; border:0px;  background: #386dc6; }
+
+.step02_rolling { position: relative; width: 100%; margin: 13px 0 0; padding:100px 0 0 20%; box-sizing: border-box; background: url("../images/m_buSubcase.png")left top/cover no-repeat; }
+.step02_rolling h1{ position: absolute; left:10%; top:10px; display: inline-block;  padding: 5px 10px; background: #fff; margin:20px 0 20px; font-size:18px; font-weight: bold; }
+.step02_rolling .swiper-container { width: 100%;}
+.step02_rolling .swiper-container .swiper-wrapper { height: 280px; }
+.step02_rolling .swiper-container .swiper-wrapper div { position: relative; width: 80%; height: 235px; border: 1px solid #dcdcdc; -webkit-box-sizing: border-box; box-sizing: border-box; background: #fff url("../images/plus.png") 90% 173px/14px auto no-repeat; }
+.step02_rolling .swiper-container .swiper-wrapper div h4 { width: 80%; font-size: 15px; line-height: 18px; color: #444; font-weight: bold; margin: 0 auto; padding: 25px 0 15px 0; }
+.step02_rolling .swiper-container .swiper-wrapper div ul { width: 80%; margin: 0 auto; }
+.step02_rolling .swiper-container .swiper-wrapper div ul li { position: relative; font-size: 12px; line-height: 12px; color: #333; margin: 0 0 9px 0; padding: 0 0 0 0; }
+.step02_rolling .swiper-container .swiper-wrapper div ul li span { display: inline-block; width: 54px; border-radius: 20px; font-size: 14px; color: #fff; text-align: center; margin: 0 10px 0 0; padding: 6px 0px; }
+.step02_rolling .swiper-container .swiper-wrapper div ul li:nth-child(2) { margin: 0 0 12px 0; }
+.step02_rolling .swiper-container .swiper-wrapper div ul li:nth-child(3) span { background: #888; font-size: 12px; }
+.step02_rolling .swiper-container .swiper-wrapper div ul li:last-child span { background: #2972b2; font-size: 12px; }
+.step02_rolling .swiper-container .swiper-wrapper div h5 { width: 80%; height: 40px; font-size: 15px; line-height: 40px; color: #2972b2; font-weight: bold; margin: 0 auto; }
+.step02_rolling .swiper-container .swiper-wrapper div h5 span { display: inline-block; vertical-align: middle; }
+.step02_rolling .swiper-container .swiper-wrapper div h5 span:first-child { font-size: 24px; margin: 0 6px 0 0; letter-spacing: 0px; }
+
+.step02_rollingTitle{ background: #465163; padding:30px 0;}
+.step02_rollingTitle h1{ width:90%; margin:0 auto; color:#fff; line-height: 28px;}
+.step02_rollingTitle h2{ width:90%; margin:0 auto; color:#fff; padding:20px 0; line-height: 28px;}
+.step02_rollingTitle h3{ width:90%; margin:0 auto; color:#fff; line-height: 28px;}
+
+.step03{ width: 100%; margin:0 auto; padding:0 0 100px 0; overflow: hidden;}
+.step03 > h1{ width:90%; margin:0 auto; padding: 30px 0 0 0; font-size:20px; font-weight: bold; }
+.step03 > h1 span{ display: block; font-size:20px; color:#1d5bb0; padding:0 0 2px;}
+.step03 > div {width: 100%; padding:30px 0 0 0px; margin:0 auto; box-sizing: border-box;}
+.step03 > div > h1{ margin:30px 0 30px 0; width:90%; margin:0 auto;  font-size: 0;}
+.step03 > div > h1 strong{ position: relative; display: inline-block; font-size:20px; padding:0 20px 10px 0;}
+.step03 > div > h1 strong:after{ position: absolute; content: ""; width: 100%; height: 5px; background: #333; left:0px; bottom:0px;}
+.step03 > div > h1 span{ display: inline-block; font-size:12px; padding:8px 0 10px 0px; }
+.step03 > div > h2 {position: relative;  background: #F5F4E7; width:90%; margin:20px auto; box-sizing: border-box; border-radius:23px; padding:7px 20px 7px 55px; font-size: 12px; color:#391b1b; font-weight: bold;}
+.step03 > div > h2:after{ content: ""; position: absolute; width:60px; height: 60px; left:13px; top:11px; background: url("../images/kakaoIcon.png")left top no-repeat;}
+
+.step03 div .infor{ width:90%; border:1px solid #e6e6e6; margin:30px auto; padding:0px 0 10px 0;}
+.step03 div .infor > h1{  width:90%;  margin:0 auto; font-size:18px; padding: 20px 0 15px 0;; font-weight: bold; }
+.step03 div .infor > h2{  width:90%;  margin:0 auto; font-size:14px; padding: 0px 0 15px 0;; font-weight: bold; }
+.step03 div .infor > h3{  width:90%;  margin:0 auto; font-size:13px; line-height: 24px; }
+.step03 div .infor ul{ width:90%;  margin:0 auto; padding:0px 0 10px; font-size: 0;}
+.step03 div .infor ul li{ display: inline-block; font-size:16px; margin:0  0 10px 0; width:100%; color:#333;}
+.step03 div .infor p{ display: block; margin: 0 auto 0px; width:90%;}
+.step03 div .infor p input[type="text"],.step03 div .infor p input[type="password"]{ display: inline-block; width:46%; height: 50px; color:#777; margin:0px 0 10px; padding:0 0 0 20px; border:1px solid #bfbfbf; box-sizing: border-box; background: #fff;}
+.step03 div .infor p span{ display: inline-block; width:6%; text-align: center; height: 50px; line-height: 50px;}
+.step03 div > h3{ width:90%; margin:0 auto; font-size: 14px; color:#333; padding:22px 0 0px 0; line-height: 26px;}
+.step03 div > h3 em{ display: block; font-size: 14px; color:#386dc6;}
+.step03 div input[type="button"]{ display: block; width:90%; height: 65px; font-size: 18px; color:#fff; margin:30px auto; border:0px;  background: #386dc6; }
+
+/* 추가 */
+.stepLastLogin{ width: 100%; height: 600px; padding:70px 0 0 0;  background:#545f69 url("../images/stepLastBg.png")50% top no-repeat;}
+.stepLastLogin .contents{ width: 90%; margin:0 auto; background: #fff; border-radius: 12px; box-shadow: 2px 3px 20px rgb(71, 71, 71,0.6);}
+.stepLastLogin .contents div{ width: 70%; margin: 0 auto;}
+.stepLastLogin .contents div h1{ font-size: 24px; font-weight: bold; padding:70px 0 35px 0; color:#3a588b;}
+.stepLastLogin .contents div input[type="text"],.stepLastLogin .contents div input[type="password"]{ display: block; width:100%; height: 50px; color:#777; margin:0 0 12px 0; padding:0 0 0 20px; 
+    border:1px solid #bfbfbf; box-sizing: border-box; background: #fff; font-size: 14px;}
+.stepLastLogin .contents div input[type="button"]{ display: block; width:100%; height: 65px; font-size: 18px; color:#fff; margin:20px 0 0;  background: #386dc6; }
+.stepLastLogin .contents div h2{ width:100%; text-align: center; font-size: 18px; padding:40px 0 10px 0; color:#1b3d76;}
+.stepLastLogin .contents div h2 span{ position: relative; display: inline-block; }
+.stepLastLogin .contents div h2 span::after{ position: absolute; content: ""; width: 100%; height: 3px; left:0px; bottom:3px; background: #f6e366;}
+.stepLastLogin .contents div h3{width:100%; text-align: center; font-size: 18px; padding:0px 0 60px 0; color:#476eb0;}
+
+.stepLast{ width: 100%; margin:0 auto; padding:40px 0 40px 0;  overflow: hidden;}
+.stepLast .contents {width:90%; margin:0 auto;}
+.stepLast .contents .title{  border-radius: 85px; padding:80px 0 0 0px; text-align: center; box-sizing: border-box; background: url("../images/addCheck.png")center 30px/42px auto no-repeat;}
+.stepLast .contents .title > h1{ padding:15px 0 ; font-size: 16px; line-height: 20px;}
+.stepLast .contents .title > h1 span{ display: inline-block; font-size: 22px; padding:0 5px 20px 0px; font-weight: bold;}
+.stepLast .contents > h1{ font-size: 18px; color:#333; font-weight: bold; border-bottom:2px solid #333; padding: 25px 0 12px 0;}
+.stepLast .contents ul.payment{ margin:20px 0;}
+.stepLast .contents ul.payment li{ margin:0 0 20px 0;}
+.stepLast .contents ul.payment li h2{ font-size: 18px; font-weight: bold;}
+.stepLast .contents ul.payment li h3{ font-size: 15px; padding: 8px 0 0 0;}
+.stepLast .contents ul.payment span{ font-size:18px; display: inline-block; padding:5px 20px 5px 30px; border-radius: 20px; font-size: 12px; color:#977878; background:#FFF8F8 url("../images/addWarning.png")20px 50%/3px auto no-repeat;}
+.stepLast .contents ul.payment{ margin:20px 0;}
+.stepLast .contents ul.receipt li{ margin:10px 0 20px 0;}
+.stepLast .contents ul.receipt li a{ display:inline-block; border:1px solid #c9c9c9; border-radius: 5px; margin:10px 10px 0px 0; font-size: 16px; box-sizing: border-box; padding:7px 20px 7px 30px; background: url("../images/addPaper.png")10px 50%/11px auto no-repeat;}
+.stepLast .contents ul.receipt li span{font-size:18px; display: inline-block; padding:5px 20px 5px 30px; border-radius: 20px; font-size: 12px; color:#977878; background:#FFF8F8 url("../images/addWarning.png")20px 50%/3px auto no-repeat;}
+.stepLast .contents ul.review li{ margin:20px 0 20px 0; font-size: 0;}
+.stepLast .contents ul.review li select{ width:100%; font-size: 12px; padding:10px 10px 10px 10px; height:40px; border:1px solid #919191;}
+.stepLast .contents ul.review li textarea{ display: inline-block; width: 80%;  height:60px; margin:0 2% 0 0; border:1px solid #919191; box-sizing: border-box;}
+.stepLast .contents ul.review li button{ display: inline-block; width: 18%; border:1px solid #333; height:60px; font-size: 14px; background: #868b94; border:0; color:#fff;}
+.stepLast .contents ul.review span{ display: block; padding:0 0 0 60px;background: url("../images/addSmile.png")10px 50%/37px auto no-repeat;}

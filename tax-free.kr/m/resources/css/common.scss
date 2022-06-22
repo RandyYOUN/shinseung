@@ -1,0 +1,303 @@
+/* Scss Document */
+$white:#fff; $black:#000; $black1:#111; $black2:#222; $black3:#333; $black4:#444; $black5:#555; $black6:#666; $black7:#777; $black8:#888;
+$black9:#999; $blacka:#aaa; $blackb:#bbb; $blackc:#ccc; $blackd:#ddd;$blacke:#eee; $line:#dadada;
+$imgLocation:"../images/";
+
+@mixin box($display,$width,$height,$margin){display: $display; width:$width; height:$height; margin: $margin;}
+@mixin boxab($display,$left,$top,$width,$height){position: absolute; display: $display; left:$left; top:$top; width:$width; height:$height; }
+@mixin boxabR($display,$right,$top,$width,$height){	position: absolute; display: $display; right:$right; top:$top; width:$width; height:$height; }
+@mixin boxabB($display,$right,$bottom,$width,$height){ position: absolute; display: $display; right:$right; bottom:$bottom; width:$width; height:$height; }
+@mixin boxfl($display,$width,$height,$margin){display: $display; width:$width; height:$height; margin: $margin;	&:after{display: block; content: '';  clear:both;}}
+@mixin text($fontsize,$lineheight,$color,$weight,$center,$margin,$padding){font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center; margin:$margin; padding:$padding;}
+@mixin texts($fontsize,$lineheight,$color,$weight,$center){font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center;}
+@mixin bg($img,$left,$top){	background: url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat;}
+@mixin bgcolor($bgcolor,$img,$left,$top){background:$bgcolor url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat;}
+@mixin after($left,$top,$width,$height,$bgcolor){&:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: $bgcolor;}}
+@mixin afterR($right,$top,$width,$height,$bgcolor){	&:after{content: ''; position: absolute; right:$right; top:$top; width:$width; height: $height; background: $bgcolor;}}
+@mixin afterbg($left,$top,$width,$height,$img,$bgleft,$bgtop){&:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: url("#{$imgLocation}#{$img}") no-repeat #{$bgleft} #{$bgtop} ;}}
+
+#wrap{ width:100%;min-height:100%;max-height:100%;height:100%;}
+.mask{ position:fixed; display:none; left:0;  top:0; width:100%; height: 100%; background:rgba(0,0,0,.6); z-index:50;}
+h1,h2,h3,h4,h5,h6{ letter-spacing: -0.50px}
+
+$maincolor : #3c5589;
+%alink{ position: absolute; display: block; left:0; top:0; width: 100%; height: 100%; cursor: pointer;}
+%title{ width: 90%; @include text(20, 20, $black3, bold, left, 0 auto, 35px 0 20px)}
+%title2{ width: 90%; @include text(20, 20, $black3, bold, left, 0 auto, 35px 0 10px)}
+
+#wrap{ width:100%;min-height:100%;max-height:100%;height:100%;}
+
+    .mquick{ position: fixed; right:10px; bottom:20px; width:60px; height:100px; z-index: 600; 
+        p{ @include boxabB(inline-block, 0px, 0px, 60px, 60px); border-radius: 50%; background:#dde0e5; z-index: 10;}
+        div{ @include boxabB(inline-block, 0px, 0px, 60px, 100px); border-radius: 0 0 120px 120px;  box-sizing: border-box; overflow: hidden; z-index: 12;
+            img{position: absolute; left:0px; bottom:-25px; width:60px;}
+        }
+        ul{ position: absolute;
+            li{ opacity: 0; position: absolute; top:40px; left:10px; width: 52px; border-radius: 10px; background: #3c5a98;
+                @include text(11,11,$white,normal,center,null,5px 2px); z-index: 15;
+                span{position: absolute; left:10px; top:18px; width:0; height:0; border-top:10px solid #3c5a98; border-right:10px solid transparent; z-index: 15;}
+                &:nth-child(2n){background:#b85708;
+                    span{border-top:10px solid #b85708; border-right:10px solid transparent;}
+                }
+            }
+        }
+        a{@extend %alink; z-index: 30;}
+    }
+    #ch-plugin-core  {bottom: 105px !important; display: none  !important;}
+
+    .mainVisual{ position: relative; background: $black3;
+        header{ position: absolute; left:0; top:0; width:100%; z-index: 33;
+            h1{ display: block; margin:30px 0 0; text-align: center;
+                img{ display: inline-block; width:240px}
+            }
+        }                
+        .swiper-container{
+            ul.swiper-wrapper { height:580px; 
+                li.swiper-slide{ width:100% !important; height:auto;
+                    h2{ position: absolute; left:5%; top:165px; @include text(28, 42, $white, bold, left, 0, 0)}
+                    h3{ position: absolute; left:5%; top:260px; width:80%; @include text(16, 26, $white, 200, left, 0, 0)}
+                    h4{ position: absolute; left:5%; top:260px; width:100%; @include text(14, 24, $white, 200, left, 0, 0)}
+                    img{ width:100%; height:auto;}
+                }
+            }
+            .swiper-pagination{ width:90%; left:5%; bottom:240px; font-size: 0; text-align: left;}            
+            .swiper-pagination span{ position:relative; display: inline-block; width:35px; height:6px; background: rgba(255,255,255,0.4); margin:0 5px 0 0; border-radius: 0; opacity:1;}
+            .swiper-pagination span:last-child{ margin: 0;}
+            .swiper-pagination span:after {content:""; display:block; width:0; height:100%; }
+            .swiper-pagination span.swiper-pagination-bullet-active:after{ width:100%; background: $white; border-radius: 0;  transition:width 3s linear;}		
+        }
+        .mainlink{ position: absolute; left:5%; bottom:50px; width:90%; z-index: 44;
+            div{ font-size: 0;
+                a{ display: inline-block; width:49%; height:50px; background:rgba(255,255,255,.2); @include text(15, 50, $white, bold, center, 0 2% 5px 0, 0);
+                    &:nth-child(even){margin: 0}
+                }	
+            }           		
+        }
+    } 
+
+    .twopower{ width: 100%;
+        li:nth-child(1){ display: inline-block; width: 100%; height: 240px; background:#e8ebf1; 
+            h1{ width: 90%; @include text(27, 40, $black4, bold, center, 0 auto, 35px 0 15px);  letter-spacing: -0.25px;}
+            dl{ width: 90%; margin:0 auto;
+                dd{@include text(15, 15, #494c52, null, center, 0 0 16px 0, 0); letter-spacing: -0.5px;
+                    span{  padding:0 5px;}
+                    span.on{background: #d4dae7;}
+                }
+            }
+        }
+        li:nth-child(2){ display: inline-block; width: 100%; height: 240px; background:#748199;
+            h1{ width: 90%; @include text(27, 40, $white, bold, center, 0 auto, 35px 0 15px);  letter-spacing: -0.25px;}
+            dl{ width: 90%; margin:0 auto;
+                dd{@include text(15, 15, $white, null, center, 0 0 16px 0, 0); letter-spacing: -0.5px;
+                    span{ padding:0px 5px}
+                    span.on{ background: #5b667c;}
+                }
+            }
+        }
+    }
+
+    .recommend{ height: 330px;
+        h1{ @extend %title}
+        ul{ width:90%; margin:0 auto;
+            li{ position: relative; width:100%; @include text(14, 26, $black3, null, null, 0 0 7px 0, 0 0 0px 25px); box-sizing: border-box;
+                img{ position:absolute; left:0; top:2px; width: 19.5px; vertical-align: middle;}
+                span{ color:#1665b5;}
+            }
+        }
+    }
+    
+    .exemption{ width:100%; background: #eff3f9;
+        h1{ @extend %title}
+        ul{ width:90%; margin:0 auto; overflow: hidden;
+            li{ border-radius: 6px; margin:0 0 10px 0; padding: 20px 0 20px;
+                h2{ width: 85%; @include text(20, 20, $white, bold, null, 0 auto, 0 0 10px)}
+                ol{ position: relative; width: 85%; @include text(13, 22, $white, null, null, 0 auto, 0 0 0px 7px); box-sizing: border-box; 
+                    @include after(0,9px,2px,2px,$white)}
+                &:nth-child(1){background: #748199;}
+                &:nth-child(2){background: #52678e;}
+                &:nth-child(3){background: #1b3c78;}
+            }
+        }
+    }
+
+    .period{ width:100%; background: #eff3f9; overflow: hidden;
+        h1{ @extend %title2}
+        h2{ width: 90%; @include text(13, 22, $black4, bold, null, 0 auto, null);}
+        ul{ width:90%; margin:15px auto 45px;
+            li{ border-radius: 6px; margin:0 0 10px 0; padding: 17px 0 13px  0px; background: $white; border:1px solid #ebebeb;
+                h3{ width: 85%; @include text(16, 16, $black3, bold, null, 0 auto, 0 0 6px)}
+                h4{ width: 85%; @include text(12, 20, $black5, null, null, 0 auto, 0 0 8px)}
+                h5{ width: 85%; @include text(14, 24, #2972b2, bold, null, 0 auto, null)}
+            }
+        }
+    }
+
+    .review{ height: 420px; @include bg("reviewBg.png", 0, 0/cover);
+        h1{ @extend %title2; color:$white}
+        h2{ width: 90%; @include text(13, 22, $white, null, null, 0 auto, null);}
+        .swiper-container{ width: 95%; margin: 30px 0 0 5%; 
+            .swiper-wrapper{ height: 260px;
+                div{position: relative; width: 70%; height: 215px;border-radius: 6px;  @include bgcolor($white,"plus.png",90%,173px/14px auto);
+                    h3{ display: inline-block; background: #384261; @include text(14, 14, $white, bold, null, 23px 0 5px 10%, 7px 14px 6px); border-radius: 3px}
+                    h4{ width: 80%; @include text(15, 22, $black3, bold, null, 0 auto, 7px 0 13px 0);}
+                    ul{ width: 80%; margin:0 auto;
+                        li{ position: relative; @include text(13, 13, $black3, null, null, 0 0 6px 0, 0 0 0 0);
+                            strong{ display: inline-block; @include text(13, 13, #384261, bold, null, 0 10px 7px 0,0); vertical-align: middle; }
+                        }
+                    }
+                    a{ @extend %alink;}
+                }
+            }
+        }
+        .swiper-pagination { width: 85%; text-align: right; box-sizing: border-box; @include text(13, 13, $white, null, null, 0 auto, 0 0 0 0)}
+    }
+
+    .tax{ width: 100%;
+        > div{
+            > li{ border-bottom:1px solid #DFDFDF;
+                > a { display: inline-block; color:#fff; padding:20px; box-sizing: border-box; width: 100%; height: 65px; background:#eff3f9; box-sizing: border-box;
+                    @include text( 20, 65, $black3, bold, null, ull, 0 0 0 5%); letter-spacing:-1px;
+                        span{ display: inline-block;  width: 17.5px; height: 12px; @include bg("taxarrow.png", left, top/17.5px auto); transform: rotate(0deg); transition: transform 0.3s ease-in-out; margin:0 0 0 11px; vertical-align: 1px;}
+                    }
+                > ul{ width: 100%; display: none;
+                    > li{ 
+                        > a { display: inline-block; width: 100%; height: 60px; box-sizing: border-box;  @include bg("taxPlus.png", 94%, 23px/15px auto); @include text(16, 60, $black4, bold, null, 0 auto, 0 0 0 5%);}
+                        > ul{ width: 100%; display: none;  
+                            
+                        }
+                        &:nth-child(2){border-top: 1px solid #DFDFDF;}
+                    }
+                    li.active > a{@include bg("taxMinus.png", 94%, 23px/15px auto);}
+                    dl{ margin:0 0 3px 0;
+                        dt{width: 90%; @include text(12, 20, $black6, bold, null, 0 auto, 0 0 13px)}
+                        dd{width: 90%; @include text(12, 20, $black6, null, null, 0 auto, 0 0 6px)}
+                    }                    
+                    h2{ width: 90%; @include text(18, 22, #0e3f6a, bold, null, 0 auto, 20px 0 8px)}
+                    h3{ width: 90%; @include text(16, 22, $black3, bold, null, 0 auto, 0 0 5px)}
+                    h4{ width: 90%; @include text(12, 22, $black6, null, null, 0 auto 18px, null)}
+                    }
+               }
+            > li.active > a > span { transform: rotate(-180deg); transition: transform 0.3s ease-in-out;}
+        }
+    }
+
+    .people{ width:100%; height: 380px; 
+        h1{@extend %title2}
+        h2{ width: 90%; @include text(13, 22, $black4, bold, null, 0 auto, null);}
+        .swiper-container{ width: 95%; margin: 30px 0 0 5%; 
+            .swiper-wrapper{
+                .swiper-slide{ position: relative; width:150px; height: 220px; margin:0 1px 0 0; background: #F2F2F2; overflow: hidden; background: #F2F2F2; border-radius: 6px;
+                    img{ position:absolute; width:135px; top:15px; left:-22px}
+                    
+                    > div{ position: absolute; left:0; bottom:0; width:160px; height: 75px; @include bgcolor(rgba(0, 0, 0, 0.5), "peopleArrow.png", 130px, 50%/11.5px auto);
+                        h3{ width:80%; @include text(16, 20, $white, bold, left, 0 auto, 17px 0 0 0)}
+                        h4{ width:80%; @include text(13, 13, $white, normal, left, 0 auto, 5px 0 20px 0)}                    
+                    }
+                    > a { @extend %alink;}
+                }
+            }
+        } 
+    }
+
+    .qna{ width: 100%;  background: #f9f9f9;
+        h1{ @extend %title}  
+        ul{ width: 90%; margin: 0 auto;
+            li{display: none; width: 100%; margin: 0 auto 5px; border:1px solid #cfcfcf; border-radius: 6px; background: $white; box-sizing: border-box; padding:15px;
+                a{ position: relative; display: inline-block;  width:100%; @include afterbg(89%, 15px, 19.5px, 11.5px,"qnaArrow.png",left,top/19.5px auto);
+                    span{ display: inline-block; vertical-align: middle; 
+                        &:first-child{ width: 11%; @include text(24, 24, $black1, bold, center, 0 auto, 0 0 0px)}
+                        &:last-child{ width: 70%; @include text(13, 19, $black1, bold, null, 0 auto, 0 0 0 5px)}
+                    }
+                    &:after{transform: rotate(0deg); }
+                }
+                div{display: none; @include text(12, 22, $black2, normal, left, 14px auto 0, 13px 0 0 0); border-top:1px dashed #707070; letter-spacing: -1px;
+                    strong{ color:#15558e}
+                }
+            }
+            li.active a:after{transform: rotate(-180deg); transition: transform 0.3s ease-in-out;}
+            li.active h4{}
+        }  
+        > a{ display: inline-block; width: 100%; height:60px; @include text(14, 60, $black3, null, center, null, 10px 0);
+            span{ font-size: 12px; line-height: 58px; margin:0 5px 0 0; vertical-align: top; letter-spacing: 1;}
+        }
+        
+    }
+
+    .customer{ width: 100%; height: 600px; @include bg("customerBg.png", center, top/cover);
+        h1{ width: 90%; @include text(20, 20, $white, bold, left, 0 auto, 115px 0 20px) }
+        h2{ width: 90%; @include text(13, 22, $white, null, null, 0 auto, null)}
+        ul{ margin:45px 0 0 0;
+            li{ width: 90%; height: 160px; border-radius: 6px; margin:0 auto;}
+            li.call{ position: relative; background: rgba(56, 73, 95, 0.9);
+                h2 { width:80%; @include text(18, 18, $white, bold, null, 0 auto, 23px 0 8px)}
+                h3 { width:80%; @include text(13, 22, $white, null, null, 0 auto, null)}
+                h4 { width:80%; @include text(29, 29, $white, bold, null, 0 auto, 9px 0 5px); letter-spacing: 1px}
+                a{ @include boxabR(inline-block, 0, 0, 32%, 160px); @include bgcolor(rgba(66,87,113,0.7), "call.png", center, 48px/35.5px auto);
+                    @include text(13, 225, $white, bold, center, null, null); border-radius: 0 6px 6px 0;}
+            }
+            li.chat{position: relative; background: rgba(27, 60, 120, 0.9); margin:10px auto 0;
+                h2 { width:80%; @include text(18, 18, $white, bold, null, 0 auto, 23px 0 8px)}
+                h3 { width:80%; @include text(13, 22, $white, null, null, 0 auto, null)}
+                h4 { display: inline-block; background: $white; border-radius: 30px; @include text(15, 15, #28467d, bold, null, 13px 0 0 10%, 9px 20px); letter-spacing: 1px}
+                a{@extend %alink}
+            }
+        }
+
+    }
+
+    footer{
+        ul{ width:90%; margin: 30px auto 60px; font-size: 0;
+            li{ display: inline-block; width:50%; @include text(11, 11, $black7, null, left,  0  0 10px 0, 0);
+                span{line-height: 20px;}
+                &:nth-child(6){width: 100%} 
+                &:nth-child(7){width: 100%} 
+            }
+        }
+
+    }
+
+    //서브
+    .subpeopleTitle{width:100%; height: 180px; @include bg("subpeople.png",center,top/cover);
+        h1{ width:85%; @include text(20, 30, $white, bold, left, 0 auto, 60px 0 0 0)}
+        h2{ width:85%; @include text(13, 22, $white, normal, left, 0 auto, 5px 0 20px 0)}
+    }
+
+    .subpeopleCon{width:100%;
+        ul{width:100%; 
+            > li{position: relative;   overflow: hidden; border-bottom:1px solid $blackd;
+                img{width:125px; margin:20px 0 0 -10px;}
+                dl{position: absolute; left:40%; top:40px; display: inline-block; width:100%;
+                    dt{@include text(18, 18, $black3, normal, left, 0 auto, 15px 0 20px 0);
+                        span{@include text(20, 20, $black3, bold, left, 0 auto, 0 0 0 6px);}
+                    }
+                    > li{@include text(11, 16, $black5, normal, left, 0 auto, 0 0 8px 0); letter-spacing:-1px}
+                }                
+            }            
+        }
+    }
+
+    .subreviewTitle{ width:100%; height: 180px; @include bg("subreview.png",center,top/cover);
+        h1{ width:85%; @include text(20, 30, $white, bold, left, 0 auto, 60px 0 0 0)}
+        h2{ width:85%; @include text(13, 22, $white, normal, left, 0 auto, 5px 0 20px 0)}
+    }
+
+    .subreviewCon{ width:100%; background: #f9f9f9; overflow: hidden;
+        span{ display:none;}
+        ul{ width:90%; margin:0 auto; 
+            div{ position: relative; background: $white; border-radius: 6px; border:1px solid $blackd; margin:20px 0;
+                h3{ display: inline-block; background: #384261; @include text(13, 13, $white, null, null, 23px 0 5px 7.5%, 7px 10px);}
+                h4{ width: 85%; @include text(17, 17, $black3, bold, null, 0 auto, 10px 0 20px 0);}
+                ul{ width:85%; margin:0 auto; 
+                    li{ @include text(14, 16, $black5, normal, left, 0 auto, 0 0 10px 0); letter-spacing:-1px;
+                        strong{ color: #384261; margin:0 10px 0 0;}
+                    }         
+                }
+                h5{  width: 85%; @include text(12, 22, $black5, null, null, 0 auto, null);}
+            }                
+        }   
+        a{ display: inline-block; width: 100%; height: 50px; @include bg("reviewsubArrow.png", center, 50%/19.5px auto); transform: rotate(0deg); transition: transform 0.3s ease-in-out; }         
+        a.active{transform: rotate(180deg);}        
+    }
+   
+
+

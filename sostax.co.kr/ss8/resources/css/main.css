@@ -1,0 +1,485 @@
+/* Scss Document */
+.quick a, .taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv a, .column ul li a, .counseling ul li a, .customer ul li a { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; }
+
+.wrap { display: table; width: 100%; min-height: 100%; max-height: 100%; height: 100%; }
+
+.quick { position: fixed; right: 30px; bottom: 100px; z-index: 600; }
+.quick div { width: 105px; height: 105px; border-radius: 50%; background: #dde0e5 url("../images/customermanOn.png") -325px -50px no-repeat; }
+.quick div h1 { opacity: 0; font-size: 16px; line-height: 16px; color: #111; font-weight: bold; text-align: left; margin: 0 0 0 140px; padding: 40px 0 10px; }
+.quick div h2 { opacity: 0; font-size: 12px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0 0 0 140px; padding: 0 0 0px; letter-spacing: -1px; }
+.quick ul { position: relative; }
+.quick ul li { opacity: 0; position: absolute; right: 10px; top: -90px; background: #3c5a98; border-radius: 10px; font-size: 13px; line-height: 13px; color: #fff; font-weight: normal; margin: 0; padding: 11px 9px; }
+.quick ul li span { position: absolute; left: 54px; top: 33px; width: 0; height: 0; border-top: 10px solid #3c5a98; border-right: 10px solid transparent; z-index: 15; }
+.quick ul li:nth-child(2n) { background: #b85708; }
+.quick ul li:nth-child(2n) span { border-top: 10px solid #b85708; border-right: 10px solid transparent; }
+
+#ch-plugin-core { bottom: 105px !important; display: none  !important; }
+.popup { width: 100%; background: #115390; display: none; }
+.popup div.popContents { position: relative; width: 1400px; margin: 0 auto; height: 90px; text-align: center; background: url("../images/popup.png") 130px 0px no-repeat; line-height: 90px; }
+.popup div.popContents h1 { display: inline-block; font-size: 22px; line-height: 22px; color: #fff; font-weight: lighter; margin: 0 15px 0 0; padding: 0px 0px 0px 0px; vertical-align: middle; }
+.popup div.popContents h2 { position: relative; display: inline-block; font-size: 22px; line-height: 22px; color: #fff; padding: 0px 0px 0px 0px; z-index: 1; vertical-align: middle; }
+.popup div.popContents h2:after { content: ''; position: absolute; left: 0px; bottom: -4px; width: 100%; height: 4px; background: #1e85e4; }
+.popup div.popContents h2:after { z-index: -1; }
+.popup div.popContents h3 { display: inline-block; height: 30px; width: 56px; border-radius: 35px; background: #1e85e4; margin: 0 0 0 10px; font-size: 13px; color:#fff;
+line-height: 30px; vertical-align: middle; }
+.popup div.popContents input { position: absolute; right: 38px; top: 38px; width: 18px; height: 18px; }
+.popup div.popContents label { position: absolute; right: 60px; top: 41px; font-size: 12px; line-height: 12px; color: #fff; font-weight: lighter; margin: 0 0px 0 0; padding: 0px 0px 0px 0px; opacity: 0.6; }
+.popup div.popContents > a.btnclose { position: absolute; right: 0px; top: 27px; width: 40px; height: 40px; background: url("../images/closelight.png") 50% 50% no-repeat; cursor: pointer; opacity: 0.6; }
+
+header { position: relative; width: 100%; }
+header .navi { position: absolute; width: 1400px; height: 80px; left: 50%; top: 60px; line-height: 80px; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 20; }
+header .navi h1 { display: inline-block; background:url("../images/logo.png")left 25px no-repeat; color:#ffffff; box-sizing:border-box; padding:0 0 0 45px; letter-spacing:-2px; font-weight:bold;}
+header .navi h1 img { display: inline-block; margin: 0px 0 0 0; vertical-align: -4px; }
+header .navi ul { display: inline-block; margin: 0 0 0 200px; }
+header .navi ul li { display: inline-block; font-size: 18px; line-height: 20px; color: #fff; text-align: left; padding: 20px 60px 20px; }
+header .mainVisual { position: relative; width: 100%; }
+header .mainVisual ul li { position: relative; width: 100%; height: 980px; overflow: hidden; background: #222; }
+header .mainVisual ul li img { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 0; margin-left: 0px; z-index: 10; width: auto; }
+header .mainVisual ul li div { position: absolute; top: 340px; width: 100%; z-index: 15; }
+header .mainVisual ul li div h2 { font-size: 60px; line-height: 60px; color: #fff; font-weight: bold; text-align: center; }
+header .mainVisual ul li div h3 { font-size: 34px; line-height: 34px; color: #fff; font-weight: 200; text-align: center; margin: 40px 0 0 0; }
+header .mainVisual .bx-controls-direction { display: none; }
+header .mainVisual .bx-pager { position: absolute; bottom: 450px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+header .mainVisual .bx-pager div { display: inline-block; margin-right: 10px; text-indent: -9999px; }
+header .mainVisual .bx-pager div a { display: block; position: relative; width: 60px; height: 3px; border-radius: 0; background: rgba(255, 255, 255, 0.2); }
+header .mainVisual .bx-pager div a:after { content: ""; position: absolute; display: block; left: 0; top: 0; width: 0; height: 3px; }
+header .mainVisual .bx-pager div a.active:after { position: absolute; width: 100%; background: #fff; border-radius: 0; -webkit-transition: width 3s linear; transition: width 3s linear; }
+header .mainVlink { position: absolute; bottom: 0px; width: 100%; border-top: 1px solid #666; }
+header .mainVlink ul { width: 1126px; border-right: 1px solid #666; font-size: 0; margin: 0 auto; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 20; }
+header .mainVlink ul li { display: inline-block; width: 225px; height: 200px; border-left: 1px solid #666; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; }
+header .mainVlink ul li img { padding: 55px 0 25px; }
+header .mainVlink ul li span { display: inline-block; width: 100%; font-size: 17px; line-height: 17px; color: #fff; font-weight: normal; text-align: center; }
+
+.taxtSchedul h2 { width: 100%; height: 36px; font-size: 36px; line-height: 36px; color: #111; font-weight: bold; text-align: center; margin: 0; padding: 130px 0 70px; }
+.taxtSchedul h2 span { display: inline-block; vertical-align: top; }
+.taxtSchedul h2 a.more { display: inline-block; width: 36px; height: 36px; background: #373839 url("../images/plus.png") 50% 50% no-repeat; margin: 0 0 0 10px; }
+.taxtSchedul div.swiper-container { position: relative; width: 1400px; font-size: 0; margin: 0 auto 125px; height: 370px; }
+.taxtSchedul div.swiper-container div.swiper-wrapper { height: 360px; }
+.taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv { position: relative; display: inline-block; width: 260px; height: 285px; margin: 0 0 0 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px solid #e4e4e4; }
+.taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv h3 { width: 200px; font-size: 36px; line-height: 36px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 40px 0 20px; }
+.taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv h4 { width: 200px; height: 90px; font-size: 16px; line-height: 28px; color: #111; font-weight: normal; text-align: left; margin: 0 auto; padding: 0 0 0px; letter-spacing: -1px; }
+.taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv h5 { width: 200px; font-size: 14px; line-height: 24px; color: #555; font-weight: normal; text-align: left; margin: 0 auto; padding: 0 0 25px; letter-spacing: 0px; }
+.taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv h5 span { display: inline-block; width: 46px; height: 24px; color: #fff; border-radius: 13px; background: #373839; text-align: center; margin: 0 10px 0 0; vertical-align: top; }
+.taxtSchedul div.swiper-container div.swiper-wrapper div.scheduleDiv h5 strong { display: inline-block; width: 130px; font-weight: normal; }
+.taxtSchedul div.swiper-container .swiper-pagination-progressbar { position: absolute; top: 340px; width: 100%; height: 2px; }
+.taxtSchedul div.swiper-container .swiper-pagination-progressbar-fill { background: #000; }
+.taxtSchedul div.swiper-container .swiper-button-prev { left: 650px; top: 345px; background: #fff url("../images/btnLeft.png") 50% 50% no-repeat; }
+.taxtSchedul div.swiper-container .swiper-button-next { left: 730px; top: 345px; background: #fff url("../images/btnRight.png") 50% 50% no-repeat; }
+
+.video { width: 100%; height: 450px; background: #11100f url("../images/mainVideobg.png") 50% top no-repeat; text-align: center; font-size: 0; }
+.video > div { display: block; width: 1300px; margin: 0 auto; text-align: left; }
+.video > div > div { display: inline-block; width: 480px; margin: 115px 0 0 0; vertical-align: top; }
+.video > div > div h1 { width: 480px; font-size: 44px; line-height: 44px; color: #fff; font-weight: 200; text-align: left; margin: 0; padding: 0 0 20px; }
+.video > div > div > ul { width: 480px; font-size: 0; text-align: left; margin: 20px 0 0 0; }
+.video > div > div > ul li { display: inline-block; width: 300px; vertical-align: top; cursor: pointer; }
+.video > div > div > ul li h2 { position: relative; font-size: 14px; line-height: 26px; color: #a4a4a4; font-weight: 200; text-align: left; margin: 0; padding: 0 0 20px 25px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.video > div > div > ul li h2:after { content: ''; position: absolute; left: 0; top: 5px; width: 2px; height: 44px; background: #a4a4a4; }
+.video > div > div > ul li.videoMain { display: inline-block; width: 150px; font-size: 16px; line-height: 26px; color: #fff; font-weight: 200; text-align: center; margin: 0; padding: 0 30px 0 0; }
+.video > div > div > ul li.videoMain img { display: inline-block; }
+.video > div > div > ul li.videoMain span { display: inline-block; width: 100%; margin: 15px 0 0 0; }
+.video > div > ul { display: inline-block; width: 820px; font-size: 0; margin: 100px 0 0 0; }
+.video > div > ul li { display: inline-block; width: 400px; background: rgba(0, 0, 0, 0.6) url("../images/videoPlay.png") 11px 50% no-repeat; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 14px; line-height: 14px; color: #dadada; font-weight: 200; text-align: left; margin: 0 10px 10px 0; padding: 12px 0 12px 30px; }
+.video > div > ul li span { font-size: 14px; line-height: 14px; color: #9b9b9b; font-weight: 200; text-align: left; padding: 0 0 0 0px; }
+
+.videoPop { position: fixed; display: none; left: 50%; top: 50%; width: 960px; height: 540px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; z-index: 60; }
+.videoPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.column { width: 1300px; margin: 140px auto 0; font-size: 0; }
+.column div { display: inline-block; width: 180px; margin: 50px 0 0 0; }
+.column div h1 { display: block; font-size: 36px; line-height: 36px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 0 0 0px; }
+.column div a.more { display: inline-block; width: 36px; height: 36px; background: #373839 url("../images/plus.png") 50% 50% no-repeat; margin: 30px 0 0 100px; }
+.column ul { display: inline-block; width: 1120px; font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; vertical-align: top; }
+.column ul li { position: relative; display: inline-block; width: 370px; height: 300px; margin: 0 0 0 0; border-right: 1px solid #dadada; vertical-align: top; }
+.column ul li h2 { font-size: 20px; line-height: 30px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 50px 50px 20px 50px; }
+.column ul li h3 { font-size: 14px; line-height: 24px; color: #111; font-weight: normal; text-align: left; margin: 0; padding: 0px 50px 0px 50px; }
+.column ul li h3 strong { font-weight: normal; }
+.column ul li h4 { font-size: 13px; line-height: 13px; color: #888; font-weight: normal; text-align: left; margin: 0; padding: 35px 50px 10px 50px; }
+.column ul li:last-child { border: 0; }
+
+.counseling { width: 1300px; margin: 90px auto 130px; font-size: 0; }
+.counseling div { display: inline-block; width: 180px; margin: 50px 0 0 0; }
+.counseling div h1 { display: block; font-size: 36px; line-height: 36px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 0 0 0px; }
+.counseling div a.more { display: inline-block; width: 36px; height: 36px; background: #373839 url("../images/plus.png") 50% 50% no-repeat; margin: 30px 0 0 100px; }
+.counseling ul { display: inline-block; width: 1120px; font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; vertical-align: top; }
+.counseling ul li { position: relative; display: inline-block; width: 370px; height: 300px; margin: 0 0 0 0; border-right: 1px solid #dadada; vertical-align: top; }
+.counseling ul li h2 { position: relative; font-size: 20px; line-height: 30px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 50px 50px 20px 90px; }
+.counseling ul li h2:after { content: 'Q'; position: absolute; left: 50px; top: 50px; width: 28px; height: 28px; font-size: 36px; line-height: 30px; color: #111; font-weight: bold; text-align: left; }
+.counseling ul li h3 { position: relative; font-size: 13px; line-height: 24px; color: #666; font-weight: normal; text-align: left; margin: 0; padding: 0px 50px 0px 90px; }
+.counseling ul li h3:after { content: 'A'; position: absolute; left: 50px; top: 0; width: 28px; height: 28px; font-size: 36px; line-height: 30px; color: #ddd; font-weight: bold; text-align: left; }
+.counseling ul li:last-child { border: 0; }
+
+.counselingPop { position: fixed; display: none; left: 50%; top: 50%; width: 700px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 0 50px 0; z-index: 60; }
+.counselingPop .qWrap { background: #166bb5; height: 90px; font-size: 0; text-align: center; }
+.counselingPop .qWrap span { display: inline-block; width: 60px; height: 30px; border-right: 2px solid #fff; font-size: 45px; line-height: 27px; color: #fff; font-weight: bold; text-align: center; margin: 30px 15px 0 0px; padding: 0; }
+.counselingPop .qWrap h1 { display: inline-block; width: 560px; height: 80px; font-size: 20px; line-height: 92px; color: #fff; font-weight: bold; text-align: left; margin: 0 0 0 0; padding: 0 0 0 0px; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -1px; }
+.counselingPop .aWrap { font-size: 0; text-align: center; }
+.counselingPop .aWrap span { display: inline-block; width: 60px; height: 30px; border-right: 2px solid #444; font-size: 45px; line-height: 27px; color: #444; font-weight: bold; text-align: center; margin: 30px 15px 0 0px; padding: 0; }
+.counselingPop .aWrap span.blank { border: 0; }
+.counselingPop .aWrap h2 { display: inline-block; width: 560px; font-size: 14px; line-height: 26px; color: #444; font-weight: normal; text-align: left; margin: 0 auto; padding: 30px 0 0 0px; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -0.5px; }
+.counselingPop .aWrap h2 strong { display: inline-block; padding: 8px 0 0 0; }
+.counselingPop .aWrap h3 { display: inline-block; width: 560px; font-size: 14px; line-height: 26px; color: #728a9f; font-weight: normal; text-align: left; margin: 0 auto; padding: 30px 0 0 0px; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -0.5px; }
+.counselingPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.review { position: relative; width: 100%; height: 880px; margin: 0 auto; background: #f4f4f4; overflow: hidden; }
+.review div.title { position: absolute; left: 50%; margin: 160px 0 0 280px; }
+.review div.title h1 { font-size: 42px; line-height: 42px; color: #222; font-weight: bold; text-align: left; margin: 0; padding: 0 0 15px 0; letter-spacing: -0.5px; }
+.review div.title h2 { font-size: 15px; line-height: 15px; color: #777; font-weight: normal; text-align: left; margin: 0; padding: 0; letter-spacing: -0.5px; }
+.review .review-con { width: 1400px; margin: 0 auto 0; padding: 120px 0 0 0; }
+.review .review-main { width: 900px; }
+.review .review-sub { overflow: hidden; position: absolute; left: 50%; top: 400px; height: 300px; margin: 0 0 0 370px; cursor: pointer; }
+.review .review-sub .slick-list { margin-left: -330px; }
+.review .review-text { position: absolute; left: 50%; top: 400px; width: 450px; height: 300px; background: #fff url("../images/null") 360px 320px no-repeat; margin: 0 0 0 -110px; }
+.review .review-text h1 { width: 340px; font-size: 16px; line-height: 16px; color: #111; font-weight: normal; text-align: left; margin: 0 auto; padding: 50px 0 5px 0; letter-spacing: -0.5px; }
+.review .review-text h3 { width: 340px; font-size: 19px; line-height: 28px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 15px 0 10px 0; letter-spacing: -0.5px; }
+.review .review-text h4 { width: 340px; font-size: 15px; line-height: 26px; color: #111; font-weight: normal; text-align: left; margin: 0 auto; padding: 0; letter-spacing: -0.5px; }
+.review button { position: absolute; width: 60px; height: 60px; border: 1px solid #dadada; text-indent: -99999px; }
+.review button.slick-prev { left: 980px; top: 150px; background: #fff url("../images/btnLeft.png") 50% 50% no-repeat; }
+.review button.slick-next { left: 1039px; top: 150px; background: #fff url("../images/btnRight.png") 50% 50% no-repeat; }
+
+.company { position: relative; width: 100%; height: 480px; background: #3a526c; overflow: hidden; }
+.company div { width: 1300px; margin: 0 auto; }
+.company div img { float: left; margin: 90px 0 0 0; }
+.company div h2 { float: left; width: 550px; font-size: 34px; line-height: 54px; color: #fff; font-weight: normal; text-align: left; margin: 0; padding: 120px 0px 10px 40px; letter-spacing: -0.5px; }
+.company div h3 { float: left; width: 550px; font-size: 18px; line-height: 32px; color: #fff; font-weight: normal; text-align: left; margin: 0; padding: 0px 50px 0px 40px; letter-spacing: -0.5px; }
+.company p { position: absolute; left: 50%; top: 0; width: 100%; height: 480px; margin: 0 0 0 370px; background: url("../images/companyBg.png") left top no-repeat; }
+
+.location { position: relative; width: 100%; background: #f9fdff; }
+.location div.locationCon { width: 1400px; height: 800px; margin: 0 auto; background: url("../images/locationBg.png") right 115px no-repeat; }
+.location div.locationCon h1 { font-size: 40px; line-height: 40px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 110px 0px 30px 0px; letter-spacing: -0.5px; }
+.location div.locationCon h2 { font-size: 24px; line-height: 24px; color: #222; font-weight: 200; text-align: left; margin: 0; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.location div.locationCon ul { width: 840px; font-size: 0; margin: 70px 0 0 0; }
+.location div.locationCon ul li { display: inline-block; width: 260px; height: 60px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 3px solid #d9e2e7; background: #f9fdff; cursor: pointer; font-size: 18px; line-height: 57px; color: #1b2124; font-weight: normal; text-align: left; margin: 0px 20px 20px 0; padding: 0 0 0 30px; }
+.location div.locationCon ul li span { position: relative; float: right; margin: 23px 25px 0px 0px; font-size: 12px; line-height: 12px; color: #7d8a91; font-weight: normal; text-align: left; }
+.location div.locationCon ul li span:after { content: ''; position: absolute; left: -18px; top: -3px; width: 13px; height: 17px; background: url("../images/locationIcon.png") left top no-repeat; }
+
+.locationPop { position: fixed; display: none; left: 50%; top: 50%; width: 600px; padding: 0 0 30px 0; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; z-index: 60; }
+.locationPop h1 { width: 500px; font-size: 22px; line-height: 22px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 40px 0 20px 0; letter-spacing: -0.5px; }
+.locationPop h1 span { display: inline-block; vertical-align: middle; font-size: 14px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0; padding: 0 0 0 10px; }
+.locationPop h2 { width: 500px; font-size: 16px; line-height: 32px; color: #222; font-weight: normal; text-align: left; margin: 0 auto; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.locationPop h2 li strong { display: inline-block; width: 50px; }
+.locationPop a { display: inline-block; width: 200px; height: 70px; }
+.locationPop a span { font-size: 18px; line-height: 70px; color: #fff; font-weight: normal; text-align: left; margin: 0 0 0 130px; padding: 0; }
+.locationPop a.chat { width: 300px; background: #166bb5 url("../images/companyChat.png") 90px 50% no-repeat; margin: 30px 0 0 140px; }
+.locationPop a.call { background: #222 url("../images/companyCall.png") 40px 50% no-repeat; }
+.locationPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.mask { position: fixed; display: none; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+
+.people { margin: 0 auto 100px; }
+.people h1 { font-size: 40px; line-height: 40px; color: #111; font-weight: bold; text-align: center; margin: 0; padding: 90px 0px 40px 0px; letter-spacing: -0.5px; }
+.people h2 { font-size: 24px; line-height: 24px; color: #111; font-weight: 200; text-align: center; margin: 0; padding: 0px 0px 75px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock { width: 1400px; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0 auto; }
+.people div.tabBlock ul { font-size: 0; border: 1px solid #dadada; }
+.people div.tabBlock ul li { display: inline-block; width: 231.8px; height: 100px; border-right: 1px solid #dadada; cursor: pointer; vertical-align: top; }
+.people div.tabBlock ul li span { position: relative; display: inline-block; width: 50%; font-size: 18px; line-height: 28px; color: #555; font-weight: bold; text-align: center; margin: 25px 0 0 0; }
+.people div.tabBlock ul li span strong { color: #166bb5; display: block; font-size: 15px; }
+.people div.tabBlock ul li span:first-child:after { content: ''; position: absolute; left: 115px; top: 7px; width: 1px; height: 40px; background: #bbcad7; }
+.people div.tabBlock ul li:last-child { border-right: 0; }
+.people div.tabBlock ul li.solo span { width: 100%; margin: 40px 0 0 0; }
+.people div.tabBlock ul li.solo span strong { display: inline-block; font-size: 18px; font-weight: bold; margin-right: 10px; }
+.people div.tabBlock ul li.solo span:first-child:after { display: none; }
+.people div.tabBlock ul li.is-active { background: #166bb5; }
+.people div.tabBlock ul li.is-active span { color: #fff; }
+.people div.tabBlock ul li.is-active span strong { color: #fff; }
+.people div.tabBlock-pane { width: 1400px; height: 580px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; margin: 40px auto 0; font-size: 0; }
+/*
+.people div.tabBlock-pane div { position: relative; display: inline-block; width: 50%; height: 578px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; background: url("../images/peopleBg.png") left bottom no-repeat; overflow: hidden; }
+*/
+.people div.tabBlock-pane div { position: relative; display: inline-block; width: 50%; height: 578px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; overflow: hidden; }
+.people div.tabBlock-pane div img { position: absolute; left: 20px; top: 50px; }
+.people div.tabBlock-pane div:last-child { border-right: 0; }
+.people div.tabBlock-pane div h3 { display: inline-block; font-size: 30px; line-height: 30px; color: #444; font-weight: 200; text-align: left; margin: 0 0 0 370px; padding: 120px 0px 15px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock-pane div h4 { display: inline-block; font-size: 30px; line-height: 28px; color: #444; font-weight: bold; text-align: left; margin: 0 0 0 10px; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock-pane div h5 { font-size: 15px; line-height: 30px; color: #666; font-weight: normal; text-align: left; margin: 20px 0 0 370px; padding: 0; letter-spacing: -0.5px; }
+.people div.tabBlock-pane div h5 strong { color: #555; font-size: 15px; }
+.people div.tabBlock-pane div div.label { position: absolute; display: inline-block; left: 215px; top: 250px; width: 101px; height: 135px; background: url("../images/peopleLabel.png") left top no-repeat; text-align: center; }
+.people div.tabBlock-pane div div.label > p { font-size: 14px; line-height: 13px; color: #fff; font-weight: normal; text-align: center; margin: 0; padding: 20px 0px 10px 0px; }
+.people div.tabBlock-pane div div.label > p.labelText { font-size: 16px; line-height: 26px; color: #fff; font-weight: bold; text-align: center; margin: 0; padding: 30px 0px 10px 0px; }
+.people div.tabBlock-pane div div.label span { height: 40px; font-size: 40px; line-height: 40px; color: #fff; font-weight: bold; text-align: center; vertical-align: middle; }
+.people div.tabBlock-pane div div.label span:last-child { font-size: 18px; line-height: 18px; color: #fff; font-weight: bold; text-align: center; margin: 0 0 0 3px; padding: 0; }
+.people div.tabBlock-pane div.solo { width: 100%; border-right: none; }
+.people div.tabBlock-pane div.solo img { position: absolute; left: 100px; top: 50px; }
+.people div.tabBlock-pane div.solo h3 { margin: 0 0 0 500px; }
+.people div.tabBlock-pane div.solo h4 { margin: 0 0 0 10px; }
+.people div.tabBlock-pane div.solo h5 { display: inline-block; width: 320px; margin: 20px 0 0 500px; }
+.people div.tabBlock-pane div.solo h6 { display: inline-block; width: 320px; font-size: 14px; line-height: 28px; color: #777; font-weight: normal; text-align: left; margin: 20px 0 0 60px; padding: 0; letter-spacing: -0.5px; vertical-align: top; }
+.people div.tabBlock-pane div.solo h6 strong.book { color: #166bb5; font-size: 16px; font-weight: normal; }
+.people div.tabBlock-pane div.solo div.label { left: 320px; }
+
+.allpeople { position: relative; width: 100%; height: 480px; background: url("../images/allpeopleBg.png") 50% bottom no-repeat; }
+.allpeople div { position: absolute; width: 100%; height: 180px; left: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); }
+.allpeople div h1 { font-size: 36px; line-height: 36px; color: #fff; font-weight: bold; text-align: center; margin: 0 auto; padding: 50px 0 20px 0; letter-spacing: -0.5px; }
+.allpeople div h2 { font-size: 24px; line-height: 24px; color: #fff; font-weight: 200; text-align: center; margin: 0 auto; padding: 0; letter-spacing: -0.5px; }
+
+.china { width: 100%; height: 760px; background: url("../images/chinaBg.png") 50% top no-repeat; }
+.china div { position: relative; width: 1300px; margin: 0 auto; }
+.china div img { position: absolute; left: 718px; top: -24px; }
+.china div h1 { font-size: 42px; line-height: 42px; color: #fff; font-weight: normal; text-align: left; margin: 0 0 0 0px; padding: 125px 0px 35px 0px; letter-spacing: -0.5px; }
+.china div h2 { font-size: 30px; line-height: 30px; color: #fff; font-weight: 200; text-align: left; margin: 0 0 0 0px; padding: 0px 0px 30px 0px; letter-spacing: -0.5px; }
+.china div h3 { font-size: 18px; line-height: 34px; color: #fff; font-weight: 200; text-align: left; margin: 0; padding: 0; letter-spacing: -0.5px; }
+.china div ul { font-size: 0; margin: 85px 0 0 0; }
+.china div ul li { display: inline-block; width: 245px; height: 180px; background: #590e15; margin: 0 18px 0 0; text-align: center; }
+.china div ul li span { display: inline-block; font-size: 20px; line-height: 34px; color: #fff; font-weight: normal; text-align: center; margin: 0 0 0 0px; padding: 55px 0px 0px 0px; }
+.china div ul li:nth-child(even) { background: #271114; }
+.china div ul li:last-child { margin: 0; }
+
+.medi{ width: 100%; height:335px; background:#0a0b0d url('../images/medibg.png')center top no-repeat; text-align:center; }
+.medi img{display:inline-block; line-height:335px; margin:60px 0 0 0; vertical-align:middle;}
+
+.catalogue { width: 1400px; height: 700px; margin: 70px auto; background: #fafafa url("../images/catalogue.png") 75px 150px no-repeat; }
+.catalogue ul { width: 50%; float: right; font-size: 0; margin: 90px 0 0 0; }
+.catalogue ul li { display: inline-block; font-size: 18px; line-height: 18px; color: #555; font-weight: bold; text-align: left; margin: 0 0 0 70px; padding: 30px 0px 0px 0px; }
+.catalogue ul li a { display: block; width: 225px; height: 55px; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; font-size: 15px; line-height: 55px; color: #888; font-weight: normal; text-align: left; margin: 20px 0 0px 0; padding: 0 0 0 30px; }
+.catalogue ul li a img { float: right; margin: 20px 30px 0 0; }
+.catalogue ul li:last-child { margin: 15px 0 0 70px; }
+
+.customer { width: 1400px; margin: 70px auto 0; }
+.customer ul { font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; }
+.customer ul li { position: relative; display: inline-block; width: 290px; height: 220px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; vertical-align: top; }
+.customer ul li img { position: absolute; left: 60px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.customer ul li h1 { font-size: 26px; line-height: 26px; color: #222; font-weight: bold; text-align: left; margin: 0 0 0 205px; padding: 45px 0px 15px 0px; letter-spacing: -0.5px; }
+.customer ul li h2 { font-size: 16px; line-height: 26px; color: #222; font-weight: normal; text-align: left; margin: 0 0 0 205px; padding: 0px 0px 10px 0px; letter-spacing: -0.5px; }
+.customer ul li h3 { font-size: 30px; line-height: 26px; color: #222; font-weight: bold; text-align: left; margin: 0 0 0 205px; padding: 0; letter-spacing: -0.5px; }
+.customer ul li h3 strong { display: inline-block; font-size: 14px; vertical-align: 6px; margin: 0 10px 0 0; }
+.customer ul li h4 { width: 200px; font-size: 22px; line-height: 26px; color: #222; font-weight: bold; text-align: left; margin: 0 auto; padding: 35px 0px 10px 0px; letter-spacing: -0.5px; }
+.customer ul li h5 { width: 200px; font-size: 16px; line-height: 26px; color: #222; font-weight: normal; text-align: left; margin: 0 auto; padding: 0; letter-spacing: -0.5px; }
+.customer ul li span { display: inline-block; width: 90px; height: 36px; border-radius: 18px; background: #222; font-size: 14px; line-height: 36px; color: #fff; font-weight: noraml; text-align: center; margin: 45px 0 0 45px; padding: 0; }
+.customer ul li:last-child { border: 0; }
+.customer ul li.tel { width: 528px; }
+
+.group { width: 100%; border-bottom: 1px solid #e6e6e6; margin: 0 0 90px 0; }
+.group ul { font-size: 0; width: 1200px; margin: 30px auto 80px; }
+.group ul a { display: inline-block; margin: 0 130px 0 0; text-align: left; vertical-align: top; background: url("../images/group01.png") left bottom no-repeat; }
+.group ul a h1{ font-size:16px; color:#bbb; letter-spacing:-2px; margin:40px 0 0 40px; font-weight:bold;}
+.group ul a h2{ font-size:16px; color:#111; letter-spacing:-2px; margin:5px 0 0 40px; font-weight:bold;}
+.group ul a img { margin: 45px 0 0 0; }
+.group ul a span { display: block; font-size: 13px; line-height: 23px; color: #777; font-weight: noraml; text-align: center; margin: 0; padding: 10px 0 0 0; letter-spacing: -0.5px; }
+.group ul a:last-child { margin: 0; }
+
+footer { width: 1400px; margin: 0 auto; }
+footer ul { font-size: 0; }
+footer ul li { display: inline-block; position: relative; font-size: 13px; line-height: 13px; color: #777; font-weight: normal; text-align: center; padding: 0 30px 0 0; }
+footer ul li:after { content: ''; position: absolute; right: 15px; top: 1px; width: 1px; height: 12px; background: #bbb; }
+footer ul li:last-child:after { display: none; }
+footer h3 { font-size: 13px; line-height: 13px; color: #777; font-weight: normal; text-align: left; margin: 0; padding: 20px 0 120px 0; }
+
+.subvisual { width: 100%; height: 315px; }
+.subvisual h1 { text-align: center; padding: 60px 0 75px 0; }
+.subvisual h1 img { display: inline-block; }
+.subvisual h2 { font-size: 32px; line-height: 32px; color: #fff; font-weight: bold; text-align: center; letter-spacing: -0.5px; }
+
+.bgtax { background: url("../images/subvisualTax.png") center top no-repeat; }
+.bgsulting { background: url("../images/subvisualConsulting.png") center top no-repeat; }
+.bginvestigation { background: url("../images/subvisualInvestigation.png") center top no-repeat; }
+.bgcompany { background: url("../images/subvisualCompany.png") center top no-repeat; }
+
+.subnavi { border-bottom: 1px solid #dadada; }
+.subnavi ul { font-size: 0; text-align: center; }
+.subnavi ul li { display: inline-block; font-size: 17px; line-height: 17px; color: #555; text-align: center; padding: 25px 85px; letter-spacing: -0.5px; }
+.subnavi ul li.on { color: #2168b0; font-weight: bold; }
+.subnavi ul li.on span { display: inline-block; width: 17px; height: 10px; background: url("../images/subnaviArrow.png") left top no-repeat; margin: 0 0 0 6px; }
+
+.subconWrap { margin: 0 auto 120px; overflow: hidden; }
+
+.subtitle { width: 1280px; position: relative; margin: 100px auto 0; }
+.subtitle h1 { position: absolute; left: 75px; top: 60px; font-size: 32px; line-height: 32px; color: #fff; font-weight: bold; letter-spacing: -0.5px; }
+.subtitle h2 { position: absolute; left: 75px; top: 115px; font-size: 20px; line-height: 20px; color: #fff; }
+.subtitle div { font-size: 17px; line-height: 32px; color: black4; margin: 30px 0 0 0; letter-spacing: -0.85px; }
+.subtitle div span { background: #edf3fa; }
+.subtitle div > p { margin: 10px 0 0 0; }
+
+.subtext { width: 1280px; margin: 55px auto 0; }
+.subtext h1 { font-size: 26px; line-height: 26px; color: #333; font-weight: bold; margin: 0 0 28px 0; letter-spacing: -0.5px; }
+.subtext ul li { position: relative; font-size: 17px; line-height: 17px; color: #444; margin: 0 0 15px 0; padding: 0 0 0 10px; letter-spacing: -0.75px; }
+.subtext ul li:after { content: ''; position: absolute; left: 0px; top: 9px; width: 3px; height: 3px; background: #444; }
+
+.subbox { width: 1280px; margin: 55px auto 0; }
+.subbox h1 { font-size: 26px; line-height: 26px; color: #333; font-weight: bold; margin: 0 0 28px 0; letter-spacing: -0.5px; }
+.subbox div { border: 1px solid #dadada; }
+.subbox div ul { width: 93%; margin: 45px auto 22px; font-size: 0; }
+.subbox div ul li { position: relative; display: inline-block; width: 33.3%; font-size: 19px; line-height: 19px; color: #444; margin: 0 0 31px 0; padding: 0 0 0 27px; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -0.75px; }
+.subbox div ul li:after { content: ''; position: absolute; left: 0px; top: 4px; width: 15px; height: 12px; background: url("../images/subboxCheck.png") left top no-repeat; }
+
+.subconsultingProcess { width: 1600px; height: 845px; background: url("../images/subconsultingProcess.png") center top no-repeat; margin: 100px auto 0; }
+.subconsultingProcess h1 { width: 1280px; font-size: 30px; line-height: 30px; color: #fff; font-weight: bold; margin: 0 auto; padding: 105px 0 40px; letter-spacing: -0.5px; }
+.subconsultingProcess ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.subconsultingProcess ul li { position: relative; height: 115px; width: 310px; display: inline-block; margin: 30px 13px 0 0; vertical-align: top; }
+.subconsultingProcess ul li p { position: absolute; left: 0; top: -17px; width: 99.1%; height: 1px; background: #fff; }
+.subconsultingProcess ul li i { position: absolute; display: inline-block; right: 3px; top: -22px; border: solid #fff; border-width: 0 1px 1px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.subconsultingProcess ul li a { display: inline-block; position: absolute; left: 0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align: center; border-radius: 0 0 50% 50%; }
+.subconsultingProcess ul li a span { display: inline-block; font-size: 11px; line-height: 15px; color: #fff; text-align: center; margin: 9px 0 0 0; }
+.subconsultingProcess ul li div { width: 100%; height: 95px; background: #fff; }
+.subconsultingProcess ul li div h2 { font-size: 16px; line-height: 26px; color: #555; font-weight: bold; text-align: center; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subconsultingProcess ul li div h3 { font-size: 16px; line-height: 26px; color: #555; font-weight: bold; text-align: center; padding: 24px 0 0 0; letter-spacing: -1px; }
+.subconsultingProcess ul li div h4 { font-size: 13px; line-height: 13px; color: #777; text-align: center; padding: 5px 0 0 0; letter-spacing: -1px; }
+.subconsultingProcess ul li:nth-child(4n) { margin: 30px 0 0 0; }
+
+.subinvestigationProcess01 { width: 1400px; height: 325px; background: url("../images/subinvestigationProcess01.png") center top no-repeat; margin: 100px auto 0; }
+.subinvestigationProcess01 h1 { width: 1280px; font-size: 30px; line-height: 30px; color: #fff; font-weight: bold; margin: 0 auto; padding: 60px 0 20px; letter-spacing: -0.5px; }
+.subinvestigationProcess01 h1 span { font-size: 20px; margin: 0 0 0 15px; font-weight: normal; }
+.subinvestigationProcess01 ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.subinvestigationProcess01 ul li { position: relative; height: 115px; width: 365px; display: inline-block; margin: 35px 10px 0 0; vertical-align: top; }
+.subinvestigationProcess01 ul li p { position: absolute; left: 0; top: -17px; width: 99.1%; height: 2px; background: #fff; }
+.subinvestigationProcess01 ul li i { position: absolute; display: inline-block; right: 3px; top: -22px; border: solid #fff; border-width: 0 2px 2px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.subinvestigationProcess01 ul li a { display: inline-block; position: absolute; left: 0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align: center; border-radius: 0 0 50% 50%; }
+.subinvestigationProcess01 ul li a span { display: inline-block; font-size: 11px; line-height: 15px; color: #fff; text-align: center; margin: 9px 0 0 0; }
+.subinvestigationProcess01 ul li div { width: 100%; height: 100px; background: #fff; font-size: 20px; line-height: 100px; color: #666; font-weight: bold; text-align: center; letter-spacing: -1px; }
+.subinvestigationProcess01 ul li div img { vertical-align: middle; }
+.subinvestigationProcess01 ul li div span { display: inline-block; width: 142px; height: 48px; font-size: 16px; line-height: 48px; color: #666; font-weight: bold; text-align: center; border: 2px solid #666; border-radius: 30px; letter-spacing: -1px; }
+.subinvestigationProcess01 ul li:nth-child(1) { width: 155px; }
+.subinvestigationProcess01 ul li:nth-child(4) { margin: 35px 0 0 0; }
+
+.subinvestigationProcess02 { width: 1400px; height: 325px; background: url("../images/subinvestigationProcess02.png") center top no-repeat; margin: 100px auto 0; }
+.subinvestigationProcess02 h1 { width: 1280px; font-size: 30px; line-height: 30px; color: #fff; font-weight: bold; margin: 0 auto; padding: 60px 0 20px; letter-spacing: -0.5px; }
+.subinvestigationProcess02 h1 span { font-size: 20px; margin: 0 0 0 15px; font-weight: normal; }
+.subinvestigationProcess02 ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.subinvestigationProcess02 ul li { position: relative; height: 115px; width: 165px; display: inline-block; margin: 35px 10px 0 0; vertical-align: top; }
+.subinvestigationProcess02 ul li p { position: absolute; left: 0; top: -17px; width: 99.1%; height: 2px; background: #fff; }
+.subinvestigationProcess02 ul li i { position: absolute; display: inline-block; right: 3px; top: -22px; border: solid #fff; border-width: 0 2px 2px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.subinvestigationProcess02 ul li a { display: inline-block; position: absolute; left: 0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align: center; border-radius: 0 0 50% 50%; }
+.subinvestigationProcess02 ul li a span { display: inline-block; font-size: 11px; line-height: 15px; color: #fff; text-align: center; margin: 9px 0 0 0; }
+.subinvestigationProcess02 ul li div { width: 100%; height: 110px; background: #fff; vertical-align: middle; text-align: center; }
+.subinvestigationProcess02 ul li div span { display: inline-block; font-size: 15px; line-height: 26px; color: #666; font-weight: bold; text-align: center; margin: 15px 0 0 0; letter-spacing: -1px; }
+.subinvestigationProcess02 ul li div span.vmiddle01 { margin: 40px 0 0 0; }
+.subinvestigationProcess02 ul li div span.vmiddle02 { margin: 30px 0 0 0; }
+.subinvestigationProcess02 ul li:nth-child(4) { width: 245px; }
+.subinvestigationProcess02 ul li:nth-child(5) { width: 245px; }
+.subinvestigationProcess02 ul li:nth-child(6) { width: 245px; margin: 35px 0 0 0; }
+
+.subinvestigationText { width: 1280px; margin: 0 auto; }
+.subinvestigationText h1 { font-size: 26px; line-height: 26px; color: #333; font-weight: bold; padding: 60px 0 25px 0; letter-spacing: -1px; }
+.subinvestigationText h2 { font-size: 17px; line-height: 30px; color: #444; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText h2 p { margin: 10px 0 0 0; }
+.subinvestigationText h3 { font-size: 20px; line-height: 20px; color: #444; font-weight: bold; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText h4 { font-size: 16px; line-height: 30px; color: #777; padding: 10px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText ul { font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; }
+.subinvestigationText ul li { display: inline-block; width: 20%; height: 250px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #ddd; vertical-align: top; }
+.subinvestigationText ul li dt { width: 80%; font-size: 20px; line-height: 20px; color: #444; font-weight: bold; margin: 0 auto; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText ul li dd { width: 80%; font-size: 13px; line-height: 25px; color: #777; margin: 0 auto; padding: 10px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText ul li:last-child { border: 0; }
+
+.ceo { position: relative; width: 1400px; margin: 0 auto; }
+.ceo h1 { font-size: 32px; line-height: 32px; color: #222; font-weight: bold; padding: 100px 0 30px 0; letter-spacing: -1px; }
+.ceo div { width: 1400px; height: 570px; margin: 0 auto; background: #f8f8f8 url("../images/ceoBg.png") 370px 30px no-repeat; }
+.ceo div h2 { width: 500px; font-size: 30px; line-height: 50px; color: #444; font-weight: lighter; margin: 0 0 0 760px; padding: 80px 0 10px 0; letter-spacing: -1px; }
+.ceo div h3 { width: 500px; font-size: 16px; line-height: 28px; color: #444; margin: 0 0 0 760px; padding: 0 0 0 0; letter-spacing: -1px; }
+.ceo div h3 p { margin: 20px 0 0 0; }
+.ceo div h4 { width: 450px; font-size: 20px; line-height: 30px; color: #444; font-weight: lighter; margin: 0 0 0 760px; padding: 50px 0 0 0; letter-spacing: -1px; }
+.ceo img { position: absolute; left: 90px; top: 113px; }
+
+.companyreport { position: relative; width: 1400px; margin: 0 auto; }
+.companyreport h1 { font-size: 32px; line-height: 32px; color: #222; font-weight: bold; padding: 100px 0 30px 0; letter-spacing: -1px; }
+.companyreport > div { width: 100%; height: 100px; line-height: 100px; border-bottom: 1px solid #dadada; }
+.companyreport > div h2 { display: inline-block; width: 125px; height: 20px; border-right: 1px solid #222; vertical-align: top; font-size: 18px; line-height: 18px; color: #222; font-weight: bold; margin: 40px 60px 0 0; padding: 0 0 0 15px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.companyreport > div h3 { display: inline-block; font-size: 18px; line-height: 18px; color: #222; padding: 0 0 0 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.companyreport > div ul.member { display: inline-block; margin: 0 0 0 0px; font-size: 0; }
+.companyreport > div ul.member li { display: inline-block; width: 60px; height: 60px; border: 2px solid #d1afaf; border-radius: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 16px; line-height: 60px; color: #bf9a9a; font-weight: bold; text-align: center; margin: 13px 11px 0 0; vertical-align: top; }
+.companyreport > div ul.member li span { display: inline-block; width: 40px; height: 43px; line-height: 19px; vertical-align: middle; overflow: hidden; }
+.companyreport > div dl { display: inline-block; height: 100px; line-height: 100px; }
+.companyreport > div img { display: inline-block; vertical-align: middle; }
+.companyreport > div h4 { display: inline-block; font-size: 16px; line-height: 28px; color: #444; font-weight: bold; margin: 0 40px 0 15px; padding: 0 0 0 0; }
+.companyreport > div ul.organization { display: inline-block; }
+.companyreport > div ul.organization li { font-size: 0; display: inline-block; margin: 40px 0 0 0; line-height: 30px; height: 100px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0px 50px 0 50px; border-right: 1px solid #dadada; vertical-align: top; }
+.companyreport > div ul.organization li h5 { font-size: 18px; line-height: 28px; color: #333; font-weight: bold; margin: 0px 0 0 0px; padding: 0 0 0 0; }
+.companyreport > div ul.organization li ol { font-size: 0; margin: 15px 0 0 0px; width: 235px; display: inline-block; }
+.companyreport > div ul.organization li ol > h6 { position: relative; display: inline-block; width: 50%; height: 20px; font-size: 14px; line-height: 14px; color: #444; margin: 0; padding: 0 0 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.companyreport > div ul.organization li ol > h6:after { content: ''; position: absolute; left: 0px; top: 7px; width: 2px; height: 2px; background: #aaa; }
+.companyreport > div ul.organization li:first-child { padding: 0 50px 0px 0; }
+.companyreport > div ul.organization li:last-child { border: none; }
+.companyreport > div:last-child { border: none; height: 200px; }
+
+.map { width: 100%;  margin: 40px 0 0 0; }
+.map div { width: 1400px; height: 510px; margin: 0 auto; }
+.map div h1 { width: 400px; font-size: 32px; line-height: 28px; color: #fff; font-weight: bold; padding: 110px 0 50px 0; }
+.map div h2 { width: 400px; font-size: 20px; line-height: 34px; color: #fff; letter-spacing: -0.5px; }
+.map div h3 { width: 400px; font-size: 38px; line-height: 28px; color: #fff; font-weight: bold; padding: 30px 0 0px 0; }
+.map div.detail { width: 1400px; margin: 90px auto 40px; height: auto; }
+.map div.detail table { width: 100%; border-top: 2px solid #555; }
+.map div.detail table tr td { width: 25%; height: 140px; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 0 0 30px; }
+.map div.detail table tr td h4 { font-size: 18px; line-height: 18px; color: #444; font-weight: bold; padding: 0 0 0 0; letter-spacing: -0.75px; }
+.map div.detail table tr td h5 { font-size: 14px; line-height: 24px; color: #444; padding: 8px 0 0 0; }
+.map div.detail table tr td h5 span { display: inline-block; width: 100%; }
+.map div.detail table tr td:nth-child(4n) { border-right: 0; }
+
+.s_news .newsnavi { width: 1300px; margin: 0 auto; }
+.s_news .newsnavi ul { font-size: 0; text-align: center; margin: 90px 0 10px 0; box-sizing:border-box;  }
+.s_news .newsnavi ul li { display: inline-block; border-right: 1px solid #dcdcdc; border-bottom: 1px solid #dcdcdc;  border-top: 1px solid #dcdcdc; box-sizing:border-box; 
+font-size: 15px; line-height: 15px; color: #999; font-weight: bold; text-align: center; padding: 14px 18px 14px 17px; }
+.s_news .newsnavi ul li:hover { color: #333; }
+.s_news .newsnavi ul a:first-child li{ border-left: 1px solid #dcdcdc;  box-sizing:border-box;}
+.s_news .newsnavi ul a.active:first-child li{ background:#333; color:#fff;}
+.s_news .newsnavi ul a.active li { font-size: 15px; line-height: 15px; color: #333; font-weight: bold; text-align: center;  box-sizing:border-box; background:#f7f7f7;}
+.s_news .newsnavi div{ width:1280px; margin:30px auto 40px; font-size:0; text-align:left;}
+.s_news .newsnavi div a{ display:inline-block;  font-size: 14px; color: #666; text-align: center; margin:0 5px 0 5px; padding: 5px 20px 5px 20px;  }
+.s_news .newsnavi div a.active{position:relative; text-decoration:underline; color:#333; font-weight:bold;}
+.s_news .newsnavi div a.active:after{ position:absolute; content:''; right:1px; top:8px; width:16px; height:16px; border-radius:30px;  background:#666 url("../images/news_x.png")50% 50% no-repeat; }
+
+.s_news .newscontents { width: 1300px; margin: 0 auto; }
+.s_news .newscontents ul { font-size: 0; text-align: left; }
+.s_news .newscontents ul li { display: inline-block; width: 314px; height: 290px; border: 1px solid #dadada; margin: 0 12px 30px 0; vertical-align:top; }
+.s_news .newscontents ul a:nth-child(4n) li{margin:0 0 30px 0;}
+.s_news .newscontents ul li span { position: relative; display: block; width: 314px; height: 125px; overflow: hidden; margin: 0 auto; }
+.s_news .newscontents ul li span img { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); display: inline-block; width: 320px; }
+.s_news .newscontents ul li div { width: 86%; margin: 0 auto; text-align: left; letter-spacing: -0.5px; }
+.s_news .newscontents ul li div h1 { font-size: 15px; line-height: 15px; color: #333; font-weight: bold; padding: 30px 0px 10px 0px; }
+.s_news .newscontents ul li div h2 { font-size: 13px; line-height: 20px; color: #888; padding: 0px 0px 20px 0px; }
+.s_news .newscontents ul li div h3 { display: inline-block; width: 60%; font-size: 13px; line-height: 13px; color: #adc1cb; font-weight: bold; padding: 0px 0px 0px 0px; }
+.s_news .newscontents ul li div h4 { display: inline-block; width: 40%; overflow: hidden; font-size: 13px; line-height: 13px; color: #ccc; text-align: right; padding: 0px 0px 0px 0px; }
+.s_news .paging { width: 1400px; margin: 0 auto 100px; }
+.s_news .paging div { font-size: 0; text-align: center; margin: 30px 0 0 0; }
+.s_news .paging div a.prev { display: inline-block; width: 52px; font-size: 15px; line-height: 15px; color: #777; font-weight: bold; text-align: right; margin: 0 20px 0 0; padding: 10px 0px 10px 0px; background: url("../images/pagingleft.png") 0px 50% no-repeat; }
+.s_news .paging div a.prev:hover { color: #444; background: url("../images/pagingleftOn.png") 0px 50% no-repeat; }
+.s_news .paging div span { display: inline-block; }
+.s_news .paging div span a { width: 32px; display: inline-block; font-size: 15px; line-height: 15px; color: #999; font-weight: bold; text-align: center; padding: 10px 0px 10px 0px; }
+.s_news .paging div span a.active { position: relative; width: 32px; display: inline-block; color: #444; }
+.s_news .paging div span a.active:after { content: ''; position: absolute; left: 0px; bottom: 6px; width: 80%; height: 1px; background: #444; }
+.s_news .paging div a.next { display: inline-block; width: 52px; font-size: 15px; line-height: 15px; color: #777; font-weight: bold; text-align: left; margin: 0 0 0 20px; padding: 10px 0px 10px 0px; background: url("../images/pagingright.png") 100% 50% no-repeat; }
+.s_news .paging div a.next:hover { color: #444; background: url("../images/pagingrightOn.png") 100% 50% no-repeat; }
+.s_news .newsview { width: 850px; margin: 105px auto 0; }
+.s_news .newsview h1 { font-size: 30px; line-height: 30px; color: #333; font-weight: bold; padding: 0px 0px 30px 0px; }
+.s_news .newsview h2 { display: inline-block; height: 20px; font-size: 20px; line-height: 20px; color: #777; padding: 0px 7px 35px 0px; }
+.s_news .newsview h3 { display: inline-block; height: 20px; font-size: 14px; line-height: 20px; color: #adc1cb; font-weight: bold; padding: 0px 0px 35px 0px; vertical-align: top; }
+.s_news .newsview h4 { display: inline-block; font-size: 16px; line-height: 24px; color: #666; padding: 35px 0px 0px 0px; letter-spacing: -0.5px; border-top: 1px solid #bbb; }
+.s_news .newsview h4 img { display: block; margin: 20px auto 20px; max-width: 850px; }
+.s_news .newsview div.sns { margin: 40px 0 30px 0; font-size: 0; }
+.s_news .newsview div.sns a { display: inline-block; width: 30px; height: 30px; border-radius: 50%; margin: 0 7px 0 0; }
+.s_news .newsview div.sns a.facebook { background: #5b5b5c url("../images/sns_facebook.png") 50% 50%/22px auto no-repeat; }
+.s_news .newsview div.sns a.google { background: #5b5b5c url("../images/sns_google.png") 50% 50%/26px auto no-repeat; }
+.s_news .newsview div.sns a.pinterest { background: #5b5b5c url("../images/sns_pinterest.png") 50% 50%/24px auto no-repeat; }
+.s_news .newsview div.sns a.tweeter { background: #5b5b5c url("../images/sns_tweeter.png") 50% 50%/24px auto no-repeat; }
+.s_news .newslist { width: 850px; margin: 20px auto 85px; border-top: 1px solid #bbb; padding: 20px 0 0 0; }
+.s_news .newslist a.next { display: inline-block; width: 52px; font-size: 15px; line-height: 15px; color: #777; font-weight: bold; text-align: left; margin: 0 0 0 10px; padding: 10px 0px 10px 0px; background: url("../images/pagingright.png") 100% 50% no-repeat; }
+.s_news .newslist a.next:hover { color: #444; background: url("../images/pagingrightOn.png") 100% 50% no-repeat; }
+.s_news .newslist a.prev { display: inline-block; width: 52px; font-size: 15px; line-height: 15px; color: #777; font-weight: bold; text-align: right; margin: 0 10px 0 0; padding: 10px 0px 10px 0px; background: url("../images/pagingleft.png") 0px 50% no-repeat; }
+.s_news .newslist a.prev:hover { color: #444; background: url("../images/pagingleftOn.png") 0px 50% no-repeat; }
+.s_news .newslist a.btnlist { display: inline-block; float: right; width: 52px; font-size: 15px; line-height: 15px; color: #777; font-weight: bold; text-align: right; margin: 0 20px 0 0; padding: 10px 0px 10px 0px; }
+.s_news .newslist a.btnlist:hover { color: #444; }
+.s_news .s_newsform { position: relative; width: 1260px; margin: 50px auto 110px; padding: 20px 0px 0 0; font-size: 0; overflow: hidden; }
+.s_news .s_newsform img { position: absolute; right: 50%; bottom: -20px; width: 230px; }
+.s_news .s_newsform div.form { display: inline-block; width: 50%; height: 210px; background: #f6f6f6; border: 1px solid #dadada; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.s_news .s_newsform div.form h1 { font-size: 22px; line-height: 34px; color: #444; font-weight: bold; text-align: left; margin: 40px 0 20px 60px; letter-spacing: -0.5px; }
+.s_news .s_newsform div.form button { display: inline-block; width: 150px; height: 45px; background: #555; vertical-align: middle; font-size: 16px; line-height: 45px; color: #fff; font-weight: bold; text-align: center; margin: 0 0 0 60px; }
+.s_news .s_newsform div.form a { display: inline-block; width: 150px; height: 45px; background: #386dc6; vertical-align: middle; font-size: 16px; line-height: 45px; color: #fff; font-weight: bold; text-align: center; margin: 0 0 0 10px; padding: 0px 0px 0px 0px; }
+.s_news .s_newsform div.letter { display: inline-block; position: relative; width: 50%; font-size: 0; height: 210px; vertical-align: top; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; border-top: 1px solid #dadada; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.s_news .s_newsform div.letter h3 { vertical-align: middle; font-size: 22px; line-height: 22px; color: #444; font-weight: bold; margin: 38px 0 15px 60px; }
+.s_news .s_newsform div.letter h4 { vertical-align: middle; text-align: left; width: auto; font-size: 15px; line-height: 24px; color: #666; margin: 0 50px 10px 60px; }
+.s_news .s_newsform div.letter input { display: inline-block; width: 269px; height: 45px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 12px 10px 10px 20px; border: 1px solid #c1c1c1; margin: 0px 15px 0px 60px; font-size: 13px; vertical-align: middle; }
+.s_news .s_newsform div.letter input:focus::-webkit-input-placeholder { color: transparent; }
+.s_news .s_newsform div.letter input:focus:-ms-input-placeholder { color: transparent; }
+.s_news .s_newsform div.letter input:focus::-ms-input-placeholder { color: transparent; }
+.s_news .s_newsform div.letter input:focus::placeholder { color: transparent; }
+.s_news .s_newsform div.letter button { display: inline-block; width: 205px; height: 45px; border: 1px solid #184067; color: #184067; vertical-align: middtole; font-size: 14px; font-weight: bold; }
+
+/*카톡팝업추가*/
+.kakaoLink {            display:none ;            position: absolute;            width: 550px;            height: 515px;            background: #ffd801 url('../images/kakaoBg.png')center bottom no-repeat;            z-index: 9999999;        }
+.kakaoLink div {            position: relative;            margin: 0 auto;            width: 475px;        }
+.kakaoLink div a.close {            position: absolute;            display: inline-block;            right: 0px;            top: 35px;            width: 60px;            height: 60px;            background: url('../images/kakaoClose.png')center 50% no-repeat;            cursor: pointer;            z-index: 99900;            ;        }
+.kakaoLink div h1 {            font-size: 28px;            font-weight: bold;            color: #523e35;            padding: 35px 0 5px;        }
+.kakaoLink div h2 {            font-size: 22px;            color: #523e35;            margin: 0px 0 20px;        }
+/* css 수정부분 시작 */
+.kakaoLink div ul {            font-size: 0;            padding: 20px 0 0 0;        }
+.kakaoLink div ul li {            display: inline-block;            width: 50%;            font-size: 0;        }
+.kakaoLink div ul li a {            display: inline-block;            font-size: 21px;            font-weight: bold;            margin: 0 10px 10px 0;            box-sizing: border-box;            background: url('../images/kakaoLogo.png')25px 13px no-repeat;            padding: 0 0 0 70px;            color: #523e35;            width: 211px;            height: 55px;            line-height: 55px;            border: 2px solid #523e35;        }
+.kakaoLink div ul li a:nth-child(3n) {            margin: 0 0 10px 0;        }
+.kakaoLink div ul li dl {            display: inline-block;            margin: 6px 0 0 0;            padding: 0;        }
+.kakaoLink div ul li dl dd {            font-size: 16px;            padding: 5px 0;            margin: 0 0 0 30px;            font-weight: bold;        }

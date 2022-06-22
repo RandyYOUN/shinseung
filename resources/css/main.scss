@@ -1,0 +1,981 @@
+/* Scss Document */
+
+$white:#fff; 
+$black:#000; $black1:#111; $black2:#222; $black3:#333; $black4:#444; $black5:#555; $black6:#666; $black7:#777; $black8:#888;
+$black9:#999; $blacka:#aaa; $blackb:#bbb; $blackc:#ccc; $blackd:#ddd;$blacke:#eee; $line:#dadada;
+$imgLocation:"../images/";
+
+@mixin box($display,$width,$height,$margin){
+	display: $display; width:$width; height:$height; margin: $margin;
+}
+@mixin boxab($display,$left,$top,$width,$height){
+	position: absolute; display: $display; left:$left; top:$top; width:$width; height:$height; 
+}
+@mixin boxabR($display,$right,$top,$width,$height){
+	position: absolute; display: $display; right:$right; top:$top; width:$width; height:$height; 
+}
+@mixin boxfl($display,$width,$height,$margin){
+	display: $display; width:$width; height:$height; margin: $margin;
+	&:after{display: block; content: '';  clear:both;}
+}
+@mixin text($fontsize,$lineheight,$color,$weight,$center,$margin,$padding){
+	font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center; margin:$margin; padding:$padding;
+}
+@mixin texts($fontsize,$lineheight,$color,$weight,$center){
+	font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center; 
+}
+@mixin bg($img,$left,$top){
+	background: url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat;
+}
+@mixin bgcolor($bgcolor,$img,$left,$top){
+	background:$bgcolor url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat;
+}
+@mixin before($left,$top,$width,$height,$bgcolor){	
+	&:before{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: $bgcolor;}
+}
+@mixin after($left,$top,$width,$height,$bgcolor){	
+	&:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: $bgcolor;}
+}
+@mixin afterR($right,$top,$width,$height,$bgcolor){	
+	&:after{content: ''; position: absolute; right:$right; top:$top; width:$width; height: $height; background: $bgcolor;}
+}
+@mixin afterB($left,$bottom,$width,$height,$bgcolor){	
+	&:after{content: ''; position: absolute; left:$left; bottom:$bottom; width:$width; height: $height; background: $bgcolor;}
+}
+@mixin afterbg($left,$top,$width,$height,$img,$bgleft,$bgtop){	
+	&:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: url("#{$imgLocation}#{$img}") #{$bgleft} #{$bgtop} no-repeat;}
+}
+@mixin plus($box,$line,$color,$space) { position: relative; width:$box; height:$box; 
+		&:before, &:after { content: ""; position:absolute; background:$color;}
+		&:before { left:50%; top:$space; bottom:$space; width:$line; transform:translateX(-50.048%); -webkit-font-smoothing: subpixel-antialiased; -webkit-transform: translateZ(0) scale(1.0, 1.0);}
+		&:after { top:50%; left:$space; right:$space; height:$line; transform:translateY(-50.048%);-webkit-font-smoothing: subpixel-antialiased; -webkit-transform: translateZ(0) scale(1.0, 1.0);}
+}
+
+%alink{position: absolute; display: block; left:0; top:0; width: 100%; height: 100%; cursor: pointer;}
+
+.wrap{display:table;width:100%;min-height:100%;max-height:100%;height:100%;}
+
+	.quick{ position: fixed; right:30px; bottom:100px; z-index: 600;
+		div{width: 105px; height: 105px; border-radius: 50%; @include bgcolor(#dde0e5,"customermanOn.png",-325px,-50px);
+			h1{ opacity: 0; @include text(16,16,$black1,bold,left,0 0 0 140px,40px 0 10px);}
+			h2{ opacity: 0; @include text(12,12,$black1,normal,left,0 0 0 140px,0 0 0px); letter-spacing: -1px;}
+		}
+		ul{ position: relative;
+			li{ opacity: 0; position: absolute; right:10px; top:-90px; background: #3c5a98;  border-radius: 10px;  @include text(13,13,$white,normal,null,0,11px 9px);
+				span{position: absolute; left:54px; top:33px; width:0; height:0; border-top:10px solid #3c5a98; border-right:10px solid transparent; z-index: 15;}
+				&:nth-child(2n){background:#b85708;
+					span{border-top:10px solid #b85708; border-right:10px solid transparent;}
+				}
+			}
+		}
+		a{@extend %alink;}
+	}
+	#ch-plugin-core { bottom: 105px !important; display: none  !important;}
+
+	.mask{ position:fixed; display:none; left:0;  top:0; width:100%; height: 100%; background:rgba(0,0,0,.6); z-index:50;}
+
+
+	.popup{ width: 100%; background: #115390; display: none;
+		div.popContents{ position: relative; width: 1400px; margin:0 auto; height: 90px; text-align: center; @include bg("popup.png",130px,0px); line-height: 90px; 
+			h1{ display: inline-block; @include text(22,22,$white,lighter,null,0 15px 0 0,0px 0px 0px 0px); vertical-align: middle;}
+			h2{ position: relative; display: inline-block; @include text(22,22,$white,null,null,null,0px 0px 0px 0px); z-index: 1; @include afterB(0px, -4px, 100%, 4px, #1e85e4); vertical-align: middle;
+				&:after{ z-index: -1;}
+			}
+			h3{ display:inline-block; height:30px; width: 56px; border:1px solid $white; border-radius: 35px; color:$white; margin:0 0 0 10px; font-size: 13px; line-height: 30px;vertical-align: middle;
+		}
+			input{ position: absolute; right:38px; top:38px; width:18px; height: 18px; }
+			label{ position: absolute; right:60px; top:41px;  @include text(12,12,$white,lighter,null,0 0px 0 0,0px 0px 0px 0px); opacity: 0.6;}
+			> a.btnclose{ position: absolute; right:0px; top:27px; width: 40px; height: 40px; @include bg("closelight.png",50%,50%); cursor: pointer; opacity: 0.6; }
+		}
+	}
+
+	header{ position: relative; width:100%; height: 850px; overflow: hidden;		
+		.mainnavi{ position: absolute; width: 100%; left:0px; top:0px; text-align: center; padding-top: 30px; z-index: 500; 
+			div{ display: inline-block;  width:1400px; height: 80px;   
+				> a{ display: inline-block; width: 180px; height: 80px; @include bg("logo.png",50%,50%);}
+				ul{ display: inline-block; width: 1050px; margin:0 0 0 120px; vertical-align: top;
+					li{ display: inline-block; @include text(18,80,$white,bold,left,null,0 30px 0);}
+				}
+			}
+		}		
+
+		.subnavi{ position: absolute; width: 100%; left:0;  top:0; width:100%; padding-top: 30px; text-align: center;  z-index: 40; 
+			div{ display: inline-block;  width:1400px; height: 80px;  background: $white; 
+				> a{ display: inline-block; width: 180px; height: 80px; @include bg("sublogo.png",50%,50%);}
+				ul{ display: inline-block;  width: 1050px; margin:0 0 0 120px; vertical-align: top;
+					li{ display: inline-block; @include text(18,80,$black3,bold,left,null,0 30px 0);}
+				}
+			}
+		}
+
+		#myVideo { position:absolute;top: 0;left: 50%; min-width: 100%; height: auto; z-index: 100; transform: translateX(-50%)}
+		#currentTime{display:none;}
+		// video::-webkit-media-controls-panel { display: flex !important; opacity: 1;  position: absolute; top:10px; }
+		
+		.maintext{ width:100%; height:850px;  position: absolute; left:0p; top:0; z-index: 400; overflow: hidden; color:#fff;
+			div.slider{				
+				div.maintextBox{ height: 850px; margin:0 auto;}
+				div.maintext01 > div{ position: absolute; left:50%; top:470px; height:600px; width: 100%; margin-left:-300px; }	
+				div.maintext02 > div{ position: absolute; left:50%; top:520px; height:600px; width: 100%; margin-left:-300px;  }	
+				div.maintext03 > div{ position: absolute; left:50%; top:550px; height:600px; width: 100%; margin-left:-300px;  }	
+				h2{  font-family: 'Nanum Myeongjo', serif; @include text(36,54,$white,250,0 auto,null,null); }
+				h3{  @include text(18,18,$white,lighter,left,20px auto 0,null);}	 		
+			}
+		}
+		.subtext{ width: 100%; position: absolute; left:0p; top:0; z-index: 35; overflow: hidden; color:#fff;
+			h1{ width:100%; @include text(40,40,$black3,lighter,center,null,177px 0px 30px 0px);}
+			h2{ width:100%; @include text(18,18,$black3,lighter,center,null,0px 0px 70px 0px);}
+			h3{ width:1280px; @include text(30,30,$black3,lighter,left,0 auto,214px 0px 70px 0px);}
+		}
+	}
+	header.subhead{ height: 350px; }
+
+	.number{ width: 100%;  
+		h1{ @include text(30,30,$black3,bold,center,null,90px 0px 70px 0px);}
+		ul{ width: 1400px; font-size: 0; margin:0 auto;
+			li{ display: inline-block; width: 465px; height: 210px;  text-align: center; margin:0 2px 0 0;
+				span{ display: inline-block; vertical-align: middle;
+					&:nth-child(1){ @include text(15,210,$white,bold,null,null,null); vertical-align: -11px;}
+					&:nth-child(2){ @include text(60,210,$white,bold,null,null,0 0 0 15px);}
+					&:nth-child(3){ @include text(22,210,$white,bold,null,null,0 0 0 7px); vertical-align: -14px;}
+				}
+			&:nth-child(1){ @include bg("number01bg.png", 50%, 50%)}
+			&:nth-child(2){ @include bg("number02bg.png", 50%, 50%)}
+			&:nth-child(3){ @include bg("number03bg.png", 50%, 50%); margin:0;}
+			}
+		}
+	}
+
+	.link{ position: relative;
+		h1{ @include text(50,50,$black3,bold,center,null,180px 0px 29px 0px);}
+		h2{ @include text(20,20,$black3,lighter,center,null,0px 0px 70px 0px);}
+		img{ position: absolute; left:50%; top:120px; margin: 0 0 0 -577px; z-index: 50;}
+		ul {width: 100%; margin: 0 auto; font-size: 0;
+			li{ position: relative; display: inline-block; width: 50%; height: 410px;  vertical-align: top;
+				&:nth-child(1){ background: #184067; text-align: right; @include afterR(0px, 0px, 0px, 410px, $white)}
+				&:nth-child(2){ @include bgcolor(#5e5d59, "link02bg.png", left, 50%); margin: 0; text-align: left;
+					div{ padding:0 0 0 70px; box-shadow: border-box;}
+					span{
+						&:last-child{ background: #f8f3f3; 
+							input{ border-bottom: 1px solid #5a2d19;}
+							button{ background:#5a2d19 ; color:#fff; font-weight: normal;}
+							a{  border:2px solid #5a2d19; color:#5a2d19;}
+						}
+					}
+				}
+				> div{ position: relative; display: inline-block; width: 640px; text-align: left;
+					h3{ @include text(42,42,$white,bold,left,null,95px 0px 10px 0px);}	
+					h4{ @include bgcolor(null, "linkarrow.png", 120px, 50%); @include text(18,90,$white,null,null,0 0 30px 0,null);}
+					a{ @extend %alink}
+				}
+				span{ display: block; width: 100%; height: 145px; background: #f3f9ff; 
+					div{ display: inline-block; width: 640px; text-align: left; line-height: 145px;
+						input{ position: relative; width: 200px; margin:0 20px 0 0; padding:17px 20px 17px 13px; font-size: 18px;  color:$black3; font-weight: bold;
+							vertical-align: middle;   outline: 0; border-width: 0 0 1px; border-color: #184067; background: $white;}
+						input:focus::placeholder{ color:transparent; }
+						input::placeholder{ font-size:14px; color:$black9; font-weight: normal; }
+						button{ display: inline-block; width: 175px; height: 58px; background: #184067; @include text(18,58,$white,normal,center,0 10px 0 0,null); vertical-align: middle;}
+						a{ display: inline-block; width: 150px; height: 58px; border:2px solid #184067; box-sizing: border-box; @include text(18,58,#184067,bold,center,null,null);  vertical-align: middle;}	
+					}					
+				}
+			}
+		}
+	}
+
+	.case{ width: 1400px; margin: 0 auto;
+		h1{ @include text(36,36,$black3,bold,center,null,150px 0px 30px 0px);}
+		h2{ @include text(24,36,$black5,lighter,center,null,0px 0px 70px 0px);}
+		.tabsWrap{ width: 100%;
+			ul.tabtop{ font-size: 0; text-align:center;
+				li{ display: inline-block; @include text(20, 20, $black3, lighter, center, null, 10px 35px); box-sizing: border-box; cursor: pointer;
+					&:nth-child(1){ padding: 10px 36px 10px 0px;}
+				}
+				li.active span{ position: relative; display: inline-block; font-weight: bold; height: 30px; border-bottom:5px solid $black3;}
+			} 
+		}
+		.tabarea { width: 100%;
+			.swiper-container{ position: relative; width: 1400px; font-size: 0; margin: 35px auto 115px; height:455px;
+				div.swiper-wrapper{ 
+					div.contents{ position: relative; @include box(inline-block,260px,375px,0 0 0 0); box-sizing: border-box; border:1px solid #dadada;
+						h3{width:260px; @include text(23,26,#0a5b89,bold,left,0 auto,40px 0 33px); 
+							span{ position: relative;  display: inline-block; @include after(0px, 24px, 100%, 6px, #e0e7eb); font-size: 30px; z-index: 1; 
+								&:after{ z-index: -1;}
+							} 
+						}
+						h4{ width:260px; @include text(18,18,$black4,bold,left,0 auto,0 0 20px); letter-spacing: -1px;
+							span{ display: inline-block; ; font-size: 13px; color:$black9; margin:10px 0 0 3px; letter-spacing: 0px;}
+						}
+						ul{ width:260px; margin: 0 auto ;
+							li{ position: relative; @include text(12,12,$black6,null,null,null,0 0 10px 10px); @include after(2px, 5px, 2px, 2px, $blacka) }
+							p{ display: inline-block; width:125px; height: 72px; text-align: center; vertical-align: top; color:$white; margin:13px 0 0 0; 
+								span{ display: inline-block; font-size: 12px; margin:14px 0 0 0;}
+								strong{ display: block; font-size: 18px; font-weight: bold; margin:2px 0 0 0;}
+								strong.small{ display: block; font-size: 15px; font-weight: bold; margin:5px 0 0 0;}
+							}
+							p.taxbefore{ background: #444;}
+							p.taxafter{ background: #0e7ab7;}
+						}
+						h5{width:100%; @include text(16,16,#0e7ab7,bold,center,null,12px 0 0 0); letter-spacing: 0px;	}
+						a{@extend %alink};				
+					}
+				}
+				.swiper-button-prev{ position: absolute; left:50%; top:auto; margin:0 0 0 -60px; bottom:0px; width:60px; height: 50px; @include bgcolor($white,"btnLeft.png",50% ,50% ); cursor: pointer; z-index: 10; }
+				.swiper-button-next{ position: absolute; left:50%; top:auto; bottom:0px; width:60px; height: 50px;  @include bgcolor($white,"btnRight.png",50% ,50% ); cursor: pointer; z-index: 10; }
+			}
+		}
+	}
+
+	.review{ position: relative; width: 100%; height: 570px; background: #f9f9f9; overflow: hidden;
+		div.title{ position: absolute; width: 300px; top: 100px; left:50%; margin: 0 0 0 -670px;
+			h1{ @include text(32,32,$black4,bold,null,null,60px 0 40px); letter-spacing: -1px;}
+			h5{ width: 225px; @include text(14,24,$black9,null,null,null,null);
+				span{ display: block; @include text(22,24,$black5,null,null,null,0 0 10px 0);}
+			}
+			i{ display: inline-block; @include plus(26px,1px,$blacka,0px); margin: 40px 0 0 100px; }
+			a{ @extend %alink};
+		}
+		.review-main{position: absolute; left:50%; top: 100px; margin: 0 0 0 -370px;
+			div.contents{ width: 320px; height: 370px; background: #fff; box-sizing: border-box; border-left:1px solid #ededed; border-bottom:1px solid #ededed;  
+				h2{ width:270px; @include text(12,12,$black9,null,null,0 auto,29px 0 17px); letter-spacing: -0.5px;}
+				h3{ width:270px; @include text(16,16,$black3,bold,null,0 auto,0px 0 10px); letter-spacing: -0.5px;}
+				h4{ width:270px; @include text(13,22,$black5,null,null,0 auto,0 0 0 0); letter-spacing: -0.5px;}		
+				a{@extend %alink}			
+			}
+		
+		}
+		button{position:absolute;  width: 50px; height: 50px; text-indent: -99999px;}	
+		button.slick-prev{left:10px; top:385px; @include bg("reviewarrowL.png",50% ,50% ); z-index: 600;}
+		button.slick-next{left:55px; top:385px; @include bg("reviewarrowR.png",50% ,50% ); z-index: 600;}
+	}
+	
+	.benefits{ width: 100%; 
+		h1{ @include text(40,40,$black2,bold,center,null,110px 0px 35px 0px);}
+		h2{ @include text(24,40,$black4,lighter,center,null,null);}
+		ul{ width: 1400px; font-size: 0; margin:90px auto 125px; 
+			li{ position: relative; display: inline-block;  width: 442px; height: 415px; border:1px solid #dadada; box-sizing: border-box; margin: 0 37px 0 0;  text-align: center; vertical-align: top;
+				img{ display: inline-block; text-align: center; margin: 55px 0 0 0;}
+				h3{ @include text(28,28,#404b5b,bold,center,null,30px 0px 20px 0px); letter-spacing: -1px;}
+				h4{ width: 80%; @include text(16,26,#404b5b,null,center,0 auto,0px 0px 30px 0px); letter-spacing: -0.75px;}
+				h5{ position: relative; display: inline-block; @include text(22,16,#404b5b,bold,left,0 auto,15px 24px 15px 4px); z-index: 1;
+					&:before{ position: absolute; content: ""; right:5px; top:20px; width: 20px; height: 20px; @include bg("benefitArrow.png", 10px, 0px)};
+					&:after{ position: absolute; content: ""; left:0px; top:31px; width: 100%; height: 7px; background:#cedaf3 ; z-index: -1;};
+				}
+				&:nth-child(3){margin:0;}
+				a{@extend %alink; z-index:2}
+			}
+			li.letter{ width: 100%; margin:35px 0 0 0; height: 125px; text-align: left; line-height: 125px;
+				img{ margin:0px 30px 0px 80px; vertical-align: middle;}
+				h3{ display: inline-block; padding:0; margin:0 30px 0px 0;vertical-align: middle;}
+				h4{ display: inline-block; padding:0; margin:0; vertical-align: middle; text-align: left; width:auto; margin:0 50px 0px 0;}
+				input{ width: 269px;  padding:19px 10px 19px 20px; border:1px solid #c1c1c1; margin:0 15px 0px 0; font-size: 18px;  vertical-align: middle;  }
+				input:focus::placeholder{ color:transparent; }
+				button{ display: inline-block; width: 275px; height: 60px; background: #184067; color:$white; vertical-align: middle; font-size:16px; font-weight: bold;}
+			}
+			
+		}
+	}
+
+	.price{ width: 100%; background: #5a616c;  padding: 0 0 125px 0; box-sizing: border-box;
+		h1{ @include text(40,40,$white,bold,center,null,115px 0px 35px 0px);}
+		ul{ width: 1280px; margin: 45px auto 0; font-size: 0;  background: $white;
+			li{ position: relative; display: inline-block; width: 33.3%; height: 270px; @include after(428px, 30px, 1px, 210px, $blackd);
+				h2{ @include text(26,26,$black,bold,center,null,50px 0px 20px 0px); letter-spacing: -1px;}
+				h3{ @include text(17,17,$black7,null,center,null,0px 0px 30px 0px); letter-spacing: -1px;}
+				div{ position: relative; font-size: 0; text-align: center;
+					span{ display: inline-block;  border-radius: 13px; vertical-align: middle;
+						&:nth-child(1){ width: 45px; @include text(14,14,$white,null,center,null,5px 0px 6px);}
+						&:nth-child(2){ @include text(42,42,$black3,bold,center,0 0 0 15px,0px 0px);  vertical-align: -16px;}
+						&:nth-child(3){ @include text(20,20,$black3,bold,center,0 0 0 3px,0px 0px);}
+					}
+					p{  @include text(12,12,$blacka,null,center,null,10px 0px 0px); }
+					span.pricebg01{ background: #cc6b94;}
+					span.pricebg02{ background: #a76ac3;}
+					span.pricebg03{ background: #6773cb;}
+					span.pricebg04{ background: #509aaf;}
+					span.pricebg05{ background: #63a98f;}
+					span.pricebg06{ background: #7a9159;}
+
+					&:after{ content: '가격 자세히보기'; position: absolute; left:172px; top:45px; @include text(12,12,$blacka,null,center,null,10px 0px 0px); }
+				}
+				&:last-child:after{ display: none;}
+				a{@extend %alink}
+			}
+		}
+	}
+
+	.anywhere{width:100%; height: 360px; margin:0 auto 0; font-size: 0; @include bgcolor(#41362b,"anywhereBg.png" ,center , top);
+		h1{ width: 1280px; @include text(36,30,$white,lighter,null,0 auto,132px 0px 20px 0px);}
+		h2{ position: relative; width: 1280px; @include text(22,38,$white,null,null,0 auto,0px 0px 0px 0px);
+			img{ position: absolute; left:690px; top:-110px; }		
+		}
+		
+	}
+
+	.column{width:1280px; margin:140px auto 0; font-size: 0;
+		div{display: inline-block; width: 290px; margin:0px 0 0 0; 
+			p{ width: 240px; height: 2px; background: $black3;}
+			h1{display: block; width: 240px; @include text(30,30,$black3,bold,right,null,40px 20px 0 0px); box-sizing: border-box;}
+			a.more{display: inline-block; width: 36px; height: 36px; @include bgcolor(#373839,"plus.png",50%,50%); margin:30px 0 0 100px;}
+		}
+		ul{display: inline-block; width: 960px; font-size: 0; box-sizing: border-box; vertical-align: top; 
+			li{position: relative; @include box(inline-block,280px,300px,0 50px 0 0); vertical-align: top; border-top: 1px solid $black5;  text-align: center;
+				h2{ width: 270px; @include text(17,30,$black3,bold,left,null,40px 0px 10px 0px); letter-spacing: -1px;}
+				h3{ width: 270px; @include text(13,24,$black6,null,left,null,0px 50px 0px 0px);strong{font-weight: normal;}}
+				h4{ display: none;}
+				span{ display:inline-block; width: 44px; height: 44px; border-radius: 50%; @include bgcolor(#f6f6f6,"iconsearch.png",50%,50%); margin:20px 0 0 0;}
+			a{@extend %alink}
+			&:last-child{margin: 0;}
+			}			
+		}		
+	}
+
+	.counseling{width:1280px; margin:15px auto 100px; font-size: 0;
+		div{display: inline-block; width: 290px; margin:0px 0 0 0;
+			p{ width: 240px; height: 2px; background: $black3;}
+			h1{display: block; width: 240px; @include text(30,30,$black3,bold,right,null,40px 20px 0 0px); box-sizing: border-box;}
+			a.more{display: inline-block; width: 36px; height: 36px; @include bgcolor(#373839,"plus.png",50%,50%); margin:30px 0 0 100px;}
+		}
+		ul{display: inline-block; width: 960px; font-size: 0; box-sizing: border-box; vertical-align: top; 
+			li{position: relative; @include box(inline-block,280px,300px,0 50px 0 0); vertical-align: top; border-top: 1px solid $black5;  text-align: center;
+				h2{position: relative; @include text(17,28,$black1,bold,left,0,50px 0px 20px 40px); box-sizing: border-box; letter-spacing: -0.5px; 
+					&:after{content: 'Q'; position: absolute; left:7px; top:50px; width:28px; height: 28px; @include texts(26,30,$black1,bold,left)}
+				}				
+				h3{position: relative; @include text(13,24,$black6,normal,left,0,0px 0px 0px 40px); box-sizing: border-box;					
+					&:after{content: 'A'; position: absolute; left:7px; top:0; width:28px; height: 28px; @include texts(26,30,$blackd,bold,left)}
+				}
+				span{ display:inline-block; width: 44px; height: 44px; border-radius: 50%; @include bgcolor(#f6f6f6,"iconsearch.png",50%,50%); margin:20px 0 0 0;}
+			a{@extend %alink}
+			&:last-child{margin: 0;}
+			}
+			
+		}		
+	}			
+
+	.counselingPop{ 
+		$qcolor:#166bb5;
+		position:fixed; display:none; left:50%; top: 50%; width:700px; transform: translate(-50%,-50%); background: $white;  box-sizing: border-box; padding:0 0 50px 0; z-index: 60;	
+		.qWrap{ background:$qcolor; height: 90px; font-size: 0;  text-align: center;
+			span{display: inline-block; width:60px; height:30px; border-right:2px solid $white; @include text(45,27,$white,bold,center,30px 15px 0 0px,0);}
+			h1{display: inline-block; width:560px; height: 80px; @include text(20,92,$white,bold,left,0 0 0 0,0 0 0 0px); vertical-align: top; box-sizing: border-box; letter-spacing: -1px}		
+		}
+		.aWrap{ font-size: 0; text-align: center;
+			span{display: inline-block; width:60px; height:30px; border-right:2px solid $black4; @include text(45,27,$black4,bold,center,30px 15px 0 0px,0);}
+			span.blank{border:0}
+			h2{display: inline-block; width:560px;  @include text(14,26,$black4,normal,left,0 auto,30px 0 0 0px); vertical-align: top; box-sizing: border-box; letter-spacing: -0.5px;
+				strong{ display:inline-block; padding:8px 0 0 0;}
+			}
+			h3{display: inline-block; width:560px;  @include text(14,26,#728a9f,normal,left,0 auto,30px 0 0 0px); vertical-align: top; box-sizing: border-box; letter-spacing: -0.5px;}
+		}	
+		p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); @include bgcolor(rgba(0,0,0,.4),"close.png",50%,50%); cursor: pointer;}
+		//.nonetitle{ display:block; margin:0 auto; width: 600px;}
+	}
+
+
+	.best{ position: relative; width: 100%; height: 905px; background: #f4faff; overflow: hidden;
+		h1{ @include text(46,46,$black3,bold,center,null,110px 0 25px); letter-spacing: -1px;}
+		h2{ @include text(22,22,$black4,null,center,null,null);}
+
+		.review-main02{ position: relative; margin:60px auto 0; width:1280px; height: 550px;
+			div.contents{ position: relative; width: 100%; height: 520px; 
+				img{ position: relative; left:0px; top: 0px;}
+				ul{  position: absolute;  width:550px; height: 480px; left:710px; top:10px; background: #2b7ecd;  
+					h5 { display: inline-block; @include text(39,34,$white,lighter,null,0 0 60px 10%,54px 0 0 0); border-bottom:4px solid #56a6ef;
+						> span{ font-family: 'Nanum Pen Script';  display: inline-block;  font-size: 35px; font-weight: 200; vertical-align: middle; 
+						&:first-child{font-size: 60px; margin:0 7px 0 0}
+						}
+					 }
+					h3{ width: 80%; @include text(22,34,$white,lighter,null,0 auto,0 0 19px 0); letter-spacing: -0.75px; }
+					h4{ width: 80%; @include text(32,32,$white,bold,null,0 auto,0 0 35px 0); letter-spacing: -0.75px; }
+					li{ width: 80%; position: relative; @include text(18,26,$white,lighter,null,0 auto 10px, 0 0 0 30px); box-sizing:border-box; @include afterbg(0px, 5px, 30px, 60px, "bestcheck.png", 0px, 0px)}
+				div.label{ background: red; position: absolute; top:0px; right:20px; width: 120px; height: 160px; @include bg("label.png", 50%, 50%);
+				 span{ display: block; @include text(46,34,$white,bold,center,null,32px 0 13px 0);}
+				 strong{ display: block; @include text(20,20,$white,lighter,center,null,null);}
+				}
+				
+				}
+			}
+		
+		}
+		button{position:absolute;  width: 50px; height: 50px;  left:50%; bottom:0px; text-indent: -99999px;}	
+		button.slick-prev{ margin: 0 0 0 510px; @include bg("reviewarrowL.png",50% ,50% ); z-index: 600;}
+		button.slick-next{ margin: 0 0 0 560px; @include bg("reviewarrowR.png",50% ,50% ); z-index: 600;}
+	}
+
+
+	.people{ position: relative; width: 100%; height: 390px;  @include bg("peoplebg.png",center,top); margin:110px 0 0 0;
+		div{  position: absolute; bottom:0; width:100%; height: 215px; background: rgba(0,0,0,.4); text-align: center;
+			h1{ @include text(22,22,$white,null,center,0 auto,60px 0 25px); letter-spacing: -0.5px;}
+			h2{ display:inline-block; @include text(20,20,$white,bold,null,0 auto,20px 65px 20px 55px); @include bg("peoplearrow.png",91%,50%); 
+				 background:#fff; color:$black3; border-radius:40px;}
+			a{@extend %alink};	
+		}
+	}
+
+	.download{ width: 100%; height:338px; @include bgcolor(#07407b, "downloadbg.png", 50%, 50%);		
+		div{ width: 1280px; margin: 0 auto;
+			h1{ display:inline-block; width: 340px; @include text(32,48,$white,lighter,center,120px 50px 0 375px,null); letter-spacing: -1px;}
+			a{ display:inline-block; width: 180px; height: 200px; @include text(14,14,$white,null,center,70px 10px 20px 0,115px 0 0px 0); 
+				vertical-align: top; box-sizing: border-box;
+				span{ display: block; width: 27px; height: 24px; margin:15px auto 0; @include bg("downloadIcon.png",50%,50%);}			
+			}
+			a.google{ @include bgcolor(#043364,"downloadiconGoggle.png", 50%, 35px); }
+			a.apple{ @include bgcolor(#043364,"downloadiconApple.png", 50%, 35px); }
+		}
+	}  
+
+	.customer{width:1220px; margin: 115px auto 50px; 
+		ul{font-size: 0; box-sizing: border-box; 
+			li{position: relative; display: inline-block; height: 220px; vertical-align: top; margin: 0 0 0 175px;
+				h1{@include text(26,26,$black2,bold,left,null,0 0px 10px 0px); letter-spacing: -0.5px;}
+				h2{@include text(16,26,$black3,normal,left,null,0px 0px 10px 0px); letter-spacing: -0.5px;}
+				h3{ height: 50px; @include text(30,50,$black2,bold,left,null, null); letter-spacing: -0.5px;
+					img{ display: inline-block; vertical-align: top;}
+					span{ display: inline-block; vertical-align: top; margin: 0 0 0 8px }
+				}
+				a{display: inline-block; width: 280px; height:55px;  background: $black2; @include text(18,55,$white,bold,center,25px 0 0 0,0)}
+			&:first-child{ width: 260px; margin:0;}
+			}
+		}
+	}
+
+	footer{ background: #fafafa; overflow: hidden;
+		ul{font-size: 0;  width: 1280px; margin:70px auto 0; padding:0 0 0 120px; box-sizing: border-box; @include bg("footerlogo.png",30px,11px);
+			li{display:inline-block; position: relative; @include texts(12,22,$black7,normal,center); padding:0 30px 0 0; @include afterR(15px,6px,1px,11px,$blackb);
+			&:nth-child(6):after{display: none;}
+			&:last-child:after{display: none;}
+			}			
+		}
+		h3{  width: 1280px; @include text(12,12,$black9,normal,left,15px auto 100px,0 0 0 120px); box-sizing: border-box; letter-spacing: 0.5px;}
+		
+	}
+
+
+	//서브
+
+	.subvisual{ width: 100%; height: 345px; @include bgcolor(#f7f7f7, "s_pricevisual.png", 50%, top);	}
+	.s_pricebg{ @include bgcolor(#f7f7f7, "s_pricevisual.png", 50%, top)}
+	.s_memberbg{ @include bgcolor(#f7f7f7, "s_membervisual.png", 50%, top)}
+	.s_smartbg{ @include bgcolor(#f7f7f7, "s_smartvisual.png", 50%, top)}
+	.s_newsbg{ @include bgcolor(#f7f7f7, "s_newsvisual.png", 50%, top)}
+	.s_reviewbg{ @include bgcolor(#f7f7f7, "s_reviewvisual.png", 50%, top)}
+
+	//서브_서비스가격
+	.s_price{ width: 100%; margin:0 auto;
+		.tabsWrap{ 
+			ul.tabtop{ position: relative; font-size: 0; text-align: center; @include afterB(0px, 0px, 100%, 1px, #d8dce5);
+				li{ position: relative; display: inline-block; width: 370px; text-align: center; padding:30px 0; margin:0 40px; cursor: pointer;
+					span{ display: inline-block; vertical-align: middle;  @include text(20, 17, $black2, null, null, null, null); 
+						&:first-child { width: 46px; height: 46px; margin:0 13px 0 0; border-radius: 50%; background: #ebebeb;}
+					}
+					span.smarttab01{ @include bgcolor(#ebebeb, "s_pricetabIcon01.png", 50%, 50%)}
+					span.smarttab02{ @include bgcolor(#ebebeb, "s_pricetabIcon02.png", 50%, 50%)}
+					span.smarttab03{ @include bgcolor(#ebebeb, "s_pricetabIcon03.png", 50%, 50%)}
+
+					&:after { position: absolute; content: '';  left: 0px; height: 2px; background: #1d5bb0; transition: all 0.3s linear; width: 0; bottom: 0px; z-index: 9999999; }
+					&:hover:after { width: 100%; left: 0px; }
+					
+				}
+				li.active{ position: relative; @include afterB(0px, 0px, 100%, 2px, #1d5bb0);
+					span{ color:#1d5bb0; font-weight: bold;}
+					span.smarttab01{ @include bgcolor(#355a8b, "s_pricetabIcon01on.png", 50%, 50%)}
+					span.smarttab02{ @include bgcolor(#355a8b, "s_pricetabIcon02on.png", 50%, 50%)}
+					span.smarttab03{ @include bgcolor(#355a8b, "s_pricetabIcon03on.png", 50%, 50%)}
+				}
+			} 
+	
+			.tabarea{width: 1220px; margin:0 auto 100px; overflow: hidden;
+				h1{ @include text(30,30,$black3,bold,center,null,80px 0px 70px 0px); letter-spacing: -0.5px;}
+				.ty01 table{ width: 100%;  margin: 0 0 30px 0px;
+					thead{
+						tr{
+							th{ @include text(18,18,$black3,bold,center,null,25px 0px 25px 0px); }
+							&:nth-child(1){border-bottom:2px solid $black; }
+							&:nth-child(2){ border-bottom:1px solid $blacka;
+								th{ @include text(18,18,$black3,bold,center,null,25px 0px 25px 0px); }  
+							}
+						} 
+					}
+					tbody{
+						tr{
+							td{ @include text(18,17,$black4,null,center,null,25px 0px 25px 0px); 
+								span{ display: inline-block; width: 8px; height: 8px; border-radius: 50%;}
+							
+							}
+							&:nth-child(2n){ background: #f6f4f4;}
+							&:last-child{ border-bottom:1px solid #d1d1d1;}
+						}
+					}		
+				}
+				ul{ margin: 0 0 70px 50px;
+					li{ position: relative; @include text(14,27,$black7,null,null,null,0px 0px 0px 10px); @include after(0px, 15px, 2px, 2px, $black7 ) }
+				}
+				.pricecolor01 span{border:3px solid #355a8b;}
+				.pricecolor02 span{border:3px solid #355a8b;}
+			}
+		}
+	}
+
+	//서브_구성원
+	.s_member{ 
+		.threenumber{ width: 1400px; height: 400px; margin:80px auto; border:1px solid #d8dce5;
+			ul{ font-size: 0;
+				li{ display: inline-block; width: 33.3%; text-align: center;					
+					span{ display: block; vertical-align: middle; @include text(18,18,$black4,bold,null,null,null);						
+						strong{ display: inline-block; height:70px; @include text(70,70,$black2,null,null,null,null);
+							&:last-child{ font-size: 20px; height:30px; vertical-align: 15px; margin: 0 0 0 10px;}
+							}
+						&:first-child{  height: 120px;  margin:80px 0 0px;}
+						&:last-child{   margin:25px 0 0px;}
+					}
+				}
+			}
+		}
+		
+		.member{ width: 1400px; margin:0 auto;
+			h1{ @include text(42,42,$black3,lighter,center,null,50px 0px 35px 0px); }
+			h2{ @include text(20,20,$black3,null,center,null,0px 0px 55px 0px);}
+			ul{
+				> li{ position: relative; width: 100%; height: 360px; margin:40px 0 0 0; overflow: hidden;
+					img{ position: absolute; left:80px; top:35px;}
+					h4{ position: absolute; left:345px; bottom:50px; width: 120px; height: 120px; background:#5586a6;
+						@include text(14,14,$white,bold,right,0 auto,0px 0px 0px 0px);
+						> span{ display: block; width: 65%; margin: 35px auto 0;
+							strong{ display: block;  @include text(30,30,$white,bold,null,null,10px 0px 0px 0px); }
+						}
+					}
+					h4.labelshort{  font-size: 16px; text-align: center;
+						strong{ font-size: 20px;  display: block; margin:40px 0 15px 0;}
+					}
+					
+					div{ width: 790px; margin:0px 0 0 560px; font-size: 0;
+						h3{ @include text(32,32,$black3,bold,null,null,70px 0px 10px 0px);
+							span{ display: inline-block; vertical-align: middle;
+								&:first-child{ font-size: 24px; font-weight: normal; margin:0 10px 0px 0;}
+							}
+						}
+						ol{display: inline-block; width: 50%; margin:20px 0 0 0;  vertical-align: top;
+							li{ @include text(15,32,$black3,null,null,null,0px 0px 0px 0px);}
+						}
+						dl{display: inline-block; width: 50%; margin:20px 0 0 0;
+							dd{ @include text(12,24,#5b717f,null,null,null,0px 0px 0px 0px); }
+						}
+					}
+					&:nth-child(odd){ background: #fbfbfb;}
+					&:nth-child(even){ border:1px solid #d8dce5; }
+				
+				}
+				li.long{ height: 405px; }
+			}
+		}
+
+		.location{position: relative; width: 100%; 
+			div.locationCon{width:1300px; height: 720px; margin: 0 auto; @include bg("s_memberlocationBg.png",right,135px);
+				h1{@include text(42,42,$black3,lighter,null,null,130px 0px 35px 0px); letter-spacing: -0.5px;}
+				h2{@include text(20,20,$black6,lighter,null,null,0px 0px 0px 0px); letter-spacing: -0.5px;}
+				ul{width:960px; font-size: 0; margin: 60px 0 0 0;
+					li{display: inline-block; width:180px; height: 60px; box-sizing: border-box; border: 2px solid #d9e2e7; background: #fff; cursor: pointer;
+						@include text(17,57,#1b2124,normal,left,0px 10px 10px 0,0 0 0 20px);
+						span{position: relative; float: right; margin:23px 15px 0px 0px; @include texts(12,12,#7d8a91,normal,left); @include afterbg(-18px,-3px,13px,17px,"locationIcon.png",left,top)}
+					
+					}
+				} 			
+			}		
+		}
+	
+		.locationPop{ position:fixed; display:none; left:50%; top: 50%; width:600px; padding:0 0 30px 0; transform: translate(-50%,-50%); background: $white; z-index: 60;
+				h1{width:500px; @include text(22,22,$black1,bold,left,0 auto,40px 0 20px 0); letter-spacing: -0.5px;
+					span{display: inline-block; vertical-align: middle;  @include text(14,12,$black1,normal,left,0,0 0 0 10px); }
+				}
+				h2{width:500px; @include text(16,32,$black2,normal,left,0 auto,0px 0px 0px 0px); letter-spacing: -0.5px;
+					li{
+						strong{display:inline-block; width:50px;}
+					}
+				}
+				a{display: inline-block; width:200px; height: 70px;
+					span{@include text(18, 70, $white,normal,left, 0 0 0 130px, 0)}
+				}
+				a.chat{width:300px; @include bgcolor(#166bb5,"companyChat.png" ,90px ,50%); margin:30px 0 0 140px;}
+				a.call{@include bgcolor($black2,"companyCall.png" ,40px ,50%)}
+				p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); @include bgcolor(rgba(0,0,0,.4),"close.png",50%,50%); cursor: pointer;}
+		}
+	}
+
+	//서브_스마트세무
+	.s_smart{ margin:0 auto 130px; 
+		.tabsWrap{ 
+			ul.tabtop{ position: relative; font-size: 0; text-align: center; @include afterB(0px, 0px, 100%, 1px, #d8dce5);
+				li{ position: relative; display: inline-block; width: 250px; text-align: center; padding:30px 0; margin:0 40px; cursor: pointer;
+					span{ display: inline-block; vertical-align: middle;  @include text(17, 17, $black2, null, null, null, null); 
+						&:first-child { width: 46px; height: 46px; margin:0 13px 0 0; border-radius: 50%; background: #ebebeb;}
+					}
+					span.smarttab01{ @include bgcolor(#ebebeb, "s_smarttabIcon01.png", 50%, 50%)}
+					span.smarttab02{ @include bgcolor(#ebebeb, "s_smarttabIcon02.png", 50%, 50%)}
+					span.smarttab03{ @include bgcolor(#ebebeb, "s_smarttabIcon03.png", 50%, 50%)}
+					span.smarttab04{ @include bgcolor(#ebebeb, "s_smarttabIcon04.png", 50%, 50%)}
+
+					&:after { position: absolute; content: '';  left: 0px; height: 2px; background: #1d5bb0; transition: all 0.3s linear; width: 0; bottom: 0px; z-index: 9999999; }
+					&:hover:after { width: 100%; left: 0px; }
+				}
+				li.active{ position: relative; @include afterB(0px, 0px, 100%, 2px, #1d5bb0);
+					span{ color:#1d5bb0; font-weight: bold;}
+					span.smarttab01{ @include bgcolor(#1d5bb0, "s_smarttabIcon01on.png", 50%, 50%)}
+					span.smarttab02{ @include bgcolor(#1d5bb0, "s_smarttabIcon02on.png", 50%, 50%)}
+					span.smarttab03{ @include bgcolor(#1d5bb0, "s_smarttabIcon03on.png", 50%, 50%)}
+					span.smarttab04{ @include bgcolor(#1d5bb0, "s_smarttabIcon04on.png", 50%, 50%)}
+				}
+			} 
+			
+		}
+		.tabarea { 
+			div{ width: 100%;  border-bottom:1px solid #dadada;
+				ul{ position: relative; width:1400px;  margin: 0 auto 160px;
+					h1{ display: inline-block; width:240px;  vertical-align: top; margin: 100px 0 0 90px;
+						p{ @include text(30,30,$black2,bold,left,0 auto,3px 0 7px); }
+						strong{ position: relative; font-family: 'Nanum Pen Script', serif; @include text(40,40,$black3,lighter,center,null,14px 0px 5px 0px);
+							@include afterB(0px, 12px, 100%, 4px, #4b97df); z-index: 1;
+							&:after{ z-index:-1;}
+						 }
+						 strong:after{opacity: 0.6;}
+					}						
+					h2{  display: inline-block; width:900px; @include text(28,45,$black4,lighter,left,100px 0 100px 40px,0 0 0px);}
+					h3{  display: inline-block; width:1400px;  @include text(26,45,$black4,lighter,center,100px auto 100px,0 0 0px);}
+					li{ position: relative; width: 532px; height:66px; @include text(18,66,$black6,null,null,0 0 20px 91px,0 0 0 65px); @include bgcolor(#fff, "s_smartcheck.png", 27px, 50%);
+						 box-sizing: border-box; border:1px solid #dadada; }
+					li.highlight{ @include bgcolor(#1c90fb, "s_smartcheckOn.png", 27px, 50%); color:#fff; border:0;}
+					img { position: absolute; top:250px; right:-30px;}
+				}
+				a{@extend %alink};				
+			}
+		}
+	}
+
+	//서브_세무뉴스
+	.s_news{
+		.newsnavi{ width: 1400px; margin:0 auto;
+			ul{ font-size: 0; text-align: center; margin:110px 0 70px 0;
+				li{ display: inline-block; width: 85px; @include text(15,15,$black9,bold,center,null,0px 0px 0px 0px);
+					&:hover{ color:$black3}
+				}
+				a.active li{ @include text(15,15,$black3,bold,center,null,00px 0px 0px 0px); text-decoration: underline;}
+			}
+		}
+		.newscontents{width: 1400px; margin:0 auto;
+			ul{ font-size: 0; text-align: left;
+				li{ display: inline-block; width: 314px; height: 290px; border:1px solid $line; margin:0 20px 30px 0;
+					span{ position: relative; display:block; width: 314px; height: 125px; overflow: hidden; margin:0 auto;
+						img{ position: absolute; left:50%;  top:50%; transform: translate(-50%,-50%); display:inline-block; width: 320px;}
+					}					
+					div{ width: 86%; margin: 0 auto; text-align: left; letter-spacing: -0.5px;
+						h1{ @include text(15,15,$black3,bold,null,null,30px 0px 10px 0px);}
+						h2{ @include text(13,20,$black8,null,null,null,0px 0px 20px 0px);}
+						h3{ display: inline-block; width: 60%; @include text(13,13,#adc1cb,bold,null,null,0px 0px 0px 0px);}
+						h4{ display: inline-block; width: 40%; overflow: hidden; @include text(13,13,$blackc,null,right,null,0px 0px 0px 0px);}
+					}
+				}
+			}
+		}
+		.paging{ width: 1400px; margin:0 auto 100px;
+			div{ font-size: 0; text-align: center; margin:30px 0 0 0;
+				a.prev{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,right,0 20px 0 0,10px 0px 10px 0px); @include bg("pagingleft.png", 0px, 50%);
+					&:hover{ color:$black4;  @include bg("pagingleftOn.png", 0px, 50%);}
+				}
+				span{ display: inline-block;
+					a{ width: 32px; display: inline-block; @include text(15,15,$black9,bold,center,null,10px 0px 10px 0px);}
+					a.active{ position: relative; width: 32px; display: inline-block; color:$black4; @include afterB(0px, 6px, 80%, 1px, $black4)}
+				}
+				a.next{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,left,0 0 0 20px,10px 0px 10px 0px); @include bg("pagingright.png", 100%, 50%);
+					&:hover{ color:$black4;  @include bg("pagingrightOn.png", 100%, 50%);}
+				}
+			}
+		}
+		.newsview{ width: 850px; margin:105px auto 0;
+			h1{ @include text(30,30,$black3,bold,null,null,0px 0px 30px 0px)}
+			h2{ display: inline-block; height: 20px; @include text(20,20,$black7,null,null,null,0px 7px 35px 0px)}
+			h3{ display: inline-block; height: 20px; @include text(14,20,#adc1cb,bold,null,null,0px 0px 35px 0px); vertical-align: top;}
+			h4{ @include text(16,24,$black6,null,null,null,35px 0px 0px 0px); letter-spacing: -0.5px; border-top:1px solid $blackb;
+				img{ display:block; margin:20px auto 20px; max-width: 850px;}
+			}
+			div.sns{ margin:40px 0 30px 0; font-size: 0;
+				a{ display: inline-block; width: 30px; height: 30px; border-radius: 50%; margin:0 7px 0 0;}
+				a.facebook{ @include bgcolor(#5b5b5c, "sns_facebook.png", 50%, 50%/22px auto)}
+				a.google{ @include bgcolor(#5b5b5c, "sns_google.png", 50%, 50%/26px auto)}
+				a.pinterest{ @include bgcolor(#5b5b5c, "sns_pinterest.png", 50%, 50%/24px auto)}
+				a.tweeter{ @include bgcolor(#5b5b5c, "sns_tweeter.png", 50%, 50%/24px auto)}
+			}
+		}
+		.newslist{ width: 850px; margin:20px auto 85px; border-top:1px solid $blackb; padding:20px 0 0 0;
+			a.next{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,left,0 0 0 10px,10px 0px 10px 0px); @include bg("pagingright.png", 100%, 50%);
+				&:hover{ color:$black4;  @include bg("pagingrightOn.png", 100%, 50%);}
+			}
+			a.prev{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,right,0 10px 0 0,10px 0px 10px 0px); @include bg("pagingleft.png", 0px, 50%);
+				&:hover{ color:$black4;  @include bg("pagingleftOn.png", 0px, 50%);}
+			}
+			a.btnlist{ display: inline-block; float: right; width: 52px; @include text(15,15,$black7,bold,right,0 20px 0 0,10px 0px 10px 0px);
+				&:hover{ color:$black4;}
+			}
+
+		}
+
+		.s_newsform{ position: relative; width: 1260px; margin:50px auto 110px; padding:20px 0px 0 0;  font-size: 0; overflow: hidden;
+			img{ position: absolute; right:50%; bottom:-20px; width: 230px;}
+			div.form{ display:inline-block; width: 50%;   height: 210px; background: #f6f6f6;  border:1px solid $line;  box-sizing: border-box;
+				h1{ @include text(22,34,$black4,bold,left,40px 0 20px 60px,null); letter-spacing: -0.5px;}
+				button{ display: inline-block; width: 150px; height: 45px; background: $black5; vertical-align: middle; @include text(16,45,$white,bold,center,0 0 0 60px,null);}
+				a{ display: inline-block; width: 150px; height: 45px; background: #386dc6; vertical-align: middle; @include text(16,45,$white,bold,center,0 0 0 10px,0px 0px 0px 0px); }
+			}
+
+			div.letter{ display:inline-block; position: relative; width: 50%; font-size: 0;  height: 210px;  vertical-align: top; 
+				border-right:1px solid $line; border-bottom:1px solid $line;  border-top:1px solid $line;  box-sizing: border-box;
+				h3{ vertical-align: middle; @include text(22,22,$black4,bold,null,45px 0 15px 60px,null);} 
+				h4{ vertical-align: middle; text-align: left; width:auto; @include text(16,16,$black6,null,null,0 50px 25px 60px,null);}
+				input{ display: inline-block; width: 269px; height: 45px; box-sizing: border-box;  padding:12px 10px 10px 20px; border:1px solid #c1c1c1; 
+					margin:0px 15px 0px 60px; font-size: 13px;  vertical-align: middle;  }
+				input:focus::placeholder{ color:transparent; }
+				button{ display: inline-block; width: 205px; height: 45px; border:1px solid #184067; color:#184067; vertical-align: middtole; font-size:14px; font-weight: bold;}
+			}
+		}
+	}	
+
+	//서브_리뷰
+	.s_review{
+		.video{ width: 1400px; margin:0 auto;
+			ul{font-size: 0; margin:120px 0 140px 0;  text-align: center;
+				li{ position: relative; display: inline-block; width: 415px; height: 345px; margin:0 20px 0 0; cursor:pointer;  
+					img{ margin:120px 0 0 0 }
+					h1 { position: absolute; left:0px; bottom: 36px; width: 86%; @include text(18,34,$white,null,left,0 0 10px 7%,0px 0 0 0px); letter-spacing: -0.5px;}
+					&:nth-child(1){ @include bg("s_reviewvideo01.png", left, top)}
+					&:nth-child(2){ @include bg("s_reviewvideo02.png", left, top)}
+					&:nth-child(3){ @include bg("s_reviewvideo03.png", left, top); margin:0;}
+				}
+			}
+		}
+		.videoPop{ position:fixed; display:none; left:50%; top: 50%; width:960px; height:540px; transform: translate(-50%,-50%); background: $white; z-index: 60;			
+			p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); @include bgcolor(rgba(0,0,0,.4),"close.png",50%,50%); cursor: pointer;}
+		}
+	
+
+		.mainreview{position: relative; width: 1340px; margin:0 auto; text-align: center;
+			> h1{ display: block; @include text(20,20,$black5,null,null,null,0px 0px 0px 0px);}
+			> h2{ display: inline-block; margin:40px 0 50px 0;
+				img{display: inline-block; vertical-align: middle; margin: 0 0 0 60px}s
+				span{ display: inline-block; vertical-align: middle;   @include text(20,0,$black5,null,null,null,0px 0px 0px 10px);}
+				strong{ display: inline-block; vertical-align: middle;  @include text(30,0,$black4,null,null,null,0px 10px 0px 20px);}
+			}
+			div.swiper-container{ width: 1220px; height: 290px; margin:0 auto; background: #f8f8f8; 
+				div.contents{ text-align: left;
+					img{ display: inline-block;}
+					div{ display: inline-block; margin: 0 0 0 60px; width: 55%;
+						span{ margin:50px 0 20px 0;}						
+						h2{ display: block; @include text(22,22,$black4,bold,null,null,0px 0px 15px 0px);}
+						h3{ @include text(16,28,$black4,null,null,null,0px 0px 40px 0px);}
+						h4{ @include text(14,14,$black8,null,null,null,0px 0px 0px 0px);}
+					}
+				}
+			}
+			.swiper-button-prev-unique{ position: absolute; left:-80px; top:auto; bottom:110px; width:60px; height: 50px; @include bgcolor($white,"s_reviewarrowLeft.png",50% ,50% ); cursor: pointer; z-index: 10; }
+			.swiper-button-next-unique{ position: absolute; right:-80px; top:auto; bottom:110px; width:60px; height: 50px;  @include bgcolor($white,"s_reviewarrowRight.png",50% ,50% ); cursor: pointer; z-index: 10; }
+
+		}
+		.comment{ width: 1220px; margin:0 auto;
+			ul{ margin:25px 0 0 0;
+				li{ border-bottom: 1px solid $line; @include bg("s_reviewicon.png",30px,50%); padding: 10px 0 15px 105px; box-sizing: border-box;
+					h1{
+						span{ @include text(16,16,$black5,bold,null,null,0px 10px 0px 0px);}
+						strong{ @include text(14,14,$black5,bold,null,null,0px 0px 0px 0px);}
+					}
+					h2{ width: 95%; @include text(14,22,$black4,null,null,null,3px 0px 0px 0px); 
+						span{ @include text(13,13,$blacka,null,null,null,0px 0px 0px 10px);}
+					}
+				}
+				
+			}
+
+			.paging{ width: 1220px; margin:0 auto 100px;
+				div{ font-size: 0; text-align: center; margin:40px 0 0 0;
+					a.prev{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,right,0 20px 0 0,10px 0px 10px 0px); @include bg("pagingleft.png", 0px, 50%);
+						&:hover{ color:$black4;  @include bg("pagingleftOn.png", 0px, 50%);}
+					}
+					span{ display: inline-block;
+						a{ width: 32px; display: inline-block; @include text(15,15,$black9,bold,center,null,10px 0px 10px 0px);}
+						a.active{ position: relative; width: 32px; display: inline-block; color:$black4; @include afterB(0px, 6px, 80%, 1px, $black4)}
+					}
+					a.next{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,left,0 0 0 20px,10px 0px 10px 0px); @include bg("pagingright.png", 100%, 50%);
+						&:hover{ color:$black4;  @include bg("pagingrightOn.png", 100%, 50%);}
+					}
+				}
+			}
+		}
+		.star1{ display: inline-block; width: 70px; height: 11px; @include bg("s_star1.png",left,top)}
+		.star2{ display: inline-block; width: 70px; height: 11px; @include bg("s_star2.png",left,top)}
+		.star3{ display: inline-block; width: 70px; height: 11px; @include bg("s_star3.png",left,top)}
+		.star4{ display: inline-block; width: 70px; height: 11px; @include bg("s_star4.png",left,top)}
+		.star5{ display: inline-block; width: 70px; height: 11px; @include bg("s_star5.png",left,top)}
+
+		.write{ margin:0 0 110px 0;
+			input[type="tel"]{ display: inline-block; width: 205px; height: 45px; color:$black4; box-sizing: border-box;  padding:12px 10px 10px 20px; border:1px solid #c1c1c1; vertical-align: top;
+				margin:0px 5px 0px 0px; font-size: 13px;  vertical-align: middle;  }
+			input[type="tel"]:focus::placeholder{ color:transparent; }
+			select{ width: 200px; height: 45px; font-size: 13px; color:$black4; border:1px solid #c1c1c1; @include bg("s_select.png",right,18px); 
+					padding:5px 0 5px 20px; vertical-align: top; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+			.starwrite{ display: inline; margin:0 0 0 15px;
+				img{ vertical-align: 2px;}
+				label{ margin:0 40px 0 5px}
+			}
+			textarea{ display:inline-block; width: 1075px; height: 90px; border:1px solid #c1c1c1;  color:$black4;  box-sizing: border-box; margin:10px 5px 0 0; padding:10px 5px 5px 20px;}
+			textarea:focus::placeholder{ color:transparent; }
+			button{width: 125px; height: 90px; line-height: 90px; color:$white; margin:10px 0 0 0; background:$black5;}
+		}
+	}
+
+	
+	//  h1{ @include text(50,50,$black3,bold,center,null,0px 0px 0px 0px);
+	//	h2{ @include text(20,20,$white,null,null,null,0px 0px 0px 0px);
+
+	//  @include bgcolor(#, "linkarrow.png", 120px, 50%);
+	//  @include bg("linkarrow.png", 120px, 50%);
+	//  @include afterR(0px, 0px, 0px, 410px, $white);
+
+	//  width: 1400px; margin: 0 auto;
+
+
+	//서브_어디서나
+
+	.s_anywhere{width:100%; height: 250px; margin:0 auto 170px; font-size: 0; @include bgcolor(#41362b,"anywhereBg.png" ,center , top);
+		h1{ width: 1100px; @include text(28,30,$white,lighter,null,0 auto,84px 0px 20px 0px);}
+		h2{ position: relative; width: 1100px; @include text(16,30,$white,null,null,0 auto,0px 0px 0px 0px);
+			img{ position: absolute; left:540px; top:-100px; width: 500px; }		
+		}
+		
+	}
+
+	//서브_양도/상속/증여/기장/신고
+
+	.s_tax{ margin:0 auto 120px;  }
+
+	.s_form{ position: relative; width: 1280px;  margin:130px auto 50px; 
+		img{ position: absolute; left:5%; top:-60px}
+		h1{ @include text(40,40,#3e4c5d,lighter,center,0 0 32px 0,null); letter-spacing: -0.5px;
+			span{ font-weight: bold;}}
+		h2{ @include text(21,20,#3e4c5d,lighter,center,0 0 48px 0,null); letter-spacing: -0.5px;} 
+		div{ width: 100%; height: 175px; background: #3e4c5d; text-align:center;
+			label{display: inline-block; @include text(22,175,$white,bold,null,0 10px 0 0,null); vertical-align: middle; }
+			input{ display: inline-block; width: 265px; height: 56px; border:1px solid $white; background:#3e4c5d; color:$white; font-size: 20px; padding:0 0 0 15px; box-sizing: border-box; vertical-align: middle; }
+			input::placeholder{ color:$blackc; font-size: 15px;}
+			input:focus::placeholder{ color:#5e7086; }
+			button{ display: inline-block; width: 150px; height: 56px; background: $white; vertical-align: middle; @include text(16,16,#3e4c5d,null,center,null,null);}
+			a{ display: inline-block; width: 170px; height: 56px; background: $white; vertical-align: middle; @include text(16,56,#3e4c5d,bold,center,0 0 0 15px,0px 0px 0px 0px); }
+		}
+	}
+	.subwrapLong{ width: 1600px; }
+
+	.subtitle{ width: 1280px; position: relative; margin:100px auto 0;
+		h1{ position: absolute; left:75px; top:60px; @include text(32,32,$white,bold,null,null,null); letter-spacing: -0.5px;}
+		h2{ position: absolute; left:75px; top:115px; @include text(20,20,$white,null,null,null,null);}
+		div{ @include text(17,32,black4,null,null,30px 0 0 0,null); letter-spacing: -0.85px;
+			span{background:#edf3fa;}
+			> p{margin:10px 0 0 0;}
+		}
+	}	
+
+	.s_text{ width: 1280px; margin:55px auto 0;
+		h1{ @include text(26,26,$black3,bold,null,0 0 28px 0,null); letter-spacing: -0.5px;}
+		ul{
+			li{ position: relative; @include text(17,17,$black4,null,null,0 0 15px 0,0 0 0 10px); letter-spacing: -0.75px; @include after(0px, 9px, 3px, 3px, #444)}
+		}
+	}
+
+	.subbox{ width: 1280px; margin:55px auto 0;
+		h1{ @include text(26,26,$black3,bold,null,0 0 28px 0,null); letter-spacing: -0.5px;}
+		div{ border: 1px solid $line; 
+			ul{  width: 93%; margin:45px auto 22px;  font-size: 0; 
+				li{ position: relative; display: inline-block; width: 33.3%; @include text(19,19,$black4,null,null,0 0 31px 0,0 0 0 27px); 
+					box-sizing: border-box; letter-spacing: -0.75px; @include afterbg(0px, 4px, 15px, 12px, "subboxCheck.png",left,top)} }
+		}
+	}
+
+	.subconsultingProcess{ width: 1600px; height: 845px; @include bg("subconsultingProcess.png", center, top); margin:80px auto 0;  
+		h1{ width: 1280px; @include text(30,30,$white,bold,null,0 auto,105px 0 40px); letter-spacing: -0.5px;}
+		ul{ width: 1280px; margin:0 auto; font-size: 0;
+			li{ position: relative; height: 115px; width:310px; display: inline-block; margin:30px 13px 0 0; vertical-align: top;
+				p{ position: absolute; left:0; top:-17px; width:99.1%; height:1px; background:$white;}
+				i{ position: absolute; display:inline-block; right:3px; top:-22px; border: solid $white;  border-width:0 1px 1px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+				a{ display: inline-block; position: absolute; left:0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align:center; border-radius: 0 0 50% 50%; 
+					 span{ display: inline-block; @include text(11,15,$white,null,center,9px 0 0 0,null);}
+				 }
+				div{ width: 100%; height: 95px; background: $white;
+					h2{ @include text(16,26,$black5,bold,center,null,36px 0 0 0); letter-spacing: -1px;}
+					h3{ @include text(16,26,$black5,bold,center,null,24px 0 0 0); letter-spacing: -1px;}
+					h4{ @include text(13,13,$black7,null,center,null,5px 0 0 0); letter-spacing: -1px;}
+				}
+				&:nth-child(4n){margin:30px 0 0 0;}	
+			} 
+		}
+	}
+
+	.subinvestigationProcess01{ width: 1400px; height: 325px; @include bg("subinvestigationProcess01.png", center, top); margin:100px auto 0;  
+		h1{ width: 1280px; @include text(30,30,$white,bold,null,0 auto,60px 0 20px); letter-spacing: -0.5px;
+			span{ font-size: 20px; margin:0 0 0 15px; font-weight: normal;}
+		}
+		ul{ width: 1280px; margin:0 auto; font-size: 0;
+			li{ position: relative; height: 115px; width:365px; display: inline-block; margin:35px 10px 0 0; vertical-align: top;
+				p{ position: absolute; left:0; top:-17px; width:99.1%; height:2px; background:$white;}
+				i{ position: absolute; display:inline-block; right:3px; top:-22px; border: solid $white;  border-width:0 2px 2px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+				a{ display: inline-block; position: absolute; left:0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align:center; border-radius: 0 0 50% 50%; 
+					 span{ display: inline-block; @include text(11,15,$white,null,center,9px 0 0 0,null);}
+				 }
+				div{ width: 100%; height: 100px; background: $white; @include text(20,100,$black6,bold,center,null,null); letter-spacing: -1px;
+					img{ vertical-align: middle;}
+					span{ display: inline-block; width: 142px; height:48px; @include text(16,48,$black6,bold,center,null,null); border:2px solid $black6; border-radius: 30px;  letter-spacing: -1px;}
+				}
+				&:nth-child(1){width:155px}
+				&:nth-child(4){margin:35px 0 0 0;}	
+			} 
+		}
+	}
+
+	.subinvestigationProcess02{ width: 1400px; height: 325px; @include bg("subinvestigationProcess02.png", center, top); margin:100px auto 0;  
+		h1{ width: 1280px; @include text(30,30,$white,bold,null,0 auto,60px 0 20px); letter-spacing: -0.5px;
+			span{ font-size: 20px; margin:0 0 0 15px; font-weight: normal;}
+		}
+		ul{ width: 1280px; margin:0 auto; font-size: 0;
+			li{ position: relative; height: 115px; width:165px; display: inline-block; margin:35px 10px 0 0; vertical-align: top;
+				p{ position: absolute; left:0; top:-17px; width:99.1%; height:2px; background:$white;}
+				i{ position: absolute; display:inline-block; right:3px; top:-22px; border: solid $white;  border-width:0 2px 2px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+				a{ display: inline-block; position: absolute; left:0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align:center; border-radius: 0 0 50% 50%; 
+					 span{ display: inline-block; @include text(11,15,$white,null,center,9px 0 0 0,null);}
+				 }
+				div{ width: 100%; height: 110px; background: $white; vertical-align: middle; text-align:center;
+					span{ display: inline-block;  @include text(15,26,$black6,bold,center,15px 0 0 0,null); letter-spacing: -1px;}
+					span.vmiddle01{margin:40px 0 0 0;}
+					span.vmiddle02{margin:30px 0 0 0;}
+				}
+				&:nth-child(4){width:245px}
+				&:nth-child(5){width:245px}
+				&:nth-child(6){width:245px; margin:35px 0 0 0;}	
+			} 
+		}
+	}
+
+
+	.subinvestigationText{ width: 1280px; margin:0 auto;
+		h1{ @include text(26,26,$black3,bold,null,null,60px 0 25px 0); letter-spacing: -1px;}
+		h2{ @include text(17,30,$black4,null,null,null,36px 0 0 0); letter-spacing: -1px;
+			p{margin:10px 0 0 0}
+		}
+		h3{ @include text(20,20,$black4,bold,null,null,36px 0 0 0); letter-spacing: -1px;}
+		h4{ @include text(16,30,$black7,null,null,null,10px 0 0 0); letter-spacing: -1px;}
+		ul{ font-size: 0; box-sizing: border-box; border:1px solid $black9;
+			li{ display: inline-block; width: 20%; height: 250px; box-sizing: border-box; border-right:1px solid $blackd; vertical-align: top;
+				dt{ width: 80%; @include text(20,20,$black4,bold,null,0 auto,36px 0 0 0); letter-spacing: -1px;}
+				dd{ width: 80%; @include text(13,25,$black7,null,null,0 auto,10px 0 0 0); letter-spacing: -1px;}
+				&:last-child{border:0}
+			}
+		}
+	}
+
+	.mautoTop0{ margin:0px auto 0;}
+
+
+	
+	
+	

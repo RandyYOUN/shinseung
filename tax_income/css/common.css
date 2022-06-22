@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* base */
+html {overflow-y:scroll;}
+html, body {height:100%;}
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, strong, sub, sup, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, embed, input, select, textarea, button {margin:0;padding:0; vertical-align: top;}
+body {color:#111;font-size:0.875em;line-height:1.5;font-family:"맑은 고딕","Malgun Gothic",'돋움',Dotum,AppleGothic,Tahoma,Helvetica,sans-serif; letter-spacing: -0.5px;}
+h1, h2, h3, h4, h5, h6 {font-size:1em;font-weight:normal;font-family:"맑은 고딕","Malgun Gothic",'돋움',Dotum,AppleGothic,Tahoma,Helvetica,sans-serif;}
+input, button, textarea, select {font-size:1em;font-family:"맑은 고딕","Malgun Gothic",'돋움',Dotum,AppleGothic,Tahoma,Helvetica,sans-serif;}
+code, pre {font-size:1em;}
+address, em, cite {font-style:normal;}
+img {border:0 none;vertical-align:top;}
+hr {display:none;}
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;width:auto;width:100%;}
+caption, legend {position:absolute;overflow:hidden;text-indent:-9999px;}
+th, td {font-weight:normal;}
+li {list-style-type:none;}
+fieldset {border:0 none;}
+select {height:28px;padding:6px 4px 5px 7px;font-size:1em;line-height:1.5;color:#646464;border:1px solid #646464;}
+textarea {padding:5px;border:1px solid #646464;line-height:1.167;}
+label, button {cursor:pointer;}
+button {overflow:visible;margin:0;padding:0;border:none;background:none;cursor:pointer;}
+button::-moz-focus-inner {border:0;padding:0;}
+label {overflow:visible;border:none;background:none;background:transparent;vertical-align:top;font-family:inherit;white-space:nowrap;text-decoration:none;/*outline:0;*/}
+input {border:1px solid #666;padding:3px 5px;height:20px;background:transparent;vertical-align:middle;color:#666;}
+input[type="button"] {cursor:pointer;}
+
+a {color:#111;text-decoration:none;}
+a:hover, a:focus, a:active {color:#000;text-decoration:none;}
+
+
+.wrap {display:table;min-width:1280px;width:100%;min-height:100%;max-height:100%;height:100%;;}
+.loginWrap{ display:table;min-width:1280px;width:100%;min-height:100%;max-height:100%;height:100%;background:url("../images/loginBg.png")left top no-repeat; }
+
+
+/* main */
+.buMain{ width:100%; height:630px; background:url("images/buMain.png")left top no-repeat; }
+.buMain .buMainCon{ width:1400px; margin:0 auto;}
+.buMain .buMainCon div{ margin:0 0 0 165px;}
+.buMain .buMainCon div h1{ padding:80px 0 0 0; color:#fff; font-size: 46px; font-weight: bold;}
+.buMain .buMainCon div h2{ padding:20px 0 0 0; color:#fff; font-size: 18px; line-height: 36px;}
+.buMain .buMainCon div p{ color:#fff; margin:30px 0 0 0;}
+.buMain .buMainCon div p span{ color:#fff; padding:0 10px; height: 65px; line-height: 65px;}
+.buMain .buMainCon div p input[type="text"],.login > div input[type="password"]{ display: inline-block; width:400px; height: 65px; color:#777; margin:5px 0 10px; padding:0 0 0 30px; border:0; box-sizing: border-box; background: #fff;}
+.buMain .buMainCon div input[type="button"]{ display: block; width:820px; height: 110px; font-size: 26px; color:#fff; margin:10px 0 0;  background: #386dc6; }
+.buMain .buMainCon div .checkbox {margin: 10px 0 50px 0px; display: inline-block; height: 16px; position: relative;}
+.buMain .buMainCon div .checkbox input[type='checkbox'] {left: -9999px; top: 0px; position: absolute;}
+.buMain .buMainCon div .checkbox label {background: url("images/checkbox_off.jpg") no-repeat; height: 16px; line-height: 16px; padding:0 0 0 25px; border:0px; display: inline-block; color:#fff;}
+.buMain .buMainCon div .checkbox input[type='checkbox']:checked + label {background: url("images/checkbox_on.jpg") no-repeat;}
+
+.stepProcess{ width: 1280px;  margin:40px auto;}
+.stepProcess ul{font-size: 0;}
+.stepProcess ul li{ position: relative; display: inline-block; width: 40%; font-size: 0;}
+.stepProcess ul li:last-child{ position: relative; display: inline-block; width: 20%; font-size: 0;}
+.stepProcess ul li span{ display: inline-block;  font-size: 17px;}
+.stepProcess ul li span:first-child{margin:0 10px 0 0;}
+.stepProcess ul li span em{ display: block; font-size: 12px; letter-spacing: 0.5px;}
+.stepProcess ul li::after{ content: ''; position: absolute; right:50px; top:20px; width:260px; height: 1px; background: #e6e6e6;}
+.stepProcess ul li:nth-child(2)::after{ content: ''; position: absolute; right:50px; top:20px; width:240px; height: 1px; background: #e6e6e6;}
+.stepProcess ul li:last-child::after{ display: none;}
+
+.stepProcess ul li.on span{ font-size: 17px; font-weight: bold; color: #1d5bb0;}
+.stepProcess ul li.on span em{ display: block; font-size: 12px; font-weight: bold; color: #1d5bb0; letter-spacing: 0.5px;}
+.stepProcess ul li .stepProcess01{ display: inline-block; width: 46px; height: 46px; border-radius: 50%; background:#ebebeb url("../images/process01.png")50% 50% no-repeat; }
+.stepProcess ul li.on .stepProcess01{ display: inline-block; width: 46px; height: 46px; border-radius: 50%; background:#1d5bb0 url("../images/process01On.png")50% 50% no-repeat; }
+.stepProcess ul li .stepProcess02{ display: inline-block; width: 46px; height: 46px; border-radius: 50%; background:#ebebeb url("../images/process02.png")50% 50% no-repeat; }
+.stepProcess ul li.on .stepProcess02{ display: inline-block; width: 46px; height: 46px; border-radius: 50%; background:#1d5bb0 url("../images/process02On.png")50% 50% no-repeat; }
+.stepProcess ul li .stepProcess03{ display: inline-block; width: 46px; height: 46px; border-radius: 50%; background:#ebebeb url("../images/process03.png")50% 50% no-repeat; }
+.stepProcess ul li.on .stepProcess03{ display: inline-block; width: 46px; height: 46px; border-radius: 50%; background:#1d5bb0 url("../images/process03On.png")50% 50% no-repeat; }
+.stepProcess ul li.on::after{ content: ''; position: absolute; right:50px; top:20px; width:260px; height: 1px; background: #1d5bb0;}
+.stepProcess ul li.on:nth-child(2)::after{ content: ''; position: absolute; right:50px; top:20px; width:240px; height: 1px; background: #1d5bb0;}
+
+.step01{ width: 1280px; height: 760px; margin:0 auto;  border:1px solid #e6e6e6; overflow: hidden;}
+.step01 .fL {float:left; width:480px; padding:80px 0 0 100px; box-sizing: border-box;}
+.step01 .fL h1{ font-size:32px; font-weight: bold;}
+.step01 .fL h1 span{ display: block; font-size:20px; color:#1d5bb0; padding:0 0 10px; font-weight: normal; letter-spacing: 1px;}
+.step01 .fR {float:left; padding:80px 0 0 0px; box-sizing: border-box;}
+.step01 .fR > h1{ font-size:22px; font-weight: bold;}
+.step01 .fR > h2{ font-size:14px; color:#999; margin:10px 0 20px 0;}
+.step01 .fR > label{ display: block; font-size: 14px; font-weight: bold; padding:20px 0 0 0;}
+.step01 .fR input[type="text"],.step01 .fR input[type="password"]{ display: block; width:630px; height: 50px; color:#777; margin:10px 0 10px; padding:0 0 0 20px; border:1px solid #bfbfbf; box-sizing: border-box; background: #fff;}
+.step01 .fR input[type="button"]{ display: block; width:630px; height: 75px; font-size: 20px; color:#fff; margin:50px 0 0;  background: #386dc6; }
+.step01 .fR input[type="button"].darkblueBtn{ background: #74839d; margin:25px 0 0;}
+.step01 .fR input[type="button"].grayBtn{ display: block; width:400px; height: 55px; font-size: 16px; color:#fff; margin:0px 0 20px;  border:1px solid rgb(201, 201, 201); color:#777; background: #f8f8f8;}
+.step01 .fR .checkbox {margin: 10px 0 50px 0px; display: inline-block;height: 16px; position: relative;}
+.step01 .fR .checkbox input[type='checkbox'] {left: -9999px; top: 0px; position: absolute;}
+.step01 .fR .checkbox label {background: url("../images/checkbox_off.jpg") no-repeat; height: 16px; line-height: 16px; padding:0 0 0 20px; display: inline-block;}
+.step01 .fR .checkbox input[type='checkbox']:checked + label {background: url("../images/checkbox_on.jpg") no-repeat;}
+
+.step02{ width: 1280px; margin:0 auto; padding:0 0 100px 0; border-top:1px solid #e6e6e6; border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; overflow: hidden;}
+.step02 .fL {float:left; width:480px; padding:80px 0 0 100px; box-sizing: border-box;}
+.step02 .fL h1{ font-size:28px; font-weight: bold; line-height: 48px;}
+.step02 .fL h1 span{ display: block; font-size:20px; color:#1d5bb0; padding:0 0 10px;  font-weight: normal;  letter-spacing: 1px;}
+.step02 .fR {float:left; width:600px; padding:55px 0 0 0px; box-sizing: border-box;}
+.step02 .fR > h1{ margin:30px 0 30px 0; width:570px;   font-size: 0;}
+.step02 .fR > h1 strong{ position: relative; display: inline-block; font-size:30px; padding:0 20px 10px 0;}
+.step02 .fR > h1 strong:after{ position: absolute; content: ""; width: 100%; height: 5px; background: #333; left:0px; bottom:0px;}
+.step02 .fR > h1 span{ display: inline-block; font-size:20px; padding:8px 0 10px 10px; }
+.step02 .fR > h2 {position: relative; display: inline-block; background: #ffd409; padding:10px; border-radius:23px; padding:7px 20px 7px 50px; color:#391b1b; font-weight: bold;}
+.step02 .fR > h2:after{ content: ""; position: absolute; width:60px; height: 60px; left:13px; top:-6px; background: url("../images/kakaoIcon.png")left top no-repeat;}
+.step02 .fR .total{ width:100%; border-bottom:3px solid #555; overflow: hidden; margin:30px 0 0 0;}
+.step02 .fR .total span{ display: inline-block;  height: 80px; line-height: 80px; font-weight: bold;}
+.step02 .fR .total span:first-child{ float: left; font-size:20px;  color:#505050; height: 80px; line-height: 80px; }
+.step02 .fR .total span:last-child{ float: right; font-size:20px;}
+.step02 .fR .total span:last-child em{ font-size:40px; font-weight: bold; padding:0 10px 0 0;}
+.step02 .fR h3{  font-size: 14px; color:#333; padding:22px 0 0px 0; line-height: 26px;}
+.step02 .fR h3 em{ display: block; font-size: 14px; color:#386dc6;}
+.step02 .fR input[type="button"]{ display: block; width:100%; height: 75px; font-size: 18px; color:#fff; margin:30px 0 0; border:0px;  background: #386dc6; }
+
+.step02_advertiseWrap {width: 1280px; margin:0 auto; border-bottom:1px solid #e6e6e6; border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; height: 750px; background:url("../images/buAdvertise.png")left top no-repeat;}
+.step02_advertiseWrap .title{ margin:0 0 0 380px;}
+.step02_advertiseWrap .title > h1{ font-size: 30px; color:#333; font-weight: bold; padding: 90px 0 10px 0;}
+.step02_advertiseWrap .title > h2{ font-size: 20px; line-height: 32px; color:#333;}
+.step02_advertiseWrap .title > h3{ display: inline-block; font-size: 14px; line-height: 32px; color:#fff; background: #333; padding:0px 7px; margin:15px 0;} 
+.step02_advertiseWrap .advertiseCon{ margin: 45px 0 0 380px}
+.step02_advertiseWrap .advertiseCon .advertise { background: #fff; position: relative; display: inline-block; width: 350px; height: 344px; margin: 0 40px 0 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; }
+.step02_advertiseWrap .advertiseCon .advertise > h3 { width: 260px; font-size: 23px; line-height: 26px; color: #0a5b89; font-weight: bold; text-align: left; margin: 0 auto; padding: 40px 0 33px; }
+.step02_advertiseWrap .advertiseCon .advertise > h3 span { position: relative; display: inline-block; font-size: 30px; z-index: 1; }
+.step02_advertiseWrap .advertiseCon .advertise > h3 span:after { content: ''; position: absolute; left: 0px; top: 24px; width: 100%; height: 6px; background: #e0e7eb; }
+.step02_advertiseWrap .advertiseCon .advertise > h3 span:after { z-index: -1; }
+.step02_advertiseWrap .advertiseCon .advertise > h4 { width: 260px; font-size: 18px; line-height: 18px; color: #444; font-weight: bold; text-align: left; margin: 0 auto; padding: 0 0 20px; letter-spacing: -1px; }
+.step02_advertiseWrap .advertiseCon .advertise > h4 span { display: inline-block; font-size: 13px; color: #999; margin: 10px 0 0 3px; letter-spacing: 0px; }
+.step02_advertiseWrap .advertiseCon .advertise > ul { width: 260px; margin: 0 auto; }
+.step02_advertiseWrap .advertiseCon .advertise > ul li { position: relative; font-size: 12px; line-height: 12px; color: #666; padding: 0 0 10px 10px; }
+.step02_advertiseWrap .advertiseCon .advertise > ul li:after { content: ''; position: absolute; left: 2px; top: 5px; width: 2px; height: 2px; background: #aaa; }
+.step02_advertiseWrap .advertiseCon .advertise > ul p { display: inline-block; width: 125px; height: 72px; text-align: center; vertical-align: top; color: #fff; margin: 13px 0 0 0; }
+.step02_advertiseWrap .advertiseCon .advertise > ul p span { display: inline-block; font-size: 12px; margin: 14px 0 0 0; }
+.step02_advertiseWrap .advertiseCon .advertise > ul p strong { display: block; font-size: 18px; font-weight: bold; margin: 2px 0 0 0; }
+.step02_advertiseWrap .advertiseCon .advertise > ul p strong.small { display: block; font-size: 15px; font-weight: bold; margin: 5px 0 0 0; }
+.step02_advertiseWrap .advertiseCon .advertise > ul p.taxbefore { background: #444; }
+.step02_advertiseWrap .advertiseCon .advertise > ul p.taxafter { background: #0e7ab7; }
+.step02_advertiseWrap .advertiseCon .advertise > h5 { width: 100%; font-size: 16px; line-height: 16px; color: #0e7ab7; font-weight: bold; text-align: center; padding: 12px 0 0 0; letter-spacing: 0px; }
+
+.step03{ width: 1280px; margin:0 auto; padding:0 0 100px 0; border:1px solid #e6e6e6; overflow: hidden;}
+.step03 .fL {float:left; width:480px; padding:80px 0 0 100px; box-sizing: border-box;}
+.step03 .fL h1{ font-size:28px; font-weight: bold;}
+.step03 .fL h1 span{ display: block; font-size:20px; color:#1d5bb0; padding:0 0 10px;  font-weight: normal;  letter-spacing: 1px;}
+.step03 .fR {float:left; width:600px; padding:55px 0 0 0px; box-sizing: border-box;}
+.step03 .fR > h1{ margin:30px 0 30px 0; width:570px;   font-size: 0;}
+.step03 .fR > h1 strong{ position: relative; display: inline-block; font-size:30px; padding:0 20px 10px 0;}
+.step03 .fR > h1 strong:after{ position: absolute; content: ""; width: 100%; height: 5px; background: #333; left:0px; bottom:0px;}
+.step03 .fR > h1 span{ display: inline-block; font-size:20px; padding:8px 0 10px 10px; }
+.step03 .fR > h2 {position: relative; display: inline-block; background: #ffd409; padding:10px; border-radius:23px; padding:7px 20px 7px 50px; color:#391b1b; font-weight: bold;}
+.step03 .fR > h2:after{ content: ""; position: absolute; width:60px; height: 60px; left:13px; top:-6px; background: url("../images/kakaoIcon.png")left top no-repeat;}
+.step03 .fR .infor{ width:100%; border:1px solid #e6e6e6; margin:30px 0 0 0; padding:0px 0 20px 0;}
+.step03 .fR .infor > h1{  width:90%;  margin:0 auto; font-size:18px; padding: 20px 0 15px 0;; font-weight: bold; }
+.step03 .fR .infor > h2{  width:90%;  margin:0 auto; font-size:14px; padding: 0px 0 15px 0;; font-weight: bold; }
+.step03 .fR .infor > h3{  width:90%;  margin:0 auto; font-size:13px; line-height: 24px; }
+.step03 .fR .infor ul{ width:90%;  margin:0 auto; padding:0px 0 20px; font-size: 0;}
+.step03 .fR .infor ul li{ display: inline-block; font-size:14px; margin:0  0 10px 0; width:50%; color:#333;}
+.step03 .fR .infor p{ display: block; margin: 0 auto 0px; width:90%;}
+.step03 .fR .infor p input[type="text"],.step03 .fR .infor p input[type="password"]{ display: inline-block; width:245px; height: 50px; color:#777; margin:0px 0 10px; padding:0 0 0 20px; border:1px solid #bfbfbf; box-sizing: border-box; background: #fff;}
+.step03 .fR .infor p span{ display: inline-block; padding:0 10px; height: 50px; line-height: 50px;}
+.step03 .fR > h3{  font-size: 14px; color:#333; padding:22px 0 0px 0; line-height: 26px;}
+.step03 .fR > h3 em{ display: block; font-size: 14px; color:#386dc6;}
+.step03 .fR input[type="button"]{ display: block; width:100%; height: 75px; font-size: 18px; color:#fff; margin:30px 0 0; border:0px;  background: #386dc6; }
+
+
+/*popup */
+.layer_bg{position:fixed; width:100%; height:100%; background: rgba(0,0,0,0.7); left:0; top:0; z-index: 2;}
+.layer_wrap{position:absolute; width:500px; height: 500px; text-align: right;  z-index: 3;}
+.layer_wrap a{ display: inline-block; width:37px; height:45px; background: url("../images/buClose.png")left top no-repeat; cursor: pointer; }
+.layer_wrap div{border:1px solid #aaa; background: #fff; width:500px; height: 380px;}
+.layer_wrap div h1{ text-align: left; font-size:17px; line-height: 35px; width:85%; margin:0 auto; padding:40px 0 0 0;}
+.layer_wrap div input[type="button"]{ display: block; width:85%;  height: 55px; font-size: 15px; color:#fff; margin:30px auto 0; border:0px;  background: #386dc6; }
+.layer_wrap div input[type="button"].darkblueBtn{ background: #74839d; margin:25px auto 0;}
+

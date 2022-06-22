@@ -1,0 +1,137 @@
+.subvisual { width: 100%; height: 315px; }
+.subvisual h1 { text-align: center; padding: 60px 0 75px 0; }
+.subvisual h1 img { display: inline-block; }
+.subvisual h2 { font-size: 32px; line-height: 32px; color: #fff; font-weight: bold; text-align: center; letter-spacing: -0.5px; }
+
+.bgtax { background: url("../images/subvisualTax.png") center top no-repeat; }
+.bgsulting { background: url("../images/subvisualConsulting.png") center top no-repeat; }
+.bginvestigation { background: url("../images/subvisualInvestigation.png") center top no-repeat; }
+.bgcompany { background: url("../images/subvisualCompany.png") center top no-repeat; }
+
+.subnavi { border-bottom: 1px solid #dadada; }
+.subnavi ul { font-size: 0; text-align: center; }
+.subnavi ul li { display: inline-block; font-size: 17px; line-height: 17px; color: #555; text-align: center; padding: 25px 85px; letter-spacing: -0.5px; }
+.subnavi ul li.on { color: #2168b0; font-weight: bold; }
+.subnavi ul li.on span { display: inline-block; width: 17px; height: 10px; background: url("../images/subnaviArrow.png") left top no-repeat; margin: 0 0 0 6px; }
+
+.subconWrap { margin: 0 auto 120px; overflow: hidden; }
+
+.subtitle { width: 1280px; position: relative; margin: 100px auto 0; }
+.subtitle h1 { position: absolute; left: 75px; top: 60px; font-size: 32px; line-height: 32px; color: #fff; font-weight: bold; letter-spacing: -0.5px; }
+.subtitle h2 { position: absolute; left: 75px; top: 115px; font-size: 20px; line-height: 20px; color: #fff; }
+.subtitle div { font-size: 17px; line-height: 32px; color: black4; margin: 30px 0 0 0; letter-spacing: -0.85px; }
+.subtitle div span { background: #edf3fa; }
+.subtitle div > p { margin: 10px 0 0 0; }
+
+.subtext { width: 1280px; margin: 55px auto 0; }
+.subtext h1 { font-size: 26px; line-height: 26px; color: #333; font-weight: bold; margin: 0 0 28px 0; letter-spacing: -0.5px; }
+.subtext ul li { position: relative; font-size: 17px; line-height: 17px; color: #444; margin: 0 0 15px 0; padding: 0 0 0 10px; letter-spacing: -0.75px; }
+.subtext ul li:after { content: ''; position: absolute; left: 0px; top: 9px; width: 3px; height: 3px; background: #444; }
+
+.subbox { width: 1280px; margin: 55px auto 0; }
+.subbox h1 { font-size: 26px; line-height: 26px; color: #333; font-weight: bold; margin: 0 0 28px 0; letter-spacing: -0.5px; }
+.subbox div { border: 1px solid #dadada; }
+.subbox div ul { width: 93%; margin: 45px auto 22px; font-size: 0; }
+.subbox div ul li { position: relative; display: inline-block; width: 33.3%; font-size: 19px; line-height: 19px; color: #444; margin: 0 0 31px 0; padding: 0 0 0 27px; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -0.75px; }
+.subbox div ul li:after { content: ''; position: absolute; left: 0px; top: 4px; width: 15px; height: 12px; background: url("../images/subboxCheck.png") left top no-repeat; }
+
+.subconsultingProcess { width: 1600px; height: 845px; background: url("../images/subconsultingProcess.png") center top no-repeat; margin: 100px auto 0; }
+.subconsultingProcess h1 { width: 1280px; font-size: 30px; line-height: 30px; color: #fff; font-weight: bold; margin: 0 auto; padding: 105px 0 40px; letter-spacing: -0.5px; }
+.subconsultingProcess ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.subconsultingProcess ul li { position: relative; height: 115px; width: 310px; display: inline-block; margin: 30px 13px 0 0; vertical-align: top; }
+.subconsultingProcess ul li p { position: absolute; left: 0; top: -17px; width: 99.1%; height: 1px; background: #fff; }
+.subconsultingProcess ul li i { position: absolute; display: inline-block; right: 3px; top: -22px; border: solid #fff; border-width: 0 1px 1px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.subconsultingProcess ul li a { display: inline-block; position: absolute; left: 0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align: center; border-radius: 0 0 50% 50%; }
+.subconsultingProcess ul li a span { display: inline-block; font-size: 11px; line-height: 15px; color: #fff; text-align: center; margin: 9px 0 0 0; }
+.subconsultingProcess ul li div { width: 100%; height: 95px; background: #fff; }
+.subconsultingProcess ul li div h2 { font-size: 16px; line-height: 26px; color: #555; font-weight: bold; text-align: center; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subconsultingProcess ul li div h3 { font-size: 16px; line-height: 26px; color: #555; font-weight: bold; text-align: center; padding: 24px 0 0 0; letter-spacing: -1px; }
+.subconsultingProcess ul li div h4 { font-size: 13px; line-height: 13px; color: #777; text-align: center; padding: 5px 0 0 0; letter-spacing: -1px; }
+.subconsultingProcess ul li:nth-child(4n) { margin: 30px 0 0 0; }
+
+.subinvestigationProcess01 { width: 1400px; height: 325px; background: url("../images/subinvestigationProcess01.png") center top no-repeat; margin: 100px auto 0; }
+.subinvestigationProcess01 h1 { width: 1280px; font-size: 30px; line-height: 30px; color: #fff; font-weight: bold; margin: 0 auto; padding: 60px 0 20px; letter-spacing: -0.5px; }
+.subinvestigationProcess01 h1 span { font-size: 20px; margin: 0 0 0 15px; font-weight: normal; }
+.subinvestigationProcess01 ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.subinvestigationProcess01 ul li { position: relative; height: 115px; width: 365px; display: inline-block; margin: 35px 10px 0 0; vertical-align: top; }
+.subinvestigationProcess01 ul li p { position: absolute; left: 0; top: -17px; width: 99.1%; height: 2px; background: #fff; }
+.subinvestigationProcess01 ul li i { position: absolute; display: inline-block; right: 3px; top: -22px; border: solid #fff; border-width: 0 2px 2px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.subinvestigationProcess01 ul li a { display: inline-block; position: absolute; left: 0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align: center; border-radius: 0 0 50% 50%; }
+.subinvestigationProcess01 ul li a span { display: inline-block; font-size: 11px; line-height: 15px; color: #fff; text-align: center; margin: 9px 0 0 0; }
+.subinvestigationProcess01 ul li div { width: 100%; height: 100px; background: #fff; font-size: 20px; line-height: 100px; color: #666; font-weight: bold; text-align: center; letter-spacing: -1px; }
+.subinvestigationProcess01 ul li div img { vertical-align: middle; }
+.subinvestigationProcess01 ul li div span { display: inline-block; width: 142px; height: 48px; font-size: 16px; line-height: 48px; color: #666; font-weight: bold; text-align: center; border: 2px solid #666; border-radius: 30px; letter-spacing: -1px; }
+.subinvestigationProcess01 ul li:nth-child(1) { width: 155px; }
+.subinvestigationProcess01 ul li:nth-child(4) { margin: 35px 0 0 0; }
+
+.subinvestigationProcess02 { width: 1400px; height: 325px; background: url("../images/subinvestigationProcess02.png") center top no-repeat; margin: 100px auto 0; }
+.subinvestigationProcess02 h1 { width: 1280px; font-size: 30px; line-height: 30px; color: #fff; font-weight: bold; margin: 0 auto; padding: 60px 0 20px; letter-spacing: -0.5px; }
+.subinvestigationProcess02 h1 span { font-size: 20px; margin: 0 0 0 15px; font-weight: normal; }
+.subinvestigationProcess02 ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.subinvestigationProcess02 ul li { position: relative; height: 115px; width: 165px; display: inline-block; margin: 35px 10px 0 0; vertical-align: top; }
+.subinvestigationProcess02 ul li p { position: absolute; left: 0; top: -17px; width: 99.1%; height: 2px; background: #fff; }
+.subinvestigationProcess02 ul li i { position: absolute; display: inline-block; right: 3px; top: -22px; border: solid #fff; border-width: 0 2px 2px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.subinvestigationProcess02 ul li a { display: inline-block; position: absolute; left: 0px; top: -10px; width: 45px; height: 53px; background: #5a75a6; text-align: center; border-radius: 0 0 50% 50%; }
+.subinvestigationProcess02 ul li a span { display: inline-block; font-size: 11px; line-height: 15px; color: #fff; text-align: center; margin: 9px 0 0 0; }
+.subinvestigationProcess02 ul li div { width: 100%; height: 110px; background: #fff; vertical-align: middle; text-align: center; }
+.subinvestigationProcess02 ul li div span { display: inline-block; font-size: 15px; line-height: 26px; color: #666; font-weight: bold; text-align: center; margin: 15px 0 0 0; letter-spacing: -1px; }
+.subinvestigationProcess02 ul li div span.vmiddle01 { margin: 40px 0 0 0; }
+.subinvestigationProcess02 ul li div span.vmiddle02 { margin: 30px 0 0 0; }
+.subinvestigationProcess02 ul li:nth-child(4) { width: 245px; }
+.subinvestigationProcess02 ul li:nth-child(5) { width: 245px; }
+.subinvestigationProcess02 ul li:nth-child(6) { width: 245px; margin: 35px 0 0 0; }
+
+.subinvestigationText { width: 1280px; margin: 0 auto; }
+.subinvestigationText h1 { font-size: 26px; line-height: 26px; color: #333; font-weight: bold; padding: 60px 0 25px 0; letter-spacing: -1px; }
+.subinvestigationText h2 { font-size: 17px; line-height: 30px; color: #444; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText h2 p { margin: 10px 0 0 0; }
+.subinvestigationText h3 { font-size: 20px; line-height: 20px; color: #444; font-weight: bold; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText h4 { font-size: 16px; line-height: 30px; color: #777; padding: 10px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText ul { font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; }
+.subinvestigationText ul li { display: inline-block; width: 20%; height: 250px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #ddd; vertical-align: top; }
+.subinvestigationText ul li dt { width: 80%; font-size: 20px; line-height: 20px; color: #444; font-weight: bold; margin: 0 auto; padding: 36px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText ul li dd { width: 80%; font-size: 13px; line-height: 25px; color: #777; margin: 0 auto; padding: 10px 0 0 0; letter-spacing: -1px; }
+.subinvestigationText ul li:last-child { border: 0; }
+
+.ceo { position: relative; width: 1400px; margin: 0 auto; }
+.ceo h1 { font-size: 32px; line-height: 32px; color: #222; font-weight: bold; padding: 100px 0 30px 0; letter-spacing: -1px; }
+.ceo div { width: 1400px; height: 570px; margin: 0 auto; background: #f8f8f8 url("../images/ceoBg.png") 370px 30px no-repeat; }
+.ceo div h2 { width: 500px; font-size: 30px; line-height: 50px; color: #444; font-weight: lighter; margin: 0 0 0 760px; padding: 80px 0 10px 0; letter-spacing: -1px; }
+.ceo div h3 { width: 500px; font-size: 16px; line-height: 28px; color: #444; margin: 0 0 0 760px; padding: 0 0 0 0; letter-spacing: -1px; }
+.ceo div h3 p { margin: 20px 0 0 0; }
+.ceo div h4 { width: 450px; font-size: 20px; line-height: 30px; color: #444; font-weight: lighter; margin: 0 0 0 760px; padding: 50px 0 0 0; letter-spacing: -1px; }
+.ceo img { position: absolute; left: 90px; top: 113px; }
+
+.companyreport { position: relative; width: 1400px; margin: 0 auto; }
+.companyreport h1 { font-size: 32px; line-height: 32px; color: #222; font-weight: bold; padding: 100px 0 30px 0; letter-spacing: -1px; }
+.companyreport > div { width: 100%; height: 100px; line-height: 100px; border-bottom: 1px solid #dadada; }
+.companyreport > div h2 { display: inline-block; width: 125px; height: 20px; border-right: 1px solid #222; vertical-align: top; font-size: 18px; line-height: 18px; color: #222; font-weight: bold; margin: 40px 60px 0 0; padding: 0 0 0 15px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.companyreport > div h3 { display: inline-block; font-size: 18px; line-height: 18px; color: #222; padding: 0 0 0 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.companyreport > div ul.member { display: inline-block; margin: 0 0 0 0px; font-size: 0; }
+.companyreport > div ul.member li { display: inline-block; width: 60px; height: 60px; border: 2px solid #d1afaf; border-radius: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 16px; line-height: 60px; color: #bf9a9a; font-weight: bold; text-align: center; margin: 13px 11px 0 0; vertical-align: top; }
+.companyreport > div ul.member li span { display: inline-block; width: 40px; height: 43px; line-height: 19px; vertical-align: middle; overflow: hidden; }
+.companyreport > div dl { display: inline-block; height: 100px; line-height: 100px; }
+.companyreport > div img { display: inline-block; vertical-align: middle; }
+.companyreport > div h4 { display: inline-block; font-size: 16px; line-height: 28px; color: #444; font-weight: bold; margin: 0 40px 0 15px; padding: 0 0 0 0; }
+.companyreport > div ul.organization { display: inline-block; }
+.companyreport > div ul.organization li { font-size: 0; display: inline-block; margin: 40px 0 0 0; line-height: 30px; height: 100px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0px 50px 0 50px; border-right: 1px solid #dadada; vertical-align: top; }
+.companyreport > div ul.organization li h5 { font-size: 18px; line-height: 28px; color: #333; font-weight: bold; margin: 0px 0 0 0px; padding: 0 0 0 0; }
+.companyreport > div ul.organization li ol { font-size: 0; margin: 15px 0 0 0px; width: 235px; display: inline-block; }
+.companyreport > div ul.organization li ol > h6 { position: relative; display: inline-block; width: 50%; height: 20px; font-size: 14px; line-height: 14px; color: #444; margin: 0; padding: 0 0 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.companyreport > div ul.organization li ol > h6:after { content: ''; position: absolute; left: 0px; top: 7px; width: 2px; height: 2px; background: #aaa; }
+.companyreport > div ul.organization li:first-child { padding: 0 50px 0px 0; }
+.companyreport > div ul.organization li:last-child { border: none; }
+.companyreport > div:last-child { border: none; height: 200px; }
+
+.map { width: 100%; background: url("../images/map.png") center top no-repeat; margin: 40px 0 0 0; }
+.map div { width: 1400px; height: 510px; margin: 0 auto; }
+.map div h1 { width: 400px; font-size: 32px; line-height: 28px; color: #fff; font-weight: bold; padding: 110px 0 50px 0; }
+.map div h2 { width: 400px; font-size: 20px; line-height: 34px; color: #fff; letter-spacing: -0.5px; }
+.map div h3 { width: 400px; font-size: 38px; line-height: 28px; color: #fff; font-weight: bold; padding: 30px 0 0px 0; }
+.map div.detail { width: 1400px; margin: 90px auto 40px; height: auto; }
+.map div.detail table { width: 100%; border-top: 2px solid #555; }
+.map div.detail table tr td { width: 25%; height: 140px; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 0 0 30px; }
+.map div.detail table tr td h4 { font-size: 18px; line-height: 18px; color: #444; font-weight: bold; padding: 0 0 0 0; letter-spacing: -0.75px; }
+.map div.detail table tr td h5 { font-size: 14px; line-height: 24px; color: #444; padding: 8px 0 0 0; }
+.map div.detail table tr td h5 span { display: inline-block; width: 100%; }
+.map div.detail table tr td:nth-child(4n) { border-right: 0; }

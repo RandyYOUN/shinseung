@@ -1,0 +1,24 @@
+nas 서버 접속방법
+
+내부
+(탐색기 창에서) \\192.168.0.220
+(인터넷 창에서) http://192.168.0.220:5000n -크롬 접속 권장
+
+
+외부접속
+http://sostax.synology.me:5000
+http://sostax.quickconnect.to/
+
+-모바일 어플 ds file
+
+
+공유폴더 생성 후 스냅샷 필수 *******************
+
+
+관리자 id / pw
+admin / cmtesinc
+
+
+
+
+

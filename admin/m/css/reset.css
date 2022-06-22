@@ -1,0 +1,38 @@
+/* Reset */
+*,
+*:before,
+*:after {-webkit-box-sizing: border-box; box-sizing: border-box;}
+:root {font-size:10px;}
+html,body {width:100%; height:100%; min-height: 100%;}
+html.big_mode {font-size:11px !important} /*큰글씨*/
+body {-webkit-text-size-adjust: none; word-break: break-all; line-height: 1.437; color:#26282c; letter-spacing:-0.02em;}
+body,button,dd,dl,dt,fieldset,form,input,li,ol,p,select,table,td,textarea,th,ul,h1,h2,h3,h4,h5,h6 {margin:0; padding:0; -webkit-box-sizing:border-box; box-sizing:border-box; outline:none;}
+body,button,input,select,table,textarea {font-size:1.6rem; font-weight:400; font-family:'KBText','Roboto','돋음','dotum';}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+table {table-layout:fixed; width:100%; border-spacing:0;}
+caption,
+legend {overflow:hidden; position:static; width:0; height:0; line-height:0; visibility:hidden; font-size:0;}
+ol,ul,li,ul {list-style:0; list-style:none;}
+em,address {font-style:normal}
+img,fieldset,iframe{border:0}
+img {width:100%; height:auto; vertical-align:top;}
+a {display:inline-block; color:inherit; text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,.1);}
+a:hover { text-decoration:none;}
+area {outline:none}
+input,select,textarea,button {border:0; border-radius:0; -webkit-appearance:none; appearance:none;}
+button {background-color:transparent; cursor:pointer}
+input::-ms-clear,
+input::-ms-reveal {display:none; width:0; height:0;}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {display:none;}
+input[type=date]::-webkit-inner-spin-button {display:none}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-calendar-picker-indicator{ display:none;}
+input[type=number] {-moz-appearance:textform;}
+input[type=checkbox]:focus{outline:none;}
+select::-ms-expand {display:none;}
+select:required:invalid {color:#a0a4af;}
+option {color:#000}
+option[value=""][disabled] {display:none}​

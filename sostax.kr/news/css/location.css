@@ -1,0 +1,100 @@
+.mask { position: fixed; display: none; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+
+.locationWrap{width: 100%; background: #fafafa; overflow: hidden; }
+.locationWrap h3 { width: 95%; font-size: 20px; line-height: 20px; color: #546985; font-weight: bold; text-align: left; margin: 0 auto; padding: 30px 0 0 0; }
+.locationWrap h4 { width: 95%; font-size: 15px; line-height: 15px; color: #546985; font-weight: normal; text-align: left; margin: 0 auto; padding: 10px 0 20px 0; }
+.location div{display:none;}
+.location img { width: 160px; margin: 40px 0 30px 0; }
+.location ul { font-size: 0; width: 95%; margin:0 auto 40px; padding:0; background:#fff;  border-top:1px solid #e3e4e5; border-right:1px solid #e3e4e5;  cursor:pointer; }
+.location ul li { display: inline-block; width: 33.3%; border-bottom:1px solid #e3e4e5;  box-sizing:border-box; padding:10px 0 10px 20px;
+border-left:1px solid #e3e4e5; font-size: 14px; color: #546985; background:url('../images/customSinseung/btnarrow.png')90px 0px no-repeat;}
+.location ul li:last-child{display:none;}
+.location ul li span{display:inline-block; width:100%; font-size:11px; color:#9d9d9d; padding:0 0 0 3px; font-weight:bold;}
+
+
+.locationPop { position: fixed; display: none; left: 50%; top: 50%; width: 95%; padding: 0 0 30px 0; transform: translate(-50%, -50%); background: #fff; z-index: 60; }
+.locationPop h1 { width: 90%; font-size: 22px; line-height: 22px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 30px 0 10px 0; letter-spacing: -0.5px; }
+.locationPop h1 span { display: inline-block; vertical-align: middle; font-size: 14px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0; padding: 0 0 0 10px; }
+.locationPop h2 { width: 90%; margin: 0 auto 0; }
+.locationPop h2 li { font-size: 0; margin: 0 0 5px 0; }
+.locationPop h2 li strong { display: inline-block; width: 15%; font-size: 14px; line-height: 20px; color: #222; font-weight: bold; text-align: left; margin: 0 auto; padding: 0px 0px 0px 0px; vertical-align: top; letter-spacing: -0.5px; }
+.locationPop h2 li span { display: inline-block; width: 84%; font-size: 14px; line-height: 20px; color: #222; font-weight: normal; text-align: left; margin: 0 auto; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.locationPop a { display: inline-block; width: 42%; height: 50px; text-align: center; vertical-align: top; }
+.locationPop a span { font-size: 16px; line-height: 50px; color: #fff; font-weight: normal; text-align: center; margin: 0; padding: 0; }
+.locationPop .chat { background: #166bb5 url("../images/companyChat.png") 40px 50% no-repeat; margin: 15px 5px 0 5%; }
+.locationPop .call { background: #222 url("../images/companyCall.png") 40px 50% no-repeat; margin: 15px 0 0 0; }
+.locationPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50%/26px auto no-repeat; cursor: pointer; }
+
+
+
+.logoWrap{ width:100%; height: 115px; text-align: center; overflow: hidden; border-bottom:1px solid #e3e4e5;}
+.logoWrap img{ width: 155px; margin:40px}
+
+.gnbWrap{ width:100%;   border-bottom:1px solid #e3e4e5;}
+.gnb{ width: 100%; margin:0 auto; }
+.gnb ul{font-size: 0;  padding:8px 0 8px 0; margin:0; }
+.gnb ul li{ display: inline-block; width: 16.6%;  text-align: left;}
+.gnb ul li > a{ display: inline-block;  height: 30px; font-size: 13px; line-height: 30px; color:#555; width: 100%; text-align: center;}
+.gnb ul li.active a{ color:#066aa6; text-decoration: underline;}
+.gnb ul > a{ display: inline-block; font-size: 13px; background: red; color:red;}
+
+.footerWrap{border-top:1px solid #e3e4e5;}
+.footer{width: 90%; margin:0 auto;}
+.footer ul{font-size: 0; padding:0; margin:36px 0 0 0;}
+.footer ul li{ display: inline-block; margin:0 30px 0 0; font-size: 12px;  line-height: 24px; color:#aaa;}
+.footer h3{ width: 100%; margin: 20px 30px 50px 0; font-size: 12px;  color:#aaa;}
+
+.rmore{background:url('../images/customSinseung/mbtnplus.png')right 3px no-repeat; color:#bfbfbf; font-size:11px; padding:0 13px 15px 0;}
+.rmore:hover{color:#333; background:url('../images/customSinseung/mbtnplusOn.png')right 3px no-repeat; }
+
+.conWrap{background:#fafafa; overflow:hidden;}
+.con{background:#fff; border:1px solid #e3e4e5; width:95%; margin:20px auto 0 !important;}
+
+@media only screen and (min-width: 480px) and (max-width: 921px) {
+
+.locationWrap h3  { width: 85%;}
+.locationWrap h4  { width: 85%;}
+.location ul {width: 90%;}
+.location ul li{ background:url('../images/customSinseung/btnarrow.png')100% 0px no-repeat;}
+.footer{width: 90%}
+}
+
+@media only screen and (min-width: 1020px) {
+.locationWrap h3,.locationWrap h4{display:none;}
+.location { width: 1140px; margin:60px auto; box-sizing:border-box; overflow:hidden; background:none;}
+.location div{display:inline-block; float:left; width:440px; height:181px; background:url('../images/customSinseung/locationBg.png')left top no-repeat;  }
+.location div h1 {margin:65px 0 0 90px; padding:0; color:#fff; font-size:22px;}
+.location div h2 {margin:15px  0 0 90px; padding:0; color:#fff;font-size:16px; }
+.location ul {float:left; width:700px; margin:0; padding:0; border-top:1px solid #e3e4e5;  }
+.location ul li { width:20%; padding:25px 0 0 25px; height:90px; background:url('../images/customSinseung/btnarrow.png')108px 15px no-repeat; box-sizing:border-box; 
+border-right:1px solid #e3e4e5; border-left:none; vertical-align:top; font-size:16px;}
+.location ul li span{display:inline-block; width:100%; font-size:11px; color:#9d9d9d; padding:0 0 0 3px; font-weight:bold;}
+.location ul li:last-child{display:inline-block; background:none;}
+.location ul li:nth-child(5n){border-right:none;}
+
+.locationPop { position: fixed; display: none; left: 50%; top: 50%; width: 600px; padding: 0 0 30px 0; transform: translate(-50%, -50%); background: #fff; z-index: 60; }
+.locationPop h1 { width: 500px; font-size: 22px; line-height: 22px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 40px 0 20px 0; letter-spacing: -0.5px; }
+.locationPop h1 span { display: inline-block; vertical-align: middle; font-size: 14px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0; padding: 0 0 0 10px; }
+.locationPop h2 { width: 500px; font-size: 13px; line-height: 26px; color: #222; font-weight: normal; text-align: left; margin: 0 auto; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.locationPop h2 li strong { display: inline-block; width: 50px; }
+
+.locationPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.gnb{ width: 1174px; margin:0 auto; }
+.gnb ul li{ display: inline-block; width: 8.3%;  text-align: left; }
+.gnb ul li > a{ display: inline-block;  height: 90px; font-size: 18px; line-height: 90px; color:#555; width: 100%; text-align: center;}
+.gnb ul li.active a{ color:#066aa6; text-decoration: underline;}
+.gnb ul > a{ display: inline-block; font-size: 16px; background: red; color:red;}
+
+
+
+
+.footer{width: 1120px; margin:0 auto;}
+.footer h3{ width: 1140px;}
+
+.con{background:#fff; border:1px solid #e3e4e5; width:95%; margin:50px auto 0 !important;}
+
+
+
+
+}

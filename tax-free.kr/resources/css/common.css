@@ -1,0 +1,210 @@
+/* Scss Document */
+.review .swiper-container .swiper-wrapper div a, .customer ul li a, .quick a { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; }
+
+#wrap { width: 100%; min-height: 100%; max-height: 100%; height: 100%; }
+
+.mask { position: fixed; display: none; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.25px; }
+
+header { position: absolute; width: 100%; height: 900px; }
+header .logo { position: absolute; left: 50%; top: 0; -webkit-transform: translateX(-50%); transform: translateX(-50%); text-align: center; z-index: 99; }
+header .logo h1{font-size:22px; color:#fff; display:inline-block; margin: 70px 0 0 0; letter-spacing:-2px;}
+header .logo img { margin: 58px 0 0 0; }
+header .mainVlink { position: absolute; top: 630px; width: 100%; z-index: 99; }
+header .mainVlink ul { width: 1200px; font-size: 0; margin: 0 auto; text-align: left; }
+header .mainVlink ul li { display: inline-block; height: 135px; border: 1px solid rgba(255, 255, 255, 0.7); vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0 8px 0; padding: 0 40px; background: url("../images/mainlinkIcon.png") center 80px no-repeat; font-size: 23px; line-height: 100px; color: rgba(255, 255, 255, 0.9); font-weight: normal; text-align: center; }
+header .mainvisControl { position: absolute; left: 50%; top: 464px; margin: 0 0 0 -420px; width: 60px; height: 60px; background: url("../images/mainPlay.png") center 50% no-repeat; cursor: pointer; z-index: 99; }
+header .on { background: url("../images/mainStop.png") center 50% no-repeat; }
+
+.mainVisual { position: relative; width: 100%; }
+.mainVisual .swiper-wrapper { position: relative; width: 100%; height: 900px; background: #222; }
+.mainVisual .swiper-wrapper .swiper-slide { position: relative; width: 100%; }
+.mainVisual .swiper-wrapper .swiper-slide div { position: absolute; left: 50%; top: 320px; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 1200px; }
+.mainVisual .swiper-wrapper .swiper-slide div h2 { font-size: 50px; line-height: 48px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 0; opacity: 0; }
+.mainVisual .swiper-wrapper .swiper-slide div h3 { font-size: 26px; line-height: 26px; color: #fff; font-weight: 200; text-align: left; margin: 30px auto 0; padding: 0; opacity: 0; letter-spacing: -1px; }
+.mainVisual .swiper-button-prev { left: 50%; width: 35px; height: 51px; margin: 20px 0 0 -600px; background: url("../images/mainArrowL.png") left top no-repeat; cursor: pointer; }
+.mainVisual .swiper-button-next { right: 50%; width: 35px; height: 51px; margin: 20px 440px 0 0; background: url("../images/mainArrowR.png") left top no-repeat; cursor: pointer; }
+.mainVisual .swiper-pagination-fraction { width: 50px; left: 50%; bottom: 396px; color: #fff; font-size: 16px; margin: 0 0 0 -545px; }
+
+.twopower { width: 100%; background: #eff4f7 url("../images/twopowerBg.png") left top no-repeat; }
+.twopower ul { width: 1300px; margin: 0 auto; font-size: 0; }
+.twopower ul li:nth-child(1) { display: inline-block; width: 650px; height: 380px; background: rgba(255, 255, 255, 0.7); }
+.twopower ul li:nth-child(1) h1 { width: 70%; font-size: 40px; line-height: 40px; color: #444; font-weight: bold; margin: 0 auto; padding: 75px 0 30px; letter-spacing: -0.25px; }
+.twopower ul li:nth-child(1) dl { width: 70%; margin: 0 auto; }
+.twopower ul li:nth-child(1) dl dd { font-size: 20px; line-height: 20px; color: #494c52; margin: 0 0 19px 0; padding: 0; letter-spacing: -0.5px; }
+.twopower ul li:nth-child(1) dl dd span { padding: 0 7px; }
+.twopower ul li:nth-child(1) dl dd span.on { background: #cedbf4; }
+.twopower ul li:nth-child(2) { display: inline-block; width: 650px; height: 380px; background: #748199; }
+.twopower ul li:nth-child(2) h1 { width: 70%; font-size: 40px; line-height: 40px; color: #fff; font-weight: bold; margin: 0 auto; padding: 75px 0 30px; letter-spacing: -0.25px; }
+.twopower ul li:nth-child(2) dl { width: 70%; margin: 0 auto; }
+.twopower ul li:nth-child(2) dl dd { font-size: 20px; line-height: 20px; color: #fff; margin: 0 0 19px 0; padding: 0; letter-spacing: -0.5px; }
+.twopower ul li:nth-child(2) dl dd span { padding: 0px 7px; }
+.twopower ul li:nth-child(2) dl dd span.on { background: #5f6a80; }
+
+.recommend { width: 100%; }
+.recommend h1 { font-size: 48px; line-height: 48px; color: #222; font-weight: bold; text-align: center; margin: 0 auto 30px; padding: 80px 0 0 0; }
+.recommend h2 { font-size: 22px; line-height: 36px; color: #333; font-weight: lighter; text-align: center; }
+.recommend ul { width: 1200px; margin: 50px auto 100px; font-size: 0; }
+.recommend ul li { display: inline-block; width: 190px; height: 240px; border: 1px solid #e0e0e0; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 6px; vertical-align: top; margin: 0 12px 0 0; text-align: center; }
+.recommend ul li:last-child { margin: 0; }
+.recommend ul li img { display: inline-block; margin: 40px 0 25px; }
+.recommend ul li h3 { font-size: 17px; line-height: 27px; color: #444; text-align: center; margin: 0; padding: 0; letter-spacing: -1px; }
+.recommend ul li h3 span { color: #52678e; font-weight: bold; display: block; }
+
+.taxexamption { width: 100%; height: 720px; background: #eff3f9; }
+.taxexamption h1 { width: 1200px; font-size: 40px; line-height: 40px; color: #222; font-weight: bold; text-align: left; margin: 0 auto; padding: 80px 0 0 0; }
+.taxexamption h1 span { display: inline-block; font-size: 28px; line-height: 20px; color: #333; font-weight: 200; text-align: left; padding: 13px 0 0 20px; vertical-align: top; }
+.taxexamption ul { width: 1200px; margin: 0 auto; font-size: 0; }
+.taxexamption ul li { position: relative; width: 220px; display: inline-block; vertical-align: top; margin: 0 20px 0 0; }
+.taxexamption ul li:last-child { margin: 0; }
+.taxexamption ul li p { position: absolute; left: 0; top: 50px; width: 99%; height: 3px; background: #c0c6d1; }
+.taxexamption ul li i { position: absolute; display: inline-block; right: 3px; top: 45px; border: solid #c0c6d1; border-width: 0 3px 3px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.taxexamption ul li div { margin: 80px 0 0 0; width: 100%; height: 460px; border-radius: 6px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.taxexamption ul li div dl dd { width: 100%; height: 45px; border: 2px solid #c0c6d1; border-radius: 6px; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 15px; line-height: 40px; color: #738198; font-weight: bold; text-align: center; margin: 0 0 7px 0; letter-spacing: -1px; }
+.taxexamption ul li div dl.step05Text dd { color: #1b3c78; }
+.taxexamption ul li div h2 { width: 80%; font-size: 24px; line-height: 22px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 75px 0 20px 0; letter-spacing: -1px; }
+.taxexamption ul li div h3 { width: 80%; font-size: 40px; line-height: 36px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 0 0 25px 0; }
+.taxexamption ul li div h4 { width: 80%; font-size: 16px; line-height: 26px; color: #fff; font-weight: normal; text-align: left; margin: 0 auto; padding: 0 0 15px 0; }
+.taxexamption ul li.step02 div, .taxexamption ul li.step02 p { background: #748199; }
+.taxexamption ul li.step03 div, .taxexamption ul li.step03 p { background: #52678e; }
+.taxexamption ul li.step04 div, .taxexamption ul li.step04 p { background: #1b3c78; }
+.taxexamption ul li.step02 i { position: absolute; display: inline-block; right: 3px; top: 45px; border: solid #748199; border-width: 0 3px 3px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.taxexamption ul li.step03 i { position: absolute; display: inline-block; right: 3px; top: 45px; border: solid #52678e; border-width: 0 3px 3px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.taxexamption ul li.step04 i { position: absolute; display: inline-block; right: 3px; top: 45px; border: solid #1b3c78; border-width: 0 3px 3px 0; padding: 5px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+
+.period { width: 100%; height: 740px; }
+.period h1 { width: 1200px; font-size: 40px; line-height: 40px; color: #222; font-weight: bold; text-align: left; margin: 0 auto 30px; padding: 80px 0 0 0; }
+.period h2 { width: 1200px; font-size: 18px; line-height: 18px; color: #333; text-align: left; margin: 0 auto; }
+.period ul { width: 1200px; margin: 85px auto 0; font-size: 0; }
+.period ul li { position: relative; height: 380px; display: inline-block; border: 2px solid #c3cdde; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 6px; margin: 0 25px 0 0; vertical-align: top; }
+.period ul li p { position: absolute; left: 0; top: -22px; width: 99%; height: 2px; background: #c3cdde; }
+.period ul li i { position: absolute; display: inline-block; right: 3px; top: -26px; border: solid #c3cdde; border-width: 0 2px 2px 0; padding: 4px; transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
+.period ul li h3 { display: inline-block; height: 35px; background: #3c5589; font-size: 18px; line-height: 37px; color: #fff; font-weight: bold; text-align: left; margin: 30px 0 15px 10%; padding: 0 15px; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 6px; }
+.period ul li h4 { width: 80%; font-size: 18px; line-height: 30px; color: #3c5589; font-weight: bold; text-align: left; margin: 30px auto 15px; letter-spacing: -1px; }
+.period ul li h5 { width: 80%; font-size: 16px; line-height: 26px; color: #666; font-weight: normal; text-align: left; margin: 0 auto; }
+.period ul li h5 span { font-size: 15px; letter-spacing: -1px; }
+.period ul li h6 { width: 80%; font-size: 18px; line-height: 28px; color: #444; font-weight: bold; text-align: left; margin: 15px auto 0; padding: 10 0 15px 0; }
+.period ul li:nth-child(1) { width: 275px; }
+.period ul li:nth-child(2) { width: 345px; }
+.period ul li:nth-child(3) { width: 300px; }
+.period ul li:nth-child(4) { width: 180px; margin: 0; }
+.period ul li:nth-child(4) h4 { margin: 110px auto 0; text-align: center; }
+
+.review { position: relative; width: 100%; background: #3c5589; height: 790px; }
+.review h1 { font-size: 40px; line-height: 40px; color: #fff; font-weight: bold; text-align: center; margin: 0 auto 30px; padding: 80px 0 0 0; }
+.review h2 { font-size: 20px; line-height: 20px; color: #fff; text-align: center; margin: 0 auto; }
+.review .swiper-container { position: relative; width: 1280px; height: 500px; margin: 70px auto 0; }
+.review .swiper-container .swiper-wrapper { font-size: 0; }
+.review .swiper-container .swiper-wrapper div { position: relative; display: inline-block; width: 392px; height: 420px; border-radius: 6px; background: #fff url("../images/reviewBtn.png") center 350px no-repeat; margin: 0 52px 0 0; }
+.review .swiper-container .swiper-wrapper div:last-child { margin: 0; }
+.review .swiper-container .swiper-wrapper div h3 { width: 156px; height: 69px; background: url("../images/reviewLabel.png") center top no-repeat; font-size: 16px; line-height: 59px; color: #fff; font-weight: bold; text-align: center; margin: 0 auto; }
+.review .swiper-container .swiper-wrapper div h4 { width: 80%; font-size: 20px; line-height: 20px; color: #4d5c7b; font-weight: bold; text-align: left; margin: 30px auto 0; letter-spacing: -1px; }
+.review .swiper-container .swiper-wrapper div ul { width: 80%; margin: 20px auto 0; }
+.review .swiper-container .swiper-wrapper div ul li { font-size: 16px; line-height: 16px; color: #333; font-weight: normal; text-align: left; margin: 0 0 12px 0; }
+.review .swiper-container .swiper-wrapper div ul li strong { margin: 0 8px 0 0; }
+.review .swiper-container .swiper-wrapper div h5 { width: 80%; font-size: 15px; line-height: 25px; color: #666; font-weight: normal; text-align: left; margin: 15px auto 15px; }
+.review .swiper-container .swiper-button-prev { position: absolute; right: 0; left: 50%; top: 460px; width: 22px; height: 34px; margin: 0px 0 0 -40px; background: url("../images/reviewArrowL.png") left top no-repeat; cursor: pointer; }
+.review .swiper-container .swiper-button-next { position: absolute; right: 0; left: 50%; top: 460px; width: 22px; height: 34px; margin: 0px 0 0 30px; background: url("../images/reviewArrowR.png") left top no-repeat; cursor: pointer; }
+
+.reviewPop { position: fixed; display: none; left: 50%; top: 50%; width: 700px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; border-radius: 6px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 0 50px 0; z-index: 60; }
+.reviewPop h3 { width: 156px; height: 69px; background: url("../images/reviewLabel.png") center top no-repeat; font-size: 16px; line-height: 59px; color: #fff; font-weight: bold; text-align: center; margin: 0 auto; }
+.reviewPop h4 { width: 85%; font-size: 24px; line-height: 20px; color: #4d5c7b; font-weight: bold; text-align: left; margin: 30px auto 0; letter-spacing: -1px; }
+.reviewPop ul { width: 85%; margin: 20px auto 0; }
+.reviewPop ul li { font-size: 16px; line-height: 16px; color: #333; font-weight: normal; text-align: left; margin: 0 0 12px 0; }
+.reviewPop ul li strong { margin: 0 8px 0 0; }
+.reviewPop h5 { width: 85%; font-size: 16px; line-height: 28px; color: #666; font-weight: normal; text-align: left; margin: 15px auto 15px; letter-spacing: -1px; }
+.reviewPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; border-radius: 6px; cursor: pointer; }
+
+.taxExplain { width: 100%; }
+.taxExplain ul { width: 1280px; margin: 0 auto; font-size: 0; }
+.taxExplain ul > h1 { width: 1200px; margin: 0 auto; font-size: 36px; line-height: 32px; color: #333; font-weight: bold; text-align: left; margin: 0 auto 35px; padding: 60px 0 0 0; }
+.taxExplain ul li { width: 50%; display: inline-block; vertical-align: top; padding: 0 0 70px 0; }
+.taxExplain ul li > h1 { font-size: 34px; line-height: 32px; color: #333; font-weight: bold; text-align: left; margin: 0 0 35px 40px; padding: 60px 0 0 0; }
+.taxExplain ul li h2 { width: 560px; margin: 0 0 0 40px; }
+.taxExplain ul li h2 span { background: #3c5589; font-size: 24px; line-height: 26px; color: #fff; font-weight: normal; text-align: left; padding: 7px 15px; }
+.taxExplain ul li h3 { width: 560px; font-size: 22px; line-height: 18px; color: #555; font-weight: bold; text-align: left; margin: 25px 0 10px 40px; }
+.taxExplain ul li h4 { width: 560px; font-size: 16px; line-height: 28px; color: #555; font-weight: normal; text-align: left; margin: 0 auto; }
+.taxExplain ul li h5 { width: 560px; font-size: 16px; line-height: 28px; color: #555; font-weight: normal; text-align: left; margin: 25px 0 0 40px; }
+.taxExplain ul li h5 strong { display: block; font-size: 16px; }
+.taxExplain ul li h6 { width: 560px; font-size: 16px; line-height: 26px; color: #8493b3; font-weight: bold; text-align: left; margin: 15px 0 0 40px; }
+.taxExplain p { width: 100%; height: 1px; background: #dadada; }
+
+.people { margin: 0 auto 100px; }
+.people h1 { font-size: 40px; line-height: 40px; color: #111; font-weight: bold; text-align: center; margin: 0 auto 30px; padding: 80px 0 0 0; }
+.people h2 { font-size: 22px; line-height: 22px; color: #111; font-weight: normal; text-align: center; margin: 0; }
+.people div.tabBlock { width: 1280px; height: 571px; margin: 50px auto 0; font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; }
+.people div.tabBlock div.tabBlock-content { display: inline-block; width: 850px; height: 569px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; }
+.people div.tabBlock div.tabBlock-content div { position: relative; display: inline-block; width: 100%; height: 569px; background: url("../images/peopleBg.png") left bottom no-repeat; overflow: hidden; }
+.people div.tabBlock div.tabBlock-content div img { position: absolute; left: 60px; top: 50px; }
+.people div.tabBlock div.tabBlock-content div:last-child { border-right: 0; }
+.people div.tabBlock div.tabBlock-content div h3 { font-size: 36px; line-height: 30px; color: #444; font-weight: 200; text-align: left; margin: 0 0 0 420px; padding: 130px 0px 15px 0px; letter-spacing: -1px; }
+.people div.tabBlock div.tabBlock-content div h3 span { font-size: 36px; line-height: 36px; color: #444; font-weight: bold; text-align: left; margin: 0 0 0 10px; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock div.tabBlock-content div h3.people01 { padding: 90px 0 15px 0; }
+.people div.tabBlock div.tabBlock-content div h5 { margin: 10px 0 0 420px; letter-spacing: -0.5px; }
+.people div.tabBlock div.tabBlock-content div h5 li { font-size: 15px; line-height: 28px; color: #777; font-weight: normal; text-align: left; margin: 0; padding: 0 0 0 4px; }
+.people div.tabBlock div.tabBlock-content div h5 li strong { color: #333; }
+.people div.tabBlock div.tabBlock-content div h5 li.on { font-size: 16px; line-height: 28px; color: #777; font-weight: normal; text-align: left; margin: 0 0 5px 0; padding: 0; }
+.people div.tabBlock div.tabBlock-content div h5 li.on strong { color: #333; background: #eaf3fa; padding: 3px 4px; }
+.people div.tabBlock div.tabBlock-content div div.label { position: absolute; display: inline-block; left: 245px; top: 250px; width: 101px; height: 135px; background: url("../images/peopleLabel.png") left top no-repeat; text-align: center; }
+.people div.tabBlock div.tabBlock-content div div.label p { font-size: 13px; line-height: 13px; color: #fff; font-weight: normal; text-align: center; margin: 0; padding: 20px 0px 10px 0px; }
+.people div.tabBlock div.tabBlock-content div div.label p.labelText { font-size: 16px; line-height: 26px; color: #fff; font-weight: bold; text-align: center; margin: 0; padding: 30px 0px 10px 0px; }
+.people div.tabBlock div.tabBlock-content div div.label span { height: 40px; font-size: 40px; line-height: 40px; color: #fff; font-weight: bold; text-align: center; vertical-align: middle; }
+.people div.tabBlock div.tabBlock-content div div.label span:last-child { font-size: 18px; line-height: 18px; color: #fff; font-weight: bold; text-align: center; margin: 0 0 0 3px; padding: 0; }
+.people div.tabBlock ul { display: inline-block; width: 428px; height: 570px; font-size: 0; vertical-align: top; }
+.people div.tabBlock ul li { display: inline-block; width: 50%; height: 95px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; cursor: pointer; font-size: 18px; line-height: 95px; color: #222; font-weight: normal; text-align: center; margin: 0 0 0 0; }
+.people div.tabBlock ul li:nth-child(2n) { border-right: none; }
+.people div.tabBlock ul li:nth-child(11) { border-bottom: none; }
+.people div.tabBlock ul li strong { color: #3c5589; margin: 0 10px 0 0; }
+.people div.tabBlock ul li.is-active { background: #3c5589; color: #fff; }
+.people div.tabBlock ul li.is-active strong { color: #fff; }
+
+.qna { width: 100%; background: #f6f6f6; overflow: hidden; }
+.qna h1 { font-size: 40px; line-height: 40px; color: #111; font-weight: bold; text-align: center; margin: 0 auto 50px; padding: 80px 0 0 0; }
+.qna ul { position: relative; width: 960px; margin: 0 auto 100px; border-top: 2px solid #555; }
+.qna ul li { position: relative; border-bottom: 1px solid #cdcdcd; }
+.qna ul li a { display: block; height: 60px; font-size: 20px; line-height: 60px; color: #555; font-weight: bold; text-align: left; margin: 0 auto; cursor: pointer; letter-spacing: -1px; }
+.qna ul li a span { font-size: 24px; line-height: 16px; color: #444; font-weight: bold; text-align: center; margin: 0 10px 0 20px; }
+.qna ul li div { display: none; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; background: #ececec; font-size: 17px; line-height: 27px; color: #555; font-weight: normal; text-align: left; padding: 20px 20px; letter-spacing: -1px; }
+.qna ul li img { position: absolute; left: 900px; top: 30px; }
+
+.customer { width: 100%; height: 490px; text-align: center; font-size: 0; background-image: url(../images/customerBg.png), -webkit-gradient(linear, left top, right top, color-stop(50%, #7b909e), color-stop(50%, #a7bbc7)); background-image: url(../images/customerBg.png), linear-gradient(90deg, #7b909e 50%, #a7bbc7 50%); background-repeat: no-repeat,no-repeat; background-position: bottom center,bottom center; }
+.customer div { display: inline-block; width: 600px; vertical-align: top; }
+.customer div h1 { font-size: 40px; line-height: 40px; color: #fff; font-weight: normal; text-align: left; margin: 200px 0 25px; }
+.customer div h2 { font-size: 24px; line-height: 24px; color: #fff; font-weight: normal; text-align: left; }
+.customer ul { display: inline-block; width: 600px; font-size: 0; }
+.customer ul li { position: relative; display: inline-block; width: 270px; height: 330px; vertical-align: top; border-radius: 6px; margin: 80px 20px 0 0; }
+.customer ul li img { display: inline-block; margin: 40px 0 15px; }
+.customer ul li h3 { font-size: 24px; line-height: 24px; color: #fff; font-weight: normal; text-align: center; }
+.customer ul li h4 { font-size: 16px; line-height: 26px; color: #fff; font-weight: normal; text-align: center; margin: 20px 0 45px; }
+.customer ul li h5 { font-size: 32px; line-height: 32px; color: #fff; font-weight: bold; text-align: center; }
+.customer ul li h6 { display: inline-block; border: 2px solid #fff; border-radius: 22px; font-size: 16px; line-height: 16px; color: #fff; font-weight: bold; text-align: center; padding: 12px 30px; }
+.customer ul li:first-child { background: #38495f; }
+.customer ul li:last-child { background: #1b3c78; }
+
+.group { width: 100%; border-bottom: 1px solid #e6e6e6; }
+.group ul { font-size: 0; width: 1200px; margin: 30px auto 80px; }
+.group ul a { display: inline-block; margin: 0 130px 0 0; text-align: left; vertical-align: top; background: url("../images/group01.png") left bottom no-repeat; }
+.group ul a h1{ font-size:16px; color:#bbb; letter-spacing:-2px; margin:40px 0 0 40px; font-weight:bold;}
+.group ul a h2{ font-size:16px; color:#111; letter-spacing:-2px; margin:5px 0 0 40px; font-weight:bold;}
+.group ul a span { display: block; font-size: 13px; line-height: 23px; color: #777; font-weight: noraml; text-align: center; margin: 0; padding: 10px 0 0 0; letter-spacing: -0.5px; }
+.group ul a:last-child { margin: 0; }
+
+footer { width: 1200px; margin: 55px auto 0; }
+footer ul { font-size: 0; }
+footer ul li { display: inline-block; position: relative; font-size: 12px; line-height: 13px; color: #777; font-weight: normal; text-align: center; padding: 0 30px 0 0; }
+footer ul li:after { content: ''; position: absolute; right: 15px; top: 1px; width: 1px; height: 12px; background: #bbb; }
+footer ul li:last-child:after { display: none; }
+footer h3 { font-size: 12px; line-height: 13px; color: #777; font-weight: normal; text-align: left; margin: 0; padding: 20px 0 120px 0; }
+
+.quick { position: fixed; right: 30px; bottom: 80px; z-index: 600; }
+.quick div { width: 105px; height: 105px; border-radius: 50%; background: #dde0e5 url("../images/customermanOn.png") -325px -50px no-repeat; }
+.quick div h1 { opacity: 0; font-size: 16px; line-height: 16px; color: #111; font-weight: bold; text-align: left; margin: 0 0 0 140px; padding: 40px 0 10px; }
+.quick div h2 { opacity: 0; font-size: 12px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0 0 0 140px; padding: 0 0 0px; letter-spacing: -1px; }
+.quick ul { position: relative; }
+.quick ul li { opacity: 0; position: absolute; right: 10px; top: -90px; background: #3c5a98; border-radius: 10px; font-size: 13px; line-height: 13px; color: #fff; font-weight: normal; margin: 0; padding: 11px 9px; }
+.quick ul li span { position: absolute; left: 54px; top: 33px; width: 0; height: 0; border-top: 10px solid #3c5a98; border-right: 10px solid transparent; z-index: 15; }
+.quick ul li:nth-child(2n) { background: #b85708; }
+.quick ul li:nth-child(2n) span { border-top: 10px solid #b85708; border-right: 10px solid transparent; }
+
+#ch-plugin-core { bottom: 105px !important; display: none  !important; }

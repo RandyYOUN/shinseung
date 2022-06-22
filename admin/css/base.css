@@ -1,0 +1,85 @@
+@charset "utf-8";
+/**************************/
+/*	Name: Oofs
+/*	PART: BASE STYLE
+/*	Version: 1.0
+/*	Author: sm
+/**************************/
+
+/* CSS 리셋 설정 */
+body,html,
+header,footer,aside,nav,section,article,details,figure,figcaption,menu,command,
+div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td, /* 블럭 요소 */
+h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,
+img,embed,object,canvas,audio,video,meter,progress,keygen, /* 인라인 블럭 요소 */
+a,label,output,dialog, /* 인라인 요소 */
+address,blockquote, /* 텍스트 블럭 요소 */
+p,pre,/* 텍스트 인라인 블럭 요소 */
+span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,ruby,rp,rt,code,kbd,samp, /* 텍스트 인라인 요소 */
+acronym,big,frame,frameset,noframes,tt, /* HTML5에서 사용하지 않는 요소 */
+map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
+header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block} /* HTML5 블럭 요소 */
+applet,basefont,center,dir,strike{display:none} /* XHTML4, HTML5 이후 사용하지 않는 요소 제거 */
+q,blockquote{quotes:none;content:none}
+li,menu{list-style:none}
+
+table {border-collapse:collapse;border-spacing:0;table-layout:fixed;width:auto;width:100%;}
+caption {text-align:left; display:none;}
+th,td{vertical-align:middle;word-break: break-all;}
+
+address{font-style:normal}
+label{display:inline-block;*zoom:1}
+a{text-decoration:none;} /* a요소 속성 초기화 */
+
+a:hover, a:active, a:focus{text-decoration:none;}
+.png24 {tmp:expression(setPng24(this));}
+table td a{text-decoration:none;}
+table td a:hover, table td a:active, table td a:focus{text-decoration:none;}
+table th a{text-decoration:none;}
+table th a:hover, table th a:active, table th a:focus{text-decoration:none;}
+
+.blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
+.hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden} /* .blind를 적용할 수 없는 곳에 사용 (예, caption) */
+em,i {font-style:normal;}
+zimg{width:100%;}
+.eng{font-family:'mont', arial sans-serif;}
+strong,th,h1,h2,h3,h4,h5{font-weight:normal;}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */ font-weight:300; font-size:13px; color:#b2b3b5; letter-spacing:.1em;}
+::-moz-placeholder { /* Firefox 19+ */ font-weight:300; font-size:13px; color:#b2b3b5; letter-spacing:.1em;}
+:-ms-input-placeholder { /* IE 10+ */ font-weight:300; font-size:13px; color:#b2b3b5; letter-spacing:.1em;}
+:-moz-placeholder { /* Firefox 18- */ font-weight:300; font-size:13px; color:#b2b3b5; letter-spacing:.1em;}
+
+html { width:100%; height:100%; }
+body { width:100%; height:100%; font-family:'NanumBarunGothic'; font-size:14px; color:#333333; letter-spacing:-.02em; overflow-x:auto; overflow-y:auto;}
+
+
+ /* NanumSquare Web Fonts */
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunGothic.eot);
+  src: url(../font/NanumBarunGothic.woff) format('woff');
+}
+@font-face {
+  font-family: 'NanumBarunGothicL';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunGothicLight.eot);
+  src: url(../font/NanumBarunGothicLight.woff) format('woff');
+}
+@font-face {
+  font-family: 'NanumBarunGothicUL';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunGothicUltraLight.eot);
+  src: url(../font/NanumBarunGothicUltraLight.woff) format('woff');
+}
+@font-face {
+  font-family: 'NanumBarunGothicB';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunGothicBold.eot);
+  src: url(../font/NanumBarunGothicBold.woff) format('woff');
+}

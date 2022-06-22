@@ -1,0 +1,316 @@
+/* Scss Document */
+
+$white:#fff; $black:#000; $black1:#111; $black2:#222; $black3:#333; $black4:#444; $black5:#555; $black6:#666; $black7:#777; $black8:#888;
+$black9:#999; $blacka:#aaa; $blackb:#bbb; $blackc:#ccc; $blackd:#ddd;$blacke:#eee; $line:#dadada;
+$imgLocation:"../images/";
+
+@mixin box($display,$width,$height,$margin){display: $display; width:$width; height:$height; margin: $margin;}
+@mixin boxab($display,$left,$top,$width,$height){position: absolute; display: $display; left:$left; top:$top; width:$width; height:$height; }
+@mixin boxabR($display,$right,$top,$width,$height){	position: absolute; display: $display; right:$right; top:$top; width:$width; height:$height; }
+@mixin boxfl($display,$width,$height,$margin){display: $display; width:$width; height:$height; margin: $margin;	&:after{display: block; content: '';  clear:both;}}
+@mixin text($fontsize,$lineheight,$color,$weight,$center,$margin,$padding){font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center; margin:$margin; padding:$padding;}
+@mixin texts($fontsize,$lineheight,$color,$weight,$center){font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center;}
+@mixin bg($img,$left,$top){	background: url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat;}
+@mixin bgcolor($bgcolor,$img,$left,$top){background:$bgcolor url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat;}
+@mixin after($left,$top,$width,$height,$bgcolor){&:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: $bgcolor;}}
+@mixin afterR($right,$top,$width,$height,$bgcolor){	&:after{content: ''; position: absolute; right:$right; top:$top; width:$width; height: $height; background: $bgcolor;}}
+@mixin afterbg($left,$top,$width,$height,$img,$bgleft,$bgtop){&:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: url("#{$imgLocation}#{$img}") #{$bgleft} #{$bgtop} no-repeat;}}
+%alink{position: absolute; display: block; left:0; top:0; width: 100%; height: 100%; cursor: pointer;}
+
+#wrap{width:100%;min-height:100%;max-height:100%;height:100%;}
+.mask{position:fixed; display:none; left:0;  top:0; width:100%; height: 100%; background:rgba(0,0,0,.6); z-index:50;}
+h1,h2,h3,h4,h5,h6{letter-spacing: -0.25px}
+$maincolor : #3c5589;
+
+header{position: absolute; width:100%; height: 900px;
+	.logo{position: absolute; left:50% ; top:0; transform:translateX(-50%); text-align: center;  z-index: 99;
+		img{margin:70px 0 0 0;}
+	}	
+	.mainVlink{position: absolute; top:630px; width:100%;   z-index: 99;
+		ul{ width:1200px; font-size: 0; margin:0 auto; text-align: left; 
+			li{display: inline-block;  height: 135px; border:1px solid rgba(255, 255, 255, .7); vertical-align: top; box-sizing: border-box;  margin:0 8px 0; padding:0 40px;
+			@include bg("mainlinkIcon.png", center, 80px);	@include texts(23,100,rgba(255, 255, 255, .9),normal,center)
+			}
+		}			
+	}
+	.mainvisControl{position: absolute; left:50%; top:464px; margin:0 0 0 -420px; width:60px; height: 60px; @include bg("mainPlay.png",center,50%); cursor: pointer; z-index: 99;}
+	.on{@include bg("mainStop.png",center,50%); }		
+}
+
+.mainVisual{position: relative; width:100%; 
+	.swiper-wrapper{position:relative; width:100%; height:900px;  background:#222;
+		.swiper-slide{position: relative;width:100%;  
+			div{position: absolute; left:50%; top:320px; transform:translateX(-50%); width:1200px; 
+				h2{ @include text(50,48,$white,bold,left,0 auto,0); opacity: 0;}	
+				h3{ @include text(26,26,$white,200,left,30px auto 0,0); opacity: 0; letter-spacing: -1px;}	
+			}			
+		}
+	}	
+	.swiper-button-prev{left:50%; width:35px; height:51px; margin:20px 0 0 -600px; @include bg("mainArrowL.png",left,top); cursor: pointer;}
+	.swiper-button-next{right:50%; width:35px; height:51px; margin:20px 440px 0 0; @include bg("mainArrowR.png",left,top); cursor: pointer;}
+	.swiper-pagination-fraction{width:50px; left:50%; bottom:396px; color:$white; font-size: 16px; margin:0 0 0 -545px;}	
+}
+
+.twopower{ width: 100%; @include bgcolor(#eff4f7, "twopowerBg.png", left, top);
+	ul{ width: 1300px; margin:0 auto; font-size: 0; 
+		li:nth-child(1){ display: inline-block; width: 650px; height: 380px; background: rgba(255, 255, 255, .7);
+			h1{ width: 70%; @include text(40, 40, $black4, bold, null, 0 auto, 75px 0 30px);  letter-spacing: -0.25px;}
+			dl{ width: 70%; margin:0 auto;
+				dd{@include text(20, 20, #494c52, null, null, 0 0 19px 0, 0); letter-spacing: -0.5px;
+					span{  padding:0 7px;}
+					span.on{background: #cedbf4;}
+				}
+			}
+		}
+		li:nth-child(2){ display: inline-block; width: 650px; height: 380px; background:#748199;
+			h1{ width: 70%; @include text(40, 40, $white, bold, null, 0 auto, 75px 0 30px);  letter-spacing: -0.25px;}
+			dl{ width: 70%; margin:0 auto;
+				dd{@include text(20, 20, $white, null, null, 0 0 19px 0, 0); letter-spacing: -0.5px;
+					span{ padding:0px 7px}
+					span.on{ background: #5f6a80;}
+				}
+			}
+		}
+	}
+}
+
+.recommend{width:100%;
+	h1{@include text(48,48,$black2,bold,center,0 auto 30px,80px 0 0 0);}		
+	h2{@include text(22,36,$black3,lighter,center,null,null)}
+	ul{width: 1200px; margin:50px auto 100px; font-size: 0;
+		li{display: inline-block; width:190px; height:240px; border:1px solid #e0e0e0; box-sizing: border-box; border-radius: 6px; vertical-align:top; margin:0 12px 0 0; text-align: center;
+			&:last-child{margin:0;}
+			img{display:inline-block; margin:40px 0 25px;}
+			h3{ @include text(17,27,$black4,null,center,0,0); letter-spacing: -1px;
+				span{color:#52678e; font-weight: bold; display:block;}
+			}	
+		}
+	}
+}
+
+.taxexamption{width:100%; height: 720px; background: #eff3f9; 
+	h1{width: 1200px; @include text(40,40,$black2,bold,left,0 auto,80px 0 0 0);
+		span{ display: inline-block; @include text(28,20,$black3,200,left,null,13px 0 0 20px);vertical-align: top;}
+	}	
+	ul{width:1200px; margin:0 auto; font-size: 0;
+		$step01color:#c0c6d1; $step02color:#748199; $step03color:#52678e; $step04color:#1b3c78;
+		li{position: relative; width:220px; display:inline-block; vertical-align: top;  margin:0 20px 0 0; 
+			&:last-child{margin:0;}
+			p{position: absolute; left:0; top:50px; width:99%; height:3px; background:$step01color;}
+			i{position: absolute; display:inline-block; right:3px; top:45px; border: solid $step01color;  border-width:0 3px 3px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+			div{ margin:80px 0 0 0; width:100%; height:460px; border-radius: 6px; box-sizing: border-box;
+				dl dd{width: 100%; height:45px; border: 2px solid $step01color; border-radius: 6px; box-sizing: border-box; @include text(15,40,#738198,bold,center,0 0 7px 0,null); letter-spacing: -1px;}
+				dl.step05Text dd{color:$step04color;}
+				h2{width:80%; @include text(24,22,$white,bold,left,0 auto,75px 0 20px 0); letter-spacing: -1px;}	
+				h3{width:80%; @include text(40,36,$white,bold,left,0 auto,0 0 25px 0);}	
+				h4{width:80%; @include text(16,26,$white,normal,left,0 auto,0 0 15px 0);}	
+				}			
+		}
+		li.step02 div,li.step02 p{background:$step02color;}
+		li.step03 div,li.step03 p{background:$step03color;}
+		li.step04 div,li.step04 p{background:$step04color;}	
+		
+		li.step02 i{position: absolute; display:inline-block; right:3px; top:45px; border: solid $step02color;  border-width:0 3px 3px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+		li.step03 i{position: absolute; display:inline-block; right:3px; top:45px; border: solid $step03color;  border-width:0 3px 3px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+		li.step04 i{position: absolute; display:inline-block; right:3px; top:45px; border: solid $step04color;  border-width:0 3px 3px 0; padding: 5px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+	}	
+}
+
+.period{width: 100%; height:740px;
+	$line:#c3cdde;
+	h1{width:1200px; @include text(40,40,$black2,bold,left,0 auto 30px,80px 0 0 0);}		
+	h2{width:1200px; @include text(18,18,$black3,null,left,0 auto,null)}
+	ul{width: 1200px; margin:85px auto 0; font-size: 0;
+		li{position: relative; height: 380px;  display: inline-block; border:2px solid $line; box-sizing: border-box; border-radius: 6px; margin:0 25px 0 0; vertical-align: top;
+			p{position: absolute; left:0; top:-22px; width:99%; height:2px; background:$line;}
+			i{position: absolute; display:inline-block; right:3px; top:-26px; border: solid $line;  border-width:0 2px 2px 0; padding: 4px;transform: rotate(-45deg);  -webkit-transform: rotate(-45deg); }
+			h3{display: inline-block; height:35px; background: $maincolor; @include text(18,37,$white,bold,left,30px 0 15px 10%,0 15px); box-sizing: border-box; border-radius: 6px; }	
+			h4{width:80%; @include text(18,30,$maincolor,bold,left,30px auto 15px,null); letter-spacing: -1px;}	
+			h5{width:80%; @include text(16,26,$black6,normal,left,0 auto,null); 
+				span{font-size: 15px; letter-spacing: -1px;}
+			}	
+			h6{width:80%; @include text(18,28,$black4,bold,left,15px auto 0,10 0 15px 0);}	
+			&:nth-child(1){width:275px}
+			&:nth-child(2){width:345px}
+			&:nth-child(3){width:300px}
+			&:nth-child(4){width:180px; margin:0}
+			&:nth-child(4) h4{ margin:110px auto 0; text-align: center; }
+		} 	
+	}
+}
+
+.review{position: relative; width:100%; background: $maincolor; height:790px;
+	h1{@include text(40,40,$white,bold,center,0 auto 30px,80px 0 0 0);}		
+	h2{@include text(20,20,$white,null,center,0 auto,null)}
+	.swiper-container{position: relative; width:1280px; height: 500px; margin:70px auto 0; 
+		.swiper-wrapper{font-size: 0; 
+			div{position: relative;  display: inline-block; width: 392px; height: 420px; border-radius: 6px; @include bgcolor($white,"reviewBtn.png" ,center, 350px); margin: 0 52px 0 0;
+				&:last-child{margin:0;}
+				h3{width: 156px; height: 69px; @include bg("reviewLabel.png", center, top); @include text(16,59,$white,bold,center,0 auto,null);}	
+				h4{width: 80%; @include text(20,20,#4d5c7b,bold,left,30px auto 0,null); letter-spacing: -1px;}	
+				ul{width: 80%; margin:20px auto 0;
+					li{
+						@include text(16,16,$black3,normal,left,0 0 12px 0,null);
+						strong{margin:0 8px 0 0;}
+					}
+				}
+				h5{width:80%; @include text(15,25,$black6,normal,left,15px auto 15px,null);}	
+				a{@extend %alink;}
+			}
+		}
+		.swiper-button-prev{position: absolute; right:0; left:50%; top:460px; width:22px; height:34px; margin:0px 0 0 -40px; @include bg("reviewArrowL.png",left,top); cursor: pointer;}
+		.swiper-button-next{position: absolute; right:0; left:50%; top:460px; width:22px; height:34px; margin:0px 0 0 30px; @include bg("reviewArrowR.png",left,top); cursor: pointer;}
+	}	
+}
+
+.reviewPop{ position:fixed; display:none; left:50%; top: 50%; width:700px; transform: translate(-50%,-50%); background: $white;  border-radius: 6px;
+	box-sizing: border-box; padding:0 0 50px 0; z-index: 60;
+	h3{width: 156px; height: 69px; @include bg("reviewLabel.png", center, top); @include text(16,59,$white,bold,center,0 auto,null);}	
+	h4{width: 85%; @include text(24,20,#4d5c7b,bold,left,30px auto 0,null); letter-spacing: -1px;}	
+	ul{width: 85%; margin:20px auto 0;
+		li{
+			@include text(16,16,$black3,normal,left,0 0 12px 0,null);
+			strong{margin:0 8px 0 0;}
+		}
+	}
+	h5{width:85%; @include text(16,28,$black6,normal,left,15px auto 15px,null); letter-spacing: -1px;}	
+	p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); @include bgcolor(rgba(0,0,0,.4),"close.png",50%,50%);  border-radius: 6px; cursor: pointer;}
+}	
+
+.taxExplain{width:100%;
+	ul{width:1280px; margin:0 auto; font-size: 0;
+		> h1{width:1200px; margin:0 auto; @include text(36,32,$black3,bold,left,0 auto 35px,60px 0 0 0);}	
+		li{width:50%; display: inline-block;  vertical-align: top; padding:0 0 70px 0;
+			> h1{ @include text(34,32,$black3,bold,left,0 0 35px 40px,60px 0 0 0);}	 			
+			h2{width:560px; margin:0 0 0 40px;
+				span{background:$maincolor; @include text(24,26,$white,normal,left,null,7px 15px)}
+			}
+			h3{width:560px; @include text(22,18,$black5,bold,left,25px 0 10px 40px,null)}
+			h4{width:560px; @include text(16,28,$black5,normal,left,0 auto,null)}
+			h5{width:560px; @include text(16,28,$black5,normal,left,25px 0 0 40px,null);
+				strong{display:block; font-size:16px;}			
+			}
+			h6{width:560px; @include text(16,26,#8493b3,bold,left,15px 0 0 40px,null);}
+		}		
+	}
+	p{width: 100%; height:1px; background: $line;}
+}
+
+.people{margin:0 auto 100px;	
+	$blue:#166bb5;
+	h1{@include text(40,40,$black1,bold,center,0 auto 30px,80px 0 0 0);}
+	h2{@include text(22,22,$black1,normal,center,0,null);}
+
+	div.tabBlock{width: 1280px; height: 571px;  margin: 50px auto 0; font-size: 0; box-sizing: border-box;  border:1px solid $line;
+		div.tabBlock-content{display: inline-block; width: 850px; height: 569px; box-sizing: border-box;  border-right:1px solid $line;
+			div{ position: relative; display: inline-block; width: 100%;  height: 569px;
+				@include bg("peopleBg.png",left,bottom); overflow: hidden;
+				img{position: absolute; left:60px; top:50px;}
+				&:last-child{border-right:0;}				
+				h3{ @include text(36,30,$black4,200,left,0 0 0 420px,130px 0px 15px 0px); letter-spacing: -1px;
+					span{@include text(36,36,$black4,bold,left,0 0 0 10px,0px 0px 0px 0px); letter-spacing: -0.5px;}
+				}
+				h3.people01{padding:90px 0 15px 0;}				
+				h5{ margin:10px 0 0 420px; letter-spacing: -0.5px;
+					li{ @include text(15,28,$black7,normal,left,0,0 0 0 4px);
+						strong{color:$black3;}
+					}
+					li.on{ @include text(16,28,$black7,normal,left,0 0 5px 0,0);
+						strong{color:$black3; background: #eaf3fa; padding:3px 4px;}
+					}					
+				}
+				div.label{@include boxab(inline-block,245px,250px,101px,135px); @include bg("peopleLabel.png",left,top); text-align: center;
+					p{@include text(13,13,$white,normal,center,0,20px 0px 10px 0px);}
+					p.labelText{@include text(16,26,$white,bold,center,0,30px 0px 10px 0px);}
+					span{height: 40px; @include texts(40,40,$white,bold,center); vertical-align: middle;
+						&:last-child{ @include text(18,18,$white,bold,center,0 0 0 3px,0)}	
+						}
+				}
+			}
+		}
+
+		ul{display: inline-block; width: 428px; height: 570px; font-size: 0; vertical-align: top;
+			li{display: inline-block; width: 50%; height: 95px; box-sizing: border-box;  border-right: 1px solid $line;  border-bottom: 1px solid $line;  cursor: pointer; 
+				@include  texts(18,95,$black2,normal,center); margin:0 0 0 0;
+				&:nth-child(2n){border-right:none;}
+				&:nth-child(11){border-bottom:none;}
+				strong{color:$maincolor; margin:0 10px 0 0;}	
+			}
+			li.is-active{background: $maincolor; color:$white;
+				strong{color:$white;}
+			}
+		}		
+	}	
+}
+
+.qna{width:100%; background: #f6f6f6; overflow: hidden;
+	h1{@include text(40,40,$black1,bold,center,0 auto 50px,80px 0 0 0);}
+	ul{position: relative; width:960px; margin:0 auto 100px; border-top:2px solid $black5; 
+		li{position: relative; border-bottom: 1px solid #cdcdcd;
+			a{display: block; height: 60px; @include text(20,60,$black5,bold,left,0 auto,null); cursor: pointer; letter-spacing: -1px;
+				span{@include text(24,16,$black4,bold,center,0 10px 0 20px,null);}
+			}
+			div{display:none; width:100%; box-sizing: border-box; background: #ececec; @include text(17,27,$black5,normal,left,null,20px 20px); letter-spacing:-1px;}
+			img{@include boxab(null, 900px, 30px, null, null)}
+		}
+	}
+}
+
+.customer{width:100%; height: 490px; text-align: center; font-size: 0; background-image: url(../images/customerBg.png), linear-gradient(90deg, #7b909e 50%, #a7bbc7 50%);;
+    background-repeat: no-repeat,no-repeat; background-position: bottom center,bottom center;
+	
+	div{display:inline-block; width: 600px; vertical-align: top;
+		h1{@include text(40, 40,$white ,normal ,left ,200px 0 25px,null )}
+		h2{@include text(24, 24,$white ,normal ,left ,null,null)}
+	}
+	ul{display: inline-block; width: 600px; font-size: 0;
+		li{position: relative; display: inline-block; width: 270px; height: 330px; vertical-align: top; border-radius: 6px; margin:80px 20px 0 0;
+			img{display: inline-block; margin:40px 0 15px;}
+			h3{@include text(24, 24, $white, normal, center, null, null)}
+			h4{@include text(16, 26, $white, normal, center, 20px 0 45px, null)}
+			h5{@include text(32, 32, $white, bold, center, null, null)}
+			h6{display: inline-block; border:2px solid $white; border-radius:22px;  @include text(16, 16, $white, bold, center, null, 12px 30px)}
+			&:first-child{background: #38495f;}
+			&:last-child{background: #1b3c78;}
+			a{@extend %alink;}
+		}
+	}
+}
+
+.group{width: 100%; border-bottom:1px solid #e6e6e6;
+	ul{font-size: 0; width: 1200px; margin: 0 auto 50px; 
+		a{display: inline-block;  margin:0 130px 0 0; text-align: left; vertical-align: top;
+			img{margin:45px 0 0 0;}
+			span{display: block; @include text(13,23,$black7,noraml,center,0,10px 0 0 0); letter-spacing: -0.5px;}
+			&:last-child{margin: 0}
+		}
+	}
+}
+
+footer{width: 1200px; margin:55px auto 0; 
+	ul{font-size: 0; 
+		li{display:inline-block; position: relative; @include texts(12,13,$black7,normal,center); padding:0 30px 0 0; @include afterR(15px,1px,1px,12px,$blackb);
+		&:last-child:after{display: none;}
+		}
+	}
+	h3{@include text(12,13,$black7,normal,left,0,20px 0 120px 0);}
+}
+
+.quick{ position: fixed; right:30px; bottom:80px; z-index: 600;
+	div{width: 105px; height: 105px; border-radius: 50%; @include bgcolor(#dde0e5,"customermanOn.png",-325px,-50px);
+		h1{ opacity: 0; @include text(16,16,$black1,bold,left,0 0 0 140px,40px 0 10px);}
+		h2{ opacity: 0; @include text(12,12,$black1,normal,left,0 0 0 140px,0 0 0px); letter-spacing: -1px;}
+	}
+	ul{ position: relative;
+		li{ opacity: 0; position: absolute; right:10px; top:-90px; background: #3c5a98;  border-radius: 10px;  @include text(13,13,$white,normal,null,0,11px 9px);
+			span{position: absolute; left:54px; top:33px; width:0; height:0; border-top:10px solid #3c5a98; border-right:10px solid transparent; z-index: 15;}
+			&:nth-child(2n){background:#b85708;
+				span{border-top:10px solid #b85708; border-right:10px solid transparent;}
+			}
+		}
+	}
+	a{@extend %alink;}
+
+}
+
+#ch-plugin-core {bottom: 105px !important; display: none  !important;}

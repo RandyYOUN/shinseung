@@ -1,0 +1,817 @@
+    /* Scss Document */
+
+    $white:#fff; 
+    $black:#000; $black1:#111; $black2:#222; $black3:#333; $black4:#444; $black5:#555; $black6:#666; $black7:#777; $black8:#888;
+    $black9:#999; $blacka:#aaa; $blackb:#bbb; $blackc:#ccc; $blackd:#ddd;$blacke:#eee; $line:#dadada;
+    $imgLocation:"../images/";
+    $line:#dcdcdc;
+
+    %alink{position: absolute; display: block; left:0; top:0; width: 100%; height: 100%; cursor: pointer; /*background: red;*/}
+
+    $sqrt_2: 1.41421356237;
+
+    @mixin box($display,$width,$height,$margin){ display: $display; width:$width; height:$height; margin: $margin; }
+    @mixin boxab($display,$left,$top,$width,$height){ position: absolute; display: $display; left:$left; top:$top; width:$width; height:$height; }
+    @mixin boxabR($display,$right,$top,$width,$height){ position: absolute; display: $display; right:$right; top:$top; width:$width; height:$height; }
+    @mixin boxabB($display,$right,$bottom,$width,$height){ position: absolute; display: $display; right:$right; bottom:$bottom; width:$width; height:$height; }
+    @mixin boxfl($display,$width,$height,$margin){ display: $display; width:$width; height:$height; margin: $margin; &:after{display: block; content: '';  clear:both;} }
+    @mixin text($fontsize,$lineheight,$color,$weight,$center,$margin,$padding){ font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center; margin:$margin; padding:$padding; }
+    @mixin texts($fontsize,$lineheight,$color,$weight,$center){ font-size: $fontsize+px; line-height: $lineheight+px; color:$color; font-weight: $weight; text-align: $center; }
+    @mixin bg($img,$left,$top){ background: url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat; }
+    @mixin bgcolor($bgcolor,$img,$left,$top){ background:$bgcolor url("#{$imgLocation}#{$img}") #{$left} #{$top} no-repeat; }
+    @mixin after($left,$top,$width,$height,$bgcolor){ &:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: $bgcolor;} }
+    @mixin afterR($right,$top,$width,$height,$bgcolor){ &:after{content: ''; position: absolute; right:$right; top:$top; width:$width; height: $height; background: $bgcolor;} }
+    @mixin afterB($left,$bottom,$width,$height,$bgcolor){ &:after{content: ''; position: absolute; left:$left; bottom:$bottom; width:$width; height: $height; background: $bgcolor;} }
+    @mixin afterbg($left,$top,$width,$height,$img,$bgleft,$bgtop){ &:after{content: ''; position: absolute; left:$left; top:$top; width:$width; height: $height; background: url("#{$imgLocation}#{$img}") #{$bgleft} #{$bgtop} no-repeat;} }
+    @mixin afterbgR($right,$top,$width,$height,$img,$bgleft,$bgtop){ &:after{content: ''; position: absolute; right:$right; top:$top; width:$width; height: $height; background: url("#{$imgLocation}#{$img}") #{$bgleft} #{$bgtop} no-repeat;} }
+    @mixin closex($size: 21px, $thick: 2px, $color: #000, $padding: 0, $display: inline-block, $position: relative) { 
+        position: $position; display: $display; width: $size + $padding*2; height: $size + $padding*2;
+        &:before, &:after { content: ''; position: absolute; top: 50%; left: 50%; width: round($size*$sqrt_2 - $thick); height: $thick; background-color: $color; }
+        &:before { -webkit-transform: translate(-50%, -50%) rotate(45deg); transform: translate(-50%, -50%) rotate(45deg); }
+        &:after { -webkit-transform: translate(-50%, -50%) rotate(135deg); transform: translate(-50%, -50%) rotate(135deg); }
+    }
+    
+    
+    .wrap{width:100%;min-height:100%;max-height:100%;height:100%;position:relative;}
+    .mask{position:fixed; display:none; left:0;  top:0; width:100%; height: 100%; background:rgba(0,0,0,.7); z-index:50;}
+    .mainplay{ position: absolute; left:2.5%; top:245px; width: 47px; height: 47px; @include bg("stop.png", 50%, 50%/10px auto); border-radius: 50%; opacity: .5; z-index: 999;}
+    .playon{ @include bg("play.png", 50%, 50%/20px auto);  opacity: .5; }
+    
+    .mgnb{ display:none; position:absolute; top:0; right:-80%; width:80%; height:100%; overflow-y:scroll; background: #fff; z-index:60;
+        h1{ height:50px; padding:16px 20px 10px; box-sizing:border-box;background:#3b4c5a;
+            img{ width:45px;}
+        }
+        ul{ width: 100%; box-sizing:border-box;
+            li { border-bottom: 1px solid $line; height:58px;
+                a{ display:block; @include text(18, 58, $black4, null, null, 0, 0px 20px); box-sizing: border-box;}
+            }
+        }
+        .mGnbClose{ display:block;position:absolute;top:0px;right:0; width:55px;height:50px; line-height:57px; text-align:center; 
+            i{ @include closex($size: 20px, $thick: 2px, $color: $white);} }
+
+                    
+    }
+
+    header{ width:100%; height: 50px; background: #1f5381; overflow: hidden;
+        img{display: inline-block; width:45px; margin:15px 0 0 5%;}
+        .mgnbTop{ display:inline-block; position:absolute; top:0px; right:0; width:50px; height:50px; z-index: 40;
+            div{ position: relative; margin:16px 0 0 0;
+                span{  display:block; width:18px; height:2px; margin:0 auto 5px; background:#fff; border-radius: 5px;
+                    &:last-child{margin-bottom:0;}
+                }
+                &:after{content:'MENU'; position: absolute; right:40px; top:2px; color:#fff; font-size: 12px; font-weight: normal;}
+            }
+        }        
+    }
+
+    .mainvisual{ position: relative; width:100%; height: 350px; @include bg("mainvisual.png",left,top/cover); overflow: hidden;
+        h1{ width: 90%; @include text(30,30,$white,bold,null,105px auto 0,null); }  
+        h2{ width: 90%; @include text(18,18,$white,250,null,25px auto 0,null); }  
+    }    
+  
+    .maintext{ width:100%; height:135px;  position: relative; overflow: hidden;
+        div.slider{				
+            div.maintextBox{ height: 135px;}
+            div.maintext01 > div{ position: absolute; left:0; top:0px; height:135px; width: 100%; background: rgb(46, 37, 37);}	
+            div.maintext02 > div{ position: absolute; left:0; top:0px; height:135px; width: 100%; background: rgb(71, 73, 85);}	
+            div.maintext03 > div{ position: absolute; left:0; top:0px; height:135px; width: 100%; background: rgb(70, 70, 70);}	
+            h2{ width: 90%; font-family: 'Nanum Myeongjo', serif; @include text(17,27,#d8d8d8,250,null,25px auto 0,null); letter-spacing: 0; }
+            h3{ width: 90%;  @include text(13,13,$blacka,lighter,null,12px auto 0,null);}	 		
+        }
+    }
+
+    .link{ position: relative; width: 100%;  margin:10px 0 0 0;   background: #DCE5EE; padding:130px 0 15px 0;
+        img{ position: absolute; right:0px; top:-40px; width: 185px; }
+        h1{ position: absolute; left:5%; top:50px; display: inline-block; background: rgba(255,255,255,.4);  @include text(26,26,$black3,bold,center,null,4px 0 4px 2px);}
+        h2{ position: absolute; left:5%; top:95px; background: rgba(255,255,255,.9); @include text(13,13,$black1,lighter,center,null,4px 0 4px 2px);}
+        div{ width: 90%; margin:15px auto 30px; font-size: 0; 
+            input[type="tel"]{ position: relative; width: 60%; margin:20px 2.5% 15px 0%; padding:15px 20px 14px 13px; font-size: 13px;  color:$black3; font-weight: bold; box-sizing: border-box;
+                vertical-align: middle; border: 0; outline: 0; border: 1px solid $black8; background: $white;}
+            input[type="tel"]:focus::placeholder{ color:transparent; }
+            input[type="tel"]::placeholder{ font-size:12px; color:$black9; font-weight: normal; }
+            button{ display: inline-block; width: 37.5%; height: 47px; background: $black4; @include text(12,38,$white,bold,center,20px 0px 0 0,null); vertical-align: middle; box-sizing: border-box; vertical-align: top;}
+            a.chatting{ display:inline-block; width: 100%; background:#0E3F6A; padding:12px 0; height: 32px; line-height: 32px; font-size: 17px; color:$white; text-align: center; font-weight: bold; }
+        }
+    }
+
+    .heavytax{ margin:10px 0 0 0;
+        h1{ width: 100%; height: 55px; @include text(20,60,$white,bold,center,null,null); background:#922D12 ;}	
+        h2{ width: 100%; height: 115px; @include bg("heavytaxBg.png", left, top/cover);  text-align: center;
+            span{ display:inline-block; @include text(18,29,$white,null,null,30px 0 0 0,null);}
+        }
+        div{ background:#F6F8F9; padding:0 0 30px 0;
+            h3{ width: 90%; @include text(13,13,$black3,bold,null,0 auto,20px 0 8px);}
+            h4{ position:relative; display: inline-block; @include text(15,15,$black3,bold,null,0 0 20px 5%,0 0 0px); @include afterB(0px, -2px, 100%, 4px, #FBCACA); z-index: 1;
+                &:after{ z-index: -1;}
+            }
+            h5{ width: 90%; margin: 0 auto; font-size: 0;
+                a{ display: inline-block; width: 45%; height: 42px; @include text(15,42,$black3,bold,center,0 auto,null); vertical-align: top;
+                    &:first-child{ border:1px solid $black3; margin:0 5% 0 0; box-sizing: border-box;}
+                    &:last-child{ background: $black3; color:$white;}
+                }
+            }
+
+        }
+    }
+
+	.case{ width: 100%; margin: 0 auto;
+		h1{ width: 90%; @include text(19,20,$black3,bold,left,0 auto,55px 0px 5px 0px);}		
+		.case01 { width: 95%; margin:13px 0 0 5%;
+            .swiper-container{ width: 100%;
+                .swiper-wrapper{ height: 280px;
+                    div{position: relative; width: 80%; height: 235px;  border:1px solid $line; box-sizing: border-box; @include bgcolor($white,"plus.png",90%,173px/14px auto);
+                        h4{ width: 80%; @include text(15, 18, $black4, bold, null, 0 auto, 25px 0 15px 0);}
+                        ul{ width: 80%; margin:0 auto;
+                            li{ position: relative; @include text(12, 12, $black3, null, null, 0 0 9px 0, 0 0 0 0); 
+                                span{display: inline-block; width: 54px; border-radius: 20px; font-size: 14px; color:#fff; text-align: center;  margin:0 10px 0 0;  padding:6px 0px;}
+                                &:nth-child(2) {margin:0 0 12px 0 }
+                                &:nth-child(3) span{background: #888;   font-size: 12px; }
+                                &:last-child span{background: #2972b2;  font-size: 12px;}
+                            }
+                        }
+                        h5{ width: 80%; height: 40px; @include text(15, 40, #2972b2, bold, null, 0 auto, null); 
+                            span{ display: inline-block; vertical-align: middle;
+                                &:first-child {font-size: 24px; margin:0 6px 0 0; letter-spacing: 0px;}                            
+                            }
+                        }
+                        a{ @extend %alink;}
+                    }
+                }
+            }
+            .swiper-pagination { display: inline-block; width: 75%; bottom:0; text-align: right; height:24px; @include text(12, 12, $black9, null, null, 0 auto, 0 0 0 0);}
+            .swiper-button-prev{position: absolute;  top:auto; bottom:0; width:30px; height: 35px; margin-left:75%; @include bgcolor($white,"casearrowL.png",50% ,50%/16px auto ); cursor: pointer; }
+            .swiper-button-next{ position: absolute; top:auto; bottom:0; width:30px; height: 35px; margin-right:0%; @include bgcolor($white,"casearrowR.png",50% ,50%/16px auto ); cursor: pointer; }
+        }
+    }
+
+    .video{width:100%; height: 240px; margin:25px 0 0 0; @include bgcolor(#423D3E, "seminarbg.png", left, top/cover);
+        h1{width:90%; @include text(22, 22, $white, normal, left, 0 auto, 35px 0 20px 0)}        
+        .swiper-container{ height:145px;
+            .swiper-wrapper{  margin: 0px auto;
+                .scheduleDiv { 
+                    li{border:1px solid $black8; height: 35px; width:90%; @include text(12, 35, $white, normal, left, 0 auto 5px, 0px 0 0px 10px); box-sizing: border-box; 
+                        span{ display: inline-block;  @include text(12, 16, $blackd, normal, left, null, 0 0 0px 0); vertical-align: middle;
+                            &:first-child{ width: 20px; height: 30px; @include bg("play.png", 50%, 50%/13px auto);}
+                        }
+                    }
+                }
+            }
+            .swiper-pagination{ bottom:0px; @include text(12, 12, $white, normal, center, 0 auto, 0);}
+        }
+    }
+
+    .videoPop{ position:fixed; display:none; left:50%; top: 50%; width:330px; transform: translate(-50%,-50%); z-index: 999990;			
+		p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); @include bgcolor(rgba(0,0,0,.4),"close.png",50%,50%); cursor: pointer;}
+	}
+
+    .benefit{
+        h1{ width:95%; @include text(20,20,$black1,bold,center,0 auto,40px 0 10px 0);}
+        ul { width: 95%; font-size: 0; margin:0 auto;
+            li{ position: relative; width: 100%; height: 150px; border:1px solid $line; margin:15px 0 0 0;
+                h2{ width: 55%; @include text(19,19,#3472A8,bold,left,0 0 0 35%,28px 0 8px);} 
+                h3{ width: 55%;  @include text(14,20,$black6,normal,left,0 0 0 35%,0 0 0px);}
+                h4{ display: inline-block; border-bottom:2px solid  rgb(186, 209, 226); @include text(14,14,$black5,bold,left,0 0 0 35%,16px 0 0px 0);} 
+                &:nth-child(1){ @include bg("benefit01.png", 10%, 50%/63px auto);}       
+                &:nth-child(2){ @include bg("benefit02.png", 10%, 50%/66px auto);}  
+                &:nth-child(3){ @include bg("benefit03.png", 10%, 50%/66px auto);}  
+                &:nth-child(4){ @include bg("benefit04.png", 10%, 20px/73px auto);}     
+                div{ text-align: center;
+                    input[type="tel"]{ position: relative; display: inline-block; width: 80%; height:40px; margin:20px auto 0; padding:11px 20px 10px 10px; font-size: 14px;  color:$black3; font-weight: bold; box-sizing: border-box;
+                        vertical-align: middle; border: 0; outline: 0; background: rgb(244, 245, 248);}
+                    input[type="tel"]:focus::placeholder{ color:transparent; }
+                    input[type="tel"]::placeholder{ font-size:12px; color:$black9; font-weight: normal; }
+                    button{ display: inline-block; width:80%;  height: 43px; display: inline-block; border:1px solid #3472A8; @include text(14,43,#3472A8,bold,text,10px 0 0px 0,0px 0 0px 0);}
+                }
+                &:last-child{height:234px;}
+                a{ @extend %alink}
+            }
+        }
+    }
+
+    .price{
+        h1{ width:95%; @include text(20,20,$black1,bold,center,0 auto,50px 0 25px 0);}
+        ul{ font-size: 0; background: #F4F7FB;
+            li{ position: relative; display: inline-block; width: 50%; border-right:1px solid #E2EBEF; border-bottom:1px solid #E2EBEF; box-sizing: border-box;
+                h2{ width: 70%; @include text(18,18,$black1,bold,null,0 auto,40px 0 10px 0);} 
+                h3{ width: 70%; height:35px;  @include text(12,20,$black1,null,null,0 auto,0 0 0px 0);}      
+            div{  width: 70%; height: 32px; margin:20px auto 45px; font-size: 0;line-height: 32px; 
+                span{ display: inline-block;   height: 32px; @include text(14,32,$black1,normal,left,null,0 0 0px 0); vertical-align: top;                   
+                    &:first-child{width: 32px; height: 32px; font-size: 11px; border-radius: 50%; margin:0 8px 0 0; color:#fff; text-align: center;}
+                    &:nth-child(2n){ font-size: 26px; font-weight: bold; padding: 0 4px 0 0;}
+                }
+                span.pricebg01{ background: #cc6b94;}
+                span.pricebg02{ background: #7a9159;;}
+                }         
+                &:nth-child(2n){ border-right:0px;}  
+                a{ @extend %alink;}
+            }
+        }
+        a.allprice{ display: block; width: 90%; height: 50px; line-height: 50px; border:1px solid #c3d1d6; color:#8ca0a8; text-align: center; margin:20px auto; }
+    }
+
+
+    .anywhere{ position: relative; width: 100%; margin:50px 0 0 0; @include bg("anywhereBg.png", left, top/100% auto); overflow: hidden; 
+        img{ position: absolute; left:-90px; top:50px; width: 320px;}
+        h1{ width:90%; @include text(20,20,$black1,null,null,0 auto,240px 0 15px 0);}
+        h2{ width:90%; @include text(16,26,#919191,null,left,0 auto,0 0 0px 0);} 
+    }
+
+
+    .best{ width: 100%; height: 570px; margin: 60px auto 0; background: #EFF6FC;
+        h1{ width: 90%; @include text(22,22,$black3,bold,center,0 auto,45px 0px 0px 0px);}	
+        h2{ width: 90%; @include text(16,16,$black3,null,center,0 auto,15px 0px 20px 0px);}
+        .swiper-container{ width: 100%; position: relative;  
+            .swiper-wrapper{ height: 415px; 
+                .swiper-slide{ position: relative; width: 73%; height: 300px; box-sizing: border-box; @include bgcolor($white,"plus.png",90%,173px/14px auto);
+                    ul{ width: 90%; height: 140px; background: #2972B2; margin:220px auto; border-radius: 8px;
+                        h3{ width: 85%; @include text(21,21,$white,bold,left,0 auto,30px 0 5px 0);} 
+                        li{ position: relative; width: 85%; @include text(15,22,$white,normal,left,0 auto,6px 0 0px 10px); box-sizing: border-box; @include after(2px, 14px, 2px, 2px, $white);}
+                    }
+                    div.label{ position: absolute; width: 57px; height: 69px; right:8%; top:230px; font-size: 12px; line-height: 17px; color:#fff; text-align: center;  @include bg("bestlabel.png",50% ,50%/57px auto );
+                        span{ display: inline-block; width: 100%; font-family: 'Anton', sans-serif; font-size: 22px; padding:12px 0 0 0;  }
+                    }
+                }
+            }
+            .swiper-pagination { display: inline-block; width: 73%; bottom:0; text-align: right; height:24px; @include text(12, 12, $black6, null, null, 0 auto, 0 0 0 0);}
+            .swiper-button-prev{ top:auto; bottom:0; width:30px; height: 35px; margin-left:72%; @include bg("casearrowL.png",50% ,50%/16px auto ); cursor: pointer; }
+            .swiper-button-next{ top:auto; bottom:0; width:30px; height: 35px; margin-right:3%; @include bg("casearrowR.png",50% ,50%/16px auto ); cursor: pointer; }
+        }
+    } 
+
+    .people{ position: relative; width: 100%; height: 420px; @include bgcolor(#393a3a,"peoplebg.png",left ,top/100% auto ); margin:15px 0 0 0;
+        img{ position: absolute; right:10%; bottom:40px; width: 23px; }
+        h1{ width:85%; @include text(18,18,$white,bold,left,0 auto,240px 0 10px 0);}
+        h2{ width:85%; @include text(15,25,$blacka,normal,left,0 auto,0 0 0px 0);} 
+        h3{ width:85%; @include text(13,20,$blacka,normal,center,18px auto 0,13px 0); border:1px solid $black6} 
+        a{@extend %alink}
+    }
+
+    .process{ position:relative; width:100%; height: 290px; margin:15px 0 0 0; 
+        h1{ width:90%; @include text(20, 20, $black3, bold, left, 0 auto, 25px 0 23px 0)}        
+        .swiper-container{ height:215px; 
+            .swiper-wrapper{  margin: 0px auto;
+                .processDiv { 
+                    h2{ width:90%; @include text(16, 16,#44629F, bold, left, 0 auto, 0px 0 15px 0)}   
+                    li{ border:1px solid $blackd; height: 35px; width:90%; box-sizing: border-box;  border-radius: 5px;  margin:0 auto; text-align: center; font-size: 0; 
+                        @include text(14, 35, $black6, normal, left, 0 auto 10px,0 0 0px 10px);
+                        span{ display: inline-block; background: #44629F; border-radius: 20px; @include text(11, 20, $white, normal, center, 0px 6px 0 0, 2px 8px 1px); }
+                                        
+                    }
+                }
+            }
+        }
+        .swiper-pagination{ right:7%; top:67px; @include text(12, 12, $black4, normal, center, 0 auto, 0);
+            span{ margin:0 0px 0 5px;}
+            span.swiper-pagination-bullet-active{ background: $black5;}
+        }
+    }
+
+    .provide{
+        h1{ width:90%; @include text(20, 20, $black3, bold, left, 0 auto, 25px 0 23px 0)}  
+        ul{ width: 90%; margin:0 auto; 
+            li{ height: 35px; background:#E8EFF3; border-radius: 4px; @include text(17, 35, $black3, bold, left, 0 0 10px 0px, 0 0 0 15px); box-sizing: border-box;} 
+        }
+
+    }
+
+    .difference{
+        h1{ width:90%; @include text(20, 20, $black3, bold, null, 0 auto, 25px 0 16px 0)}  
+        h2{ width:90%; @include text(13, 13, $black3, null, null, 0 auto, 0px 0 10px 0)} 
+        ul{
+            li{ width:90%; border:1px solid $blackd; margin:15px auto 0; border-radius: 2px;
+                h3{ width:90%; @include text(20, 20, #3472A8, bold, null, 0 auto, 21px 0 6px 0)}  
+                h4{ width:90%; @include text(13, 20, $black3, null, null, 0 auto, 0px 0 19px 0)} 
+            }
+        } 
+
+    }
+
+    .download{ position: relative; width: 100%; height: 225px; @include bgcolor(#E6EAEF, "downloadBg.png", -20px, 20px/210px auto); margin:15px 0; overflow: hidden;
+        div{ margin:80px 0 0 130px;
+            h1{ display: inline-block; background: $white; @include text(14, 14, $black3, bold, null, 0 0 15px 0, 5px)}  
+            h2{ display: inline-block; background: $white; @include text(22, 22, $black3, bold, null, null, 5px)}  
+        }  
+        a{ @extend %alink}
+    }
+
+    .customer{ width: 100%; height: 395px; @include bgcolor(#575757, "customerbg.png", left, top/100% auto); text-align: center; margin:15px 0; overflow: hidden;
+        > a{ display: inline-block; width: 90%; height: 50px; line-height: 50px; background: $white; text-align: left; box-sizing: border-box; margin:15px 0 0 0;  padding:0 20px;
+            span{ font-size: 13px;
+                &:first-child{ font-size: 16px; font-weight: bold; margin:0 13px 0 0;}
+            }
+            img{ display: inline-block; width: 11px; float: right; margin:10px 0 0 0; vertical-align: middle;}
+            &:first-child{margin:118px 0 0 0;}
+        }
+        div{ position: relative; width: 90%; height: 170px; background: #22517e; margin:15px auto ; text-align: left;
+            h1{ width: 85%;  @include text(18,18,$white,bold,null,0 auto,35px 0 10px 0);} 
+            h2{ width: 85%;  @include text(13,22,$white,normal,left,0 auto,0 0 0px 0); letter-spacing: 0;} 
+            h3{ width: 85%;  @include text(24,24,$white,bold,left,0 auto,10px 0 0px 0); letter-spacing: 0;} 
+            a.call{ position: absolute; right:5%; top:30px; display: inline-block; width: 80px; height: 110px; line-height: 160px; text-align: center; 
+                color:$white; font-size: 12px; font-weight: bold;  @include bg("customercall.png", 50%, 25px/33px auto);
+            }
+        }
+    }
+
+    footer{
+        ul{width:90%; margin: 30px auto 90px; font-size: 0;
+            li{display: inline-block; width:50%; @include text(11, 16, $black7, null, left,  0  0 3px 0, 0);
+                &:nth-child(7){width: 70%} 
+                &:last-child{width: 100%; color:$blacka; margin:15px 0 0 0; letter-spacing: 0 ;}
+            }
+        }
+    }
+
+    .mquick{ position: fixed; left:0px; bottom:0px; width:100%; height:60px; background: #0E3F6A; z-index: 600; 
+
+        h1{ display: inline-block; @include text(15, 15, $white, null, left,  22px  0 0px 2.5%, 0  0 0px 0);}
+        h2{ position: relative; display: inline-block; height:50px; @include text(17, 60, $white, bold, left,  0  0 0px 0, 0  18px 0px 17px);  @include afterR(0px, 23px, 1px, 16px, #4A7AA4);
+           > a{ @extend %alink; width:100%; height:52px; left:0; top:0px; z-index: 30;}
+        }
+       
+        div{ @include boxabB(inline-block, 0px, 0px, 130px, 80px); box-sizing: border-box; overflow: hidden; z-index: 12; 
+            h3{ display: inline-block; position: absolute; bottom:0px; right:15px; width:90%; height:60px; 
+                @include text(17, 60, $white, bold, left,  0  0 0px 0, 0  0 0px 13px); box-sizing: border-box; }
+            img{position: absolute; right:-10px; bottom:-15px; width:60px; z-index: 1; }
+            
+        }
+        > a{ @extend %alink; width:122px; height:52px; left:auto; right:0px; right:0px; top:0px;  z-index: 720; }
+        ul{ position: absolute; left:76%; top:2px; z-index: 700;
+            li{ opacity: 0; position: absolute; top:0px; left:0px; width: 52px; border-radius: 5px; background: #B19920; color:$white; border:0; 
+                @include text(12,12,$white,normal,center,null,6px 5px 5px); z-index: 15;
+                span{position: absolute; left:40px; top:22px; width:0; height:0;  z-index: 15; border-top:10px solid #B19920;; border-left:10px solid transparent; }
+                &:nth-child(2n){background:$black3; color:$white; 
+                    span{border-top:10px solid $black3; border-left:10px solid transparent;}
+                }
+            }
+        }
+        
+    }
+
+    //기존채팅아이콘 가리기
+    #ch-plugin-core {bottom: 105px !important; display: none  !important;}
+
+    //서브
+    $blue:#2972B2;
+    
+    .subvisual{ width:100%; height:125px;  margin: 0 auto; 
+        h1{ @include text(26,125,$white,null,center,null,null);}	
+    }
+    .sub_pricebg{ @include bg("s_pricebg.png", left, top/cover);}
+    .sub_smartbg{ @include bg("s_smartbg.png", left, top/cover);}
+    .sub_memberbg{ @include bg("s_memberbg.png", left, top/cover);}
+    .sub_newsbg{ @include bg("s_newsbg.png", left, top/cover);}
+    .sub_reviewbg{ @include bg("s_reviewbg.png", left, top/cover);}
+
+    //서브_서비스가격
+    .s_price{ width:90%; margin: 0 auto 60px;        
+
+        h1{ width: 100%;  @include text(18,18,$black3,bold,null,null,40px 0px 15px 0px);
+            span{ display: inline-block; float: right; @include text(13,23,$black4,null,null,null,0px 0px 0 0px);}     
+        }
+        h1.blank{padding:25px 0 0 0;}	
+        .ty01{
+            table{ 
+                thead{width: 100%; height: 45px; background:$blue; @include text(12,45,$white,bold,null,null,null); 
+                    th{ border-right:1px solid #4386C1; box-sizing: border-box; }
+                }
+                tbody{
+                    tr{
+                        th{ @include text(14,14,$black4,bold,left,null,10px 0px 0 0px);
+                            span{ display: inline-block; color:$blue; font-size:11px; font-weight: normal; padding: 10px 8px 10px 20px;}
+                        }  
+                        td{ position:relative; border:1px solid $line; @include text(15,15,$black4,bold,left,null,35px 0px 13px 20px); box-sizing: border-box;
+                            &:nth-child(1){ &:after{ content: '프리랜서'; position: absolute; left:20px;  top: 10px; margin-top:5px; width: 100%; font-size:11px; color:$black9; font-weight: normal;} }
+                            &:nth-child(2){ &:after{ content: '개인사업자'; position: absolute; left:20px; top: 10px; margin-top:5px; width: 100%; font-size:11px; color:$black9; font-weight: normal;} }
+                            &:nth-child(3){ &:after{ content: '법인사업자'; position: absolute; left:20px; top: 10px; margin-top:5px; width: 100%; font-size:11px; color:$black9; font-weight: normal;} }
+                        } 
+                    }
+                }
+            }            
+        }
+        ul{ font-size:0; margin:15px 0 0 0;
+            li{ position: relative; width: 95%; display: inline-block; @include text(12,18,$black4,null,null,null,0px 0px 7px 8px); 
+                @include after(2px, 7px, 2px, 2px, $black8); 
+                span{ display: inline-block; font-size:11px; color:$black8; margin:3px 0 0 0;}
+            }
+        }
+
+        .ty02{
+            table{ 
+                thead{width: 100%; height: 45px; background:$blue; @include text(12,45,$white,bold,null,null,null); 
+                    th{ border-right:1px solid #4386C1; box-sizing: border-box; }
+                }
+                tbody{
+                    tr{
+                        td{ position: relative; border:1px solid $line; @include text(11,11,$black9,null,center,null,0px 0px 23px 0px); box-sizing: border-box;
+                            &:nth-child(1){ border:1px solid $line; @include text(12,18,$black4,null,left,null,13px 0px 13px 10px);}
+                            &:nth-child(2){ &:after{ content: '프리랜서'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            &:nth-child(3){ &:after{ content: '개인사업자'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            &:nth-child(4){ &:after{ content: '법인사업자'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            span{ display:inline-block; width: 9px; height: 9px; border-radius: 50%; border:2px solid $blue; margin:10px 0 0 0; padding: 0 0 0px 0;}
+                            i{ @include closex($size: 10px, $thick: 2px, $color: $black9); margin:11px 0 0 0;}
+                        } 
+                    }
+                }
+            }
+        }
+
+        .ty03{
+            table{ 
+                thead{width: 100%; height: 45px; background:$blue; @include text(12,45,$white,bold,null,null,null); 
+                    th{ border-right:1px solid #4386C1;  box-sizing: border-box; }
+                }
+                tbody{
+                    tr{
+                        th{ border:1px solid $line; @include text(12,50,$black6,normal,center,null,null); } 
+                        td{ border:1px solid $line; @include text(13,50,$black4,bold,center,null,null); } 
+                    }
+                }
+            }
+        }
+
+        .ty04{
+            table{ 
+                thead{width: 100%; height: 45px; 
+                    tr{ 
+                        th{ border-right:1px solid #4386C1; box-sizing: border-box; background:$blue; @include text(12,45,$white,bold,null,null,null);   }
+                        &:last-child{ 
+                            th{ border-right:1px solid #D0DDDE; box-sizing: border-box; background: #F5F6F6; 
+                                @include text(13,50,$black4,bold,null,null,null);   
+                                &:last-child{border:none;}
+                            } 
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        th{@include text(14,11,$black4,null,left,null,22px 0px 11px 0px); }
+                        td{ position: relative; border:1px solid $line; @include text(11,11,$black9,null,center,null,0px 0px 23px 0px); box-sizing: border-box;
+                            &:nth-child(1){ &:after{ content: '사전 절세컨설팅'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            &:nth-child(2){ &:after{ content: '양도소득세'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            &:nth-child(3){ &:after{ content: '증여세'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            &:nth-child(4){ &:after{ content: '증여세'; position: absolute; left:0px; top: 50%; margin-top:5px; width: 100%; font-size:11px;} }
+                            span{ display:inline-block; width: 9px; height: 9px; border-radius: 50%; border:2px solid $blue; margin:10px 0 0 0; padding: 0 0 0px 0;}
+                            i{ @include closex($size: 10px, $thick: 2px, $color: $black9); margin:11px 0 0 0;}
+                        } 
+                    }
+                }
+            }
+        }
+
+    }
+
+    //서브_스마트세무
+    .s_smart{ margin: 0 auto 50px;
+        .tabsWrap{ 
+			ul.tabtop{ position: relative; font-size: 0; text-align: center; @include afterB(0px, 0px, 100%, 1px, #d8dce5);
+				li{ position: relative; display: inline-block; width: 25%; text-align: center; padding:15px 0 20px; cursor: pointer; box-sizing: border-box; border-left:1px solid #dadada;
+					span{ display: inline-block; vertical-align: middle; width: 100%; @include text(12, 17, $black2, null, null, null, 8px 0 0 0); 
+						&:first-child { width: 24px; height: 24px; margin:0 0px 0 0; border:0; }
+					}
+					span.smarttab01{ @include bgcolor(null, "s_smarttab01.png", 50%, 50%/24px auto)}
+					span.smarttab02{ @include bgcolor(null, "s_smarttab02.png", 50%, 50%/24px auto)}
+					span.smarttab03{ @include bgcolor(null, "s_smarttab03.png", 50%, 50%/24px auto)}
+					span.smarttab04{ @include bgcolor(null, "s_smarttab04.png", 50%, 50%/24px auto)}
+
+					&:after { position: absolute; content: '';  left: 0px; height: 3px; background: #1d5bb0; transition: all 0.3s linear; width: 0; bottom: 0px; z-index: 9999999; }
+					&:hover:after { width: 100%; left: 0px; }
+				}
+				li.active{ position: relative; @include afterB(0px, 0px, 100%, 3px, #1d5bb0);
+					span{ color:#1d5bb0; font-weight: bold;}
+					span.smarttab01{ @include bgcolor(null, "s_smarttab01on.png", 50%, 50%/24px auto)}
+					span.smarttab02{ @include bgcolor(null, "s_smarttab02on.png", 50%, 50%/24px auto)}
+					span.smarttab03{ @include bgcolor(null, "s_smarttab03on.png", 50%, 50%/24px auto)}
+					span.smarttab04{ @include bgcolor(null, "s_smarttab04on.png", 50%, 50%/24px auto)}
+				}
+			} 
+        }
+        .tabarea { 
+            div{ position: relative; width: 100%; padding:0 0 370px 0; border-bottom:1px solid #dadada; overflow: hidden;
+                h1{ width: 85%; @include text(20,20,#0E3F6A,bold,null,0 auto,45px 0px 0px 0px);
+                    span{  font-family: 'Nanum Pen Script'; font-weight:lighter; font-size:26px; color:#5C96C8; margin:0 0 0 10px; border-bottom:1px solid #C9DBEB; }
+                }
+                h2{ width: 85%; @include text(15,26,#0E3F6A,null,null,0 auto,20px 0px 30px 0px);
+                    span{ background: #F5FCFF;}
+                }
+                h3{ width: 85%; @include text(15,26,#0E3F6A,null,null,0 auto,50px 0px 30px 0px);
+                    span{ background: #F5FCFF;}
+                }
+                img{position: absolute; }
+                ul{ position: absolute; left:0px; bottom:45px; background: $white; border-top:1px solid #C9C9C9; border-bottom:1px solid #C9C9C9; border-right:1px solid #C9C9C9;
+                    li{ position: relative; height: 42px; @include text(13,42,$black3,null,null,null,0px 20px 0px 30px); letter-spacing: -0.5px; 
+                        @include afterbg(10px, 14px, 14px, 12px,"s_smartcheck.png",50%,50%/13px auto); }
+                    li.highlight{ background: #DAECF5;}
+                    li.fontshort{font-size:11px;}
+                }
+                &:last-child{ border:none;}
+            }
+            div.hshort{height: 470px;}
+        }
+    }
+
+    //서브_구성원
+    .s_member{ 
+        ul.top{ font-size:0; background: #EBF4FC; padding:12px 0 15px;
+            li{ display: inline-block; width: 33.3%;
+                img{ display: block; width: 24px; margin:0 auto; padding:20px 0;}
+                h1{ width: 85%; @include text(12,19,$black3,null,center,0 auto,0px 0px 0px 0px);}
+                h2{ height: 50px; text-align: center;
+                    span{ display: inline-block; @include text(14,50,$black3,bold,center,0 auto,0px 0px 0px 0px); vertical-align: middle;
+                        &:first-child{ font-size:26px;  margin:0 0px 0 0;}
+                    }
+                }       
+            }
+        }
+        h1{ @include text(20,20,$black3,bold,center,0 auto,45px 0px 0px 0px);}
+        h2{ @include text(13,24,$black3,null,center,0 auto,15px 0px 20px 0px);}
+
+        ul.member{
+            > li{ position: relative; overflow: hidden;
+                h3{ width: 90%; @include text(14,14,$black3,bold,null,0 auto,55px 0px 20px 0px);
+                     span{ font-size:22px;  margin:0 0 0 10px; letter-spacing: 4px;}
+                }
+                ol{ width: 90%; margin: 0 auto;
+                    li{ @include text(12,24,$black3,null,null,null,null); letter-spacing: -0.5px;}
+                    dt{ @include text(11,11,$black5,bold,null,12px 0 6px 0,null); letter-spacing: -0.5px;}
+                    dl{ width: 73%; @include text(11,16,$black7,null,null,0 0 7px 0,null); letter-spacing: -0.5px;}
+                }
+                ol.more{ display: none;}
+                h5{ width: 90%; @include text(22,22,#BED1E1,bold,null,0 auto,35px 0px 25px 0px);}
+                > img {position: absolute; right:-75px; top:25px; width: 230px;}
+                h6{ position: absolute; right:0px; bottom:0px; width: 60px; height: 60px; text-align: center; background: $white;
+                    span{ display: inline-block; width: 100%; color:$black5; line-height: 16px; font-weight: bold; margin:10px auto 0}
+                    img{ display: inline-block; width: 10px; margin:5px 0 0 0;}
+                }
+                &:nth-child(odd){ background: #F9F9F9;}
+            }
+        }      
+    }
+
+    .location{ width:100%; text-align: center; overflow: hidden; margin:30px auto 0;
+        $maincolor:#546985;
+        img{width:160px; margin:40px 0 30px 0;}
+        h1{width:95%; @include text(20, 20, $black3, bold, center, 0 auto, 30px 0 0 0)}
+        h2{width:95%; @include text(13, 15, $black6, normal, center, 0 auto, 13px 0 20px 0)}
+        ul{font-size: 0; width:90%; margin:0 auto 42px; text-align: left;
+            li{display: inline-block; width:32%; height: 45px; box-sizing: border-box; border:1px solid #dadada; background: $white; margin:0 2% 10px 0;
+                @include text(13, 45, #424242, null, center, null, null);
+            &:nth-child(3n){margin:0}
+            }
+        }
+    }
+    
+    .locationPop{ position:fixed; display:none; left:50%; top: 50%; width:95%; padding:0 0 30px 0; transform: translate(-50%,-50%); background: $white; z-index: 60;
+        h1{width:90%; @include text(22,22,$black1,bold,left,0 auto,30px 0 25px 0);            
+            span{display: inline-block; vertical-align: middle;  @include text(14,12,$black1,normal,left,0,0 0 0 10px); }
+        }
+        h2{width:90%; margin:0 auto 0;
+            li{ font-size: 0; margin:0 0 10px 0;
+                strong{display:inline-block; width:15%; @include text(14,20,$black2,bold,left,0 auto,0px 0px 0px 0px);vertical-align: top; }
+                span{display: inline-block;width:85%; @include text(14,21,$black2,normal,left,0 auto,0px 0px 0px 0px); }
+                &:nth-child(5){ span{letter-spacing: 0.5px;}; strong{letter-spacing: 0.5px;}}
+                &:nth-child(6){ span{letter-spacing: 0.5px;}; strong{letter-spacing: 0.5px;}}
+                &:nth-child(7){ span{letter-spacing: 0.5px;}; strong{letter-spacing: 0.5px;}}
+            }
+        }
+        div{ width:90%; margin:35px auto 0; text-align: left; font-size:0;
+				a{display: inline-block; width:46%; height: 70px; vertical-align: top; text-align: center;
+					span{@include text(18, 70, $white,normal,center,0 auto, 0)}
+				}
+				a.chat{@include bgcolor(#166bb5,null ,center ,50%); margin:0 3% 0 0px;}
+				a.call{@include bgcolor($black2,null ,center ,50%)}
+			}
+            p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); line-height: 70px; text-align: center;
+                i{ @include closex($size: 20px, $thick: 2px, $color: $white);} 
+            }
+    }
+
+    //서브_세무뉴스
+	.s_news{
+		.newsnavi{ width: 100%; margin:0 auto;
+			ul{ font-size: 0; width: 90%; margin:30px auto 5px;
+				li{ display: inline-block; width: 14%; @include text(14,14,$black4,normal,center,null,0px 0px 25px 0px);
+					&:hover{ color:$black3}
+				}
+				a.active li{ @include text(15,15,$black3,bold,center,null,0px 0px 0px 0px); text-decoration: underline;}
+			}
+		}
+		.newscontents{ width: 100%; margin:0 auto;
+			ul{ font-size: 0; text-align: center;
+				li{ display: inline-block; width: 90%;  border:1px solid $line; margin:0 auto 20px;					
+					div{ width: 90%; margin: 0 auto; text-align: left; letter-spacing: -0.5px;
+						h1{ @include text(19,19,$black3,bold,null,null,30px 0px 10px 0px);}
+                        h2{ @include text(14,20,$black8,null,null,null,0px 0px 30px 0px);}
+                        span{ position: relative; display:block; width: 100%; height: 125px; overflow: hidden; margin:0 auto;
+                            img{ position: absolute; left:50%;  top:50%; transform: translate(-50%,-50%); display:inline-block; width: 100%;}
+                        }	                        
+						h3{ display: inline-block; width: 60%; @include text(15,15,#869DBC,bold,null,null,30px 0px 18px 0px);}
+						h4{ display: inline-block; width: 40%; float:right; @include text(15,15,$black7,null,right,null,30px 0px 18px 0px); letter-spacing: 0.5px;}
+					}
+				}
+			}
+		}
+		.paging{  width: 100%; margin:0 auto 40px;
+			div{ font-size: 0; text-align: center; margin:10px 0 0 0;
+				a.prev{ display: inline-block; width: 55px; @include text(15,15,$black7,bold,right,0 20px 0 0,10px 0px 10px 0px); @include bg("pagingleft.png", 0px, 50%/8px auto);
+					&:hover{ color:$black4;  @include bg("pagingleftOn.png", 0px, 50%/8px auto);}
+				}
+				span{ display: inline-block;
+					a{ width: 42px; display: inline-block; @include text(15,15,$black5,null,center,null,12px 0px 12px 0px); letter-spacing: 2px;}
+				}
+				a.next{ display: inline-block; width: 55px; @include text(15,15,$black7,bold,left,0 0 0 20px,10px 0px 10px 0px); @include bg("pagingright.png", 100%, 50%/8px auto);
+					&:hover{ color:$black4;  @include bg("pagingrightOn.png", 100%, 50%/8px auto);}
+				}
+			}
+		}
+        .newsview{  width: 90%;; margin:55px auto 0;  border:1px solid $line; font-size: 0;
+            div.contents{ width: 90%;; margin:0 auto 0;
+                h1{ width: 100%; @include text(18,18,$black4,bold,null,0 auto,30px 0px 15px 0px)}
+                h2{ display: inline-block; width: 30%; height: 20px; @include text(15,20,$black7,null,right,null,0px 0px 25px 0)}
+                h3{ display: inline-block; width: 70%; height: 20px;  @include text(13,20,#adc1cb,bold,null,null,0px 0px 25px 0)}
+                h4{ @include text(16,22,$black6,null,null,null,25px 0px 0px 0px); letter-spacing: 0px; border-top:1px solid $blackd;
+                    img{ display:block; width: 100%; margin:20px auto 20px;}
+                }
+            }
+			div.sns{ width: 90%; margin:40px auto 30px; font-size: 0;
+				a{ display: inline-block; width: 30px; height: 30px; border-radius: 50%; margin:0 7px 0 0;}
+				a.facebook{ @include bgcolor(#5b5b5c, "sns_facebook.png", 50%, 50%/22px auto)}
+				a.google{ @include bgcolor(#5b5b5c, "sns_google.png", 50%, 50%/26px auto)}
+				a.pinterest{ @include bgcolor(#5b5b5c, "sns_pinterest.png", 50%, 50%/24px auto)}
+				a.tweeter{ @include bgcolor(#5b5b5c, "sns_tweeter.png", 50%, 50%/24px auto)}
+			}
+		}
+		.newslist{  width: 90%; margin:20px auto 30px;  padding:00px 0 0 0;
+			a.next{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,left,0 0 0 10px,10px 0px 10px 0px); @include bg("pagingright.png", 100%, 50%/8px auto);
+				&:hover{ color:$black4;  @include bg("pagingrightOn.png", 100%, 50%/8px auto);}
+			}
+			a.prev{ display: inline-block; width: 52px; @include text(15,15,$black7,bold,right,0 10px 0 0,10px 0px 10px 0px); @include bg("pagingleft.png", 0px, 50%/8px auto);
+				&:hover{ color:$black4;  @include bg("pagingleftOn.png", 0px, 50%/8px auto);}
+			}
+			a.btnlist{ display: inline-block; float: right; width: 52px; @include text(15,15,$black7,bold,right,0 20px 0 0,10px 0px 10px 0px);
+				&:hover{ color:$black4;}
+			}
+
+		}
+
+		.s_newsform{ width: 100%; margin:0px auto 60px; padding:30px 0px 0 0;  font-size: 0; overflow: hidden;
+			
+            div.form{ position: relative; width: 90%; margin:0 auto;  border:1px solid $line;  box-sizing: border-box; 
+                @include afterbgR(0px, -8px, 110px, 108px, "linkpeople.png", 0px, 0px/110px auto); z-index: -1;
+         
+                h1{ width: 90%; @include text(18,30,$black4,bold,left,20px auto,null); letter-spacing: -0.5px;
+                    &:after{ z-index: 1;}
+                }
+				button{ display: inline-block; width:50%; height: 50px; background: $black5; vertical-align: middle; @include text(16,50,$white,bold,center,0 0 0 0px,null);}
+				a{ display: inline-block; width:50%; height: 50px; background: #386dc6; vertical-align: middle; @include text(16,50,$white,bold,center,0 0 0 0px,0px 0px 0px 0px); }
+			}
+
+			div.letter{ width: 90%; margin:20px auto 0; font-size: 0;  border:1px solid $line;  box-sizing: border-box; padding:0 0 30px 0;
+				h3{  width: 90%; @include text(22,22,$black4,bold,null,30px auto 15px,null);} 
+				h4{  width: 90%; @include text(15,23,$black6,null,null,0px auto 15px,null);}
+				input{ display: block;  width: 90%; height: 45px; box-sizing: border-box;  padding:12px 10px 10px 10px; border:1px solid #c1c1c1; 
+					margin:0 auto; font-size: 13px;   }
+				input:focus::placeholder{ color:transparent; }
+				button{ display: block;  width: 90%; height: 45px; border:1px solid #184067; margin:10px auto 0; color:#184067; font-size:14px; font-weight: bold;}
+			}
+        }
+    }
+
+    //서브_리뷰
+    .s_review{
+        .video{ width: 90%; margin:0 auto;
+			ul{font-size: 0; margin:30px 0 40px 0;  text-align: center;
+				li{ position: relative; display: inline-block; width: 100%;  height: 105px;  line-height: 105px;  margin:0 0px 10px 0; cursor:pointer;  
+					img{ display: inline-block; width: 30px; margin: 0px 12px 0 0; vertical-align: middle;}
+					h1 { display: inline-block; width: 70%;vertical-align: middle;  @include text(16,21,$white,null,left,0px 0 0px 0,0px 0 0 0px); letter-spacing: -0.5px;}
+					&:nth-child(1){ @include bgcolor(#333,"s_reviewvideo01.png", left, top)}
+					&:nth-child(2){ @include bgcolor(#333,"s_reviewvideo02.png", left, top)}
+					&:nth-child(3){ @include bgcolor(#333,"s_reviewvideo03.png", left, top); margin:0;}
+				}
+			}
+		}
+		.videoPop{ position:fixed; display:none; left:50%; top: 50%; width:330px; transform: translate(-50%,-50%); z-index: 999990;			
+            p.close{@include boxabR(block,0 ,-60px ,60px ,60px ); @include bgcolor(rgba(0,0,0,.4),"close.png",50%,50%/24px auto); cursor: pointer;}
+        }
+
+        .s_review{ width: 100%; margin: 20px auto 40px; background: #f4f5f6; padding:0 0 20px;
+            > h1{  width: 90%; margin:0px auto 0px; padding:35px 0 25px 0;
+				img{display: inline-block; vertical-align: middle; width: 78px; margin: 0 0 0 20px}
+				span{ display: inline-block; vertical-align: middle;   @include text(14,0,$black5,null,null,null,0px 0px 0px 0px);}
+				strong{ display: inline-block; vertical-align: middle;  @include text(18,0,$black4,null,null,null,0px 10px 0px 10px);letter-spacing: 0px;}
+			}	
+            .reviewwrap { width: 95%; margin:0 0 0 5%;
+                .swiper-container{ width: 100%;
+                    .swiper-wrapper{ height: 330px;
+                        .swiper-slide{ position: relative; width: 73%; height: 280px;  border:1px solid $line; box-sizing: border-box; @include bgcolor($white,"plus.png",90%,173px/14px auto);
+                            img{ width: 100%;}
+                            h2{ width: 85%; @include text(12, 12, $black9, null, null, 0 auto, 22px 0 10px 0);
+                                span{ margin:0 0 0 10px}
+                            }
+                            h3{ width: 85%; @include text(13, 22, $black3, bold, null, 0 auto, 0px 0 5px 0);}
+                            h4{ width: 85%; @include text(12, 18, $black4, null, null, 0 auto, 0px 0 15px 0);}
+                            a{ @extend %alink;}
+                        }
+                    }
+                }
+            }
+            .swiper-pagination { display: inline-block; width: 75%; bottom:0; text-align: right; height:24px; @include text(12, 12, $black9, null, null, 0 auto, 0 0 0 0);}
+            .swiper-button-prev{ position: absolute;  top:auto; bottom:0; width:30px; height: 35px; margin-left:75%; @include bg("casearrowL.png",50% ,50%/16px auto ); cursor: pointer; }
+            .swiper-button-next{ position: absolute;  top:auto; bottom:0; width:30px; height: 35px; margin-right:0%; @include bg("casearrowR.png",50% ,50%/16px auto ); cursor: pointer; }
+    
+        }  
+        
+        .comment{ width: 90%; margin:0 auto;
+			ul{ margin:25px 0 0 0;
+				li{ border: 1px solid $line; @include bg("s_reviewicon.png",30px,50%); padding: 10px 0 15px 0px; box-sizing: border-box; margin:0 0px 10px 0;
+					h1{ width: 85%; margin:0 auto;
+                        span{ @include text(16,16,$black5,bold,null,null,0px 10px 0px 0px);
+                            &:last-child{ float:right; margin:13px 0 0 0;}
+                        }
+						strong{ @include text(14,14,#869DBC,bold,null,null,0px 0px 0px 0px);}
+					}
+					h2{ width: 85%; @include text(14,22,$black4,null,null,0 auto,9px 0px 0px 0px); 
+						span{ @include text(13,13,$blacka,null,null,null,0px 0px 0px 10px);}
+                    }
+                    a{ display: inline-block; width: 100%; @include text(13,13,$blacka,null,center,null,7px 0px 5px 0px); cursor: pointer;}
+				}
+				
+			}
+
+			.paging{  width: 100%; margin:0 auto 40px;
+                div{ font-size: 0; text-align: center; margin:10px 0 0 0;
+                    a.prev{ display: inline-block; width: 55px; @include text(15,15,$black7,bold,right,0 20px 0 0,10px 0px 10px 0px); @include bg("pagingleft.png", 0px, 50%/8px auto);
+                        &:hover{ color:$black4;  @include bg("pagingleftOn.png", 0px, 50%/8px auto);}
+                    }
+                    span{ display: inline-block;
+                        a{ width: 42px; display: inline-block; @include text(15,15,$black5,null,center,null,12px 0px 12px 0px); letter-spacing: 2px;}
+                    }
+                    a.next{ display: inline-block; width: 55px; @include text(15,15,$black7,bold,left,0 0 0 20px,10px 0px 10px 0px); @include bg("pagingright.png", 100%, 50%/8px auto);
+                        &:hover{ color:$black4;  @include bg("pagingrightOn.png", 100%, 50%/8px auto);}
+                    }
+                }
+            }
+		}
+		.star1{ display: inline-block; width: 60px; height: 9px; @include bg("star1.png",left,top/60px auto)}
+		.star2{ display: inline-block; width: 60px; height: 9px; @include bg("star2.png",left,top/60px auto)}
+		.star3{ display: inline-block; width: 60px; height: 9px; @include bg("star3.png",left,top/60px auto)}
+		.star4{ display: inline-block; width: 60px; height: 9px; @include bg("star4.png",left,top/60px auto)}
+		.star5{ display: inline-block; width: 60px; height: 9px; @include bg("star5.png",left,top/60px auto)}
+
+		.write{ margin:0 0 80px 0; font-size: 0;
+			input[type="tel"]{ display: inline-block; width: 100%; height: 38px; color:$black4; box-sizing: border-box;  padding:12px 10px 10px 10px; border:1px solid #c1c1c1; vertical-align: top;
+				margin:0px 5px 0px 0px; font-size: 13px;  vertical-align: middle;  }
+			input[type="tel"]:focus::placeholder{ color:transparent; }
+			select{ display: inline-block; height: 38px; font-size: 13px; color:$black4; border:1px solid #c1c1c1;
+                    padding:5px 0 5px 10px; margin:10px 0 0 0; vertical-align: top; }
+            select.service{ width: 48%; }
+            select.starwrite{ width: 48%; margin:10px 0 0 4% }
+			textarea{ display:inline-block; width: 100%; height: 100px; border:1px solid #c1c1c1;  color:$black4;  box-sizing: border-box; margin:10px 5px 0 0; padding:10px 5px 5px 10px;}
+			textarea:focus::placeholder{ color:transparent; }
+			button{width: 100%; height: 50px; line-height: 50px; color:$white; margin:10px 0 0 0; background:$black5;}
+		}
+    }
+
+    //서브_양도 기장
+    .subtabsWrap{ width: 100%; 
+        ul.tabtop{ font-size: 0; border-bottom:1px solid #DEDEDE;
+            li{ display: inline-block; width: 33.3%;  height: 85px;  @include text(14, 20, $black3, bold, center, null, 20px 0 0 0); box-sizing: border-box;}
+            li.active{ color:#2972B2; border-bottom:3px solid #2972B2; @include bg("tabarrow.png",center,66px/8px auto);}
+            li.oneline{ width:50%; height: 60px;  padding: 17px 0 0 0; background-position-y: 42px;}
+        } 
+    }
+
+    .s_taxarea{ width: 90%; margin: 0 auto 50px;
+        img{ margin:22px 0 0 0; width: 100%;}
+        h1{ @include text(23, 20, $black3, bold, null, null, 30px 0 0px 0); letter-spacing: -0.5px;}
+        h2{ @include text(19, 19, $black3, bold, null, null, 40px 0 0px 0); letter-spacing: -0.5px;}
+        h4{ @include text(14, 24, $black4, null, null, null, 10px 0 0px 0); letter-spacing: -0.3px;
+            p{ margin:8px 0 0 0;}
+            p.dot{ position: relative; @include after(3px,10px,2px,2px,$black6); padding:0 0 0 10px; box-sizing: border-box;}
+            span{ display: inline-block;  background: #E8F6F9; margin:0 6px 3px 0; padding:0 4px }
+        }
+        h6{ @include text(15, 13, $black6, null, null, null, 12px 0 0px 0)}
+        ul.basic{ border:1px solid #d2d2d2; margin:15px auto 0; padding: 5px 0 20px; border-radius: 7px;
+            li{ position: relative; width: 88%; @include text(14, 20, $black4, bold, null, 0 auto, 10px 0 0px 30px); 
+                @include afterbg(0px, 14px, 15px, 12px, "subCheck.png",left,top/15px auto); box-sizing: border-box;
+            }
+            dl{ position: relative; width: 100%; border-bottom:1px solid #d2d2d2; padding:14px 0 10px 0px; box-sizing: border-box;
+                dt{ width: 90%; @include text(16, 15, $black3, bold, null, 0 auto, 5px 0 0 0); letter-spacing: -0.5px;}
+                dd{ width: 90%; @include text(13, 18, $black6, null, null, 0 auto, 9px 0 8px 0);}
+                &:last-child{ border: 0;}
+        }
+        }
+    }
+
+    .subpeopleCon{width:100%;
+        ul{width:100%; 
+            > li{position: relative;   overflow: hidden; border-bottom:1px solid $blackd;
+                img{width:125px; margin:20px 0 0 -10px;}
+                dl{position: absolute; left:40%; top:40px; display: inline-block; width:100%;
+                    dt{@include text(18, 18, $black3, normal, left, 0 auto, 15px 0 20px 0);
+                        span{@include text(20, 20, $black3, bold, left, 0 auto, 0 0 0 6px);}
+                    }
+                    > li{@include text(11, 16, $black5, normal, left, 0 auto, 0 0 8px 0); letter-spacing:-1px}
+                }                
+            }            
+        }
+    }

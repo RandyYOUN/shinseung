@@ -1,0 +1,258 @@
+/*
+Theme Name: Albist WP
+Theme URI: http://themeforest.net/user/m_adnan/portfolio
+Author: M_Adnan
+Author URI: http://themeforest.net/user/m_adnan
+Description: ALBIST is a clean and minimal WP theme modern suitable for digital agency, studio, portfolio, designer etc. ALBIST designed is modern & unique also perfectly organized.
+Version: 1.0
+License: GNU General Public License version 1.0
+License URI: http://themeforest.net/user/m_adnan
+Tags: one-column, two-columns, three-columns,four-columns, right-sidebar, custom-colors, custom-menu, featured-images, theme-options, translation-ready
+Text Domain: albist-wp
+*/
+p.logged-in-as {
+    padding-left: 15px;
+}
+.searchform input {
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 0px;
+    border: 1px solid #e6e6e6;
+}
+.searchform button {
+    float: right;
+    margin-top: 0px;
+    line-height: 45px;
+    margin-right: 0px;
+    margin-top: -45px;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    border: none;
+    color: #313f46;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    background: none;
+}
+.searchform .screen-reader-text {
+    display: none;
+}
+.subcribe .sub-mail input[type="submit"] {
+    border: none;
+    background: none;
+    color: #fff;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    font-size: 12px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    float: right;
+    padding: 0 30px;
+    position: relative;
+    margin-top: -70px;
+    width: auto;
+    text-transform: uppercase;
+}
+.heading.text-right hr {
+    margin-right: 0;
+}
+.heading.text-right p {
+    text-align: right;
+    width: 100%;
+}
+.colio-theme-black .colio-navigation{
+    display: none;
+}
+.ownmenu > li > .megamenu.full-width li{
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.sticky.empty-banner {
+    background: rgba(0,0,0,0.8);
+}
+.header-1.empty-banner {
+    background: rgba(0,0,0,0.8);
+}
+#site-header img {
+    width: 100%;
+}
+table {
+    border-bottom: 1px solid #ededed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+    line-height: 2;
+    margin: 0 0 20px;
+    width: 100%;
+}
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td {
+    border-top: 1px solid #ededed;
+    padding: 6px 10px 6px 0;
+}
+dl {
+    margin: 0 20px;
+    text-align: left;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 0 20px;
+}
+.wp-caption {
+    max-width: 100% !important;
+    height: auto;
+}
+.wp-caption-text{
+    color: #999;
+}
+.alignleft {
+    float: left;
+    margin-right: 10px;
+}
+.alignright {
+    float: right;
+    margin-left: 10px;
+}
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+}
+.screen-reader-text {}
+.gallery-caption {
+    padding:5px 1%;
+    font-size:90%;
+}
+.bypostauthor{
+    position: relative;
+}
+.sticky{}
+#none {
+    display: none;
+}
+.margin-50 .header-1{
+    z-index: 99999;
+}
+.margin-50 .header-normal{
+    z-index: 99999;
+}
+/* Theme Check */
+.widget select {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+}
+.widget .sub-menu {
+    display: inline-block;
+    width: 100%;
+}
+.widget .sub-menu li {
+    width: 100%;
+}
+.widget .sub-menu li.heading,.footer-info .sub-menu li.heading {
+    margin-bottom: 0;
+}
+.widget ul {
+    margin-bottom: 5px !important;
+}
+.widget ul .children,.footer-info .children{
+    padding-left: 15px;
+}
+.footer-info a,.footer-info{
+    color: #999999;
+}
+.footer-info select {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+}
+.footer-info .sub-menu li {
+    width: 100%;
+}
+.blog .post-in h1,.blog .post-in h2,.blog .post-in h3,.blog .post-in h4,.blog .post-in h5,.blog .post-in h6 {
+    text-align: left;
+}
+.blog .post-in ul,.blog .post-in ol {
+    text-align: left;
+}
+.blog .post-in ul,.inner-content ul{
+    list-style-type: square;
+    margin: 16px 0;
+    padding: 0 0 0 40px;
+}
+.blog .post-in ul li,.inner-content ul li {
+    list-style-type: square;
+}
+.blog .post-in ol,.inner-content ol{
+    list-style-type: decimal;
+    margin: 16px 0;
+    padding: 0 0 0 40px;
+}
+.blog .post-in ol li,.inner-content ol li {
+    list-style-type: decimal;
+}
+address {
+    text-align: left;
+}
+.widget_archive .cate li a {
+    width: auto;
+}
+.absolute-img img {
+    position: absolute;
+    left: -45%;
+    max-width: none !important;
+}
+.blog .post-in ul.zero-ul, .blog .post-in ul.zero-ul li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding-right: 30px;
+}
+.pb-40 .heading{
+    margin-bottom: 40px;
+}
+.some-graphics .heading {
+    margin-bottom: 40px;
+}
+p.lf {
+    line-height: 30px;
+    color: #fff;
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+}
+.construction-layout footer .news-letter input[type="submit"] {
+    background: #fdc71d !important;
+}
+.tags a{
+	font-size: 11px !important;
+}
+@media (max-width: 991px) and (min-width: 768px){
+    .absolute-img img {
+        max-width: 750px !important;
+    }
+}
+@media (max-width: 767px) {
+    .absolute-img img {
+        position: relative;
+        left: 0;
+        max-width: 100% !important;
+    }
+}

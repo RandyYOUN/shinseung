@@ -1,0 +1,256 @@
+/* Scss Document */
+.quick a, .column ul li a, .counseling ul li a, .customer ul li a { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; }
+
+.wrap { display: table; width: 100%; min-height: 100%; max-height: 100%; height: 100%; }
+
+.quick { position: fixed; right: 30px; bottom: 100px; z-index: 600; }
+.quick div { width: 105px; height: 105px; border-radius: 50%; background: #fff url("../images/customermanOn.png") -325px -50px no-repeat; }
+.quick div h1 { opacity: 0; font-size: 16px; line-height: 16px; color: #111; font-weight: bold; text-align: left; margin: 0 0 0 140px; padding: 40px 0 10px; }
+.quick div h2 { opacity: 0; font-size: 12px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0 0 0 140px; padding: 0 0 0px; letter-spacing: -1px; }
+.quick ul { position: relative; }
+.quick ul li { opacity: 0; position: absolute; right: 10px; top: -90px; background: #3c5a98; border-radius: 10px; font-size: 13px; line-height: 13px; color: #fff; font-weight: normal; margin: 0; padding: 11px 9px; }
+.quick ul li span { position: absolute; left: 54px; top: 33px; width: 0; height: 0; border-top: 10px solid #3c5a98; border-right: 10px solid transparent; z-index: 15; }
+.quick ul li:nth-child(2n) { background: #b85708; }
+.quick ul li:nth-child(2n) span { border-top: 10px solid #b85708; border-right: 10px solid transparent; }
+
+#ch-plugin-core{ bottom: 105px !important; display: none  !important; }
+
+header { position: relative; width: 100%; }
+/*header h1 { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 0; width: 1400px; text-align: center; z-index: 11; }
+header h1 img { margin: 50px 0 0 0; }
+*/
+header .navi { position: absolute; width: 1400px; height: 80px; left: 50%; top: 30px; line-height: 80px; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 20; }
+header .navi h1 { display: inline-block; background:url("../images/logo.png")left 25px no-repeat; color:#ffffff; box-sizing:border-box; padding:0 0 0 45px; letter-spacing:-2px; font-weight:bold;}
+header .navi h1 img { display: inline-block; margin: 0px 0 0 0; vertical-align: -4px; }
+header .navi ul { display: inline-block; margin: 0 0 0 200px; }
+header .navi ul li { display: inline-block; font-size: 18px; line-height: 20px; color: #fff; text-align: left; padding: 20px 60px 20px; }
+header .mainVisual { position: relative; width: 100%; }
+header .mainVisual ul li { position: relative; width: 100%; height: 980px; overflow: hidden; background: #222; }
+header .mainVisual ul li img { position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 0; margin-left: 0px; z-index: 10; width: auto; }
+header .mainVisual ul li div { position: absolute; top: 320px; width: 100%; z-index: 15; }
+header .mainVisual ul li div h2 { font-size: 54px; line-height: 76px; color: #fff; font-weight: bold; text-align: center; }
+header .mainVisual ul li div h3 { font-size: 26px; line-height: 26px; color: #fff; font-weight: lighter; text-align: center; letter-spacing: -0.5px; margin: 25px 0 0 0; }
+header .mainVisual .bx-controls-direction { display: none; }
+header .mainVisual .bx-pager { position: absolute; bottom: 400px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+header .mainVisual .bx-pager div { display: inline-block; margin-right: 10px; text-indent: -9999px; }
+header .mainVisual .bx-pager div a { display: block; position: relative; width: 60px; height: 3px; border-radius: 0; background: rgba(255, 255, 255, 0.2); }
+header .mainVisual .bx-pager div a:after { content: ""; position: absolute; display: block; left: 0; top: 0; width: 0; height: 3px; }
+header .mainVisual .bx-pager div a.active:after { position: absolute; width: 100%; background: #fff; border-radius: 0; -webkit-transition: width 3s linear; transition: width 3s linear; }
+header .mainVlink { position: absolute; bottom: 0px; width: 100%; border-top: 1px solid #666; }
+header .mainVlink ul { width: 1126px; border-right: 1px solid #666; font-size: 0; margin: 0 auto; text-align: center; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 20; }
+header .mainVlink ul li { display: inline-block; width: 225px; height: 200px; border-left: 1px solid #666; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; }
+header .mainVlink ul li img { padding: 55px 0 25px; }
+header .mainVlink ul li span { display: inline-block; width: 100%; font-size: 17px; line-height: 17px; color: #fff; font-weight: normal; text-align: center; }
+
+.institute { width: 100%; height: 400px; overflow: hidden; }
+.institute div { width: 1280px; margin: 100px auto 0; font-size: 0; }
+.institute div h1 { display: inline-block; width: 370px; height: 215px; line-height: 215px; text-align: center; }
+.institute div h1 img { display: inline-block; margin: 49px 0 0 0; }
+.institute div h2 { position: relative; width: 910px; height: 215px; display: inline-block; background: -webkit-gradient(linear, left top, right top, from(#1968b3), to(#06a8e5)); background: linear-gradient(to right, #1968b3, #06a8e5); line-height: 215px; vertical-align: top; text-align: center; }
+.institute div h2:after { content: ''; position: absolute; left: 910px; top: 0; width: 100%; height: 215px; background: #06a8e5; }
+.institute div h2 img { display: inline-block; margin: 90px 0 0 0; }
+
+.system { width: 100%; background: #f6f9fb; margin: 0 0 200px 0; }
+.system div { position: relative; width: 1400px; margin: 0 auto; text-align: right; }
+.system div:after { content: ''; position: absolute; left: -590px; top: 0; width: 100%; height: 765px; background: url("../images/systemBg.png") 0 0 no-repeat; }
+.system div h1 { position: absolute; left: 60px; top: 90px; width: 330px; font-size: 50px; line-height: 62px; color: #fff; font-weight: bold; text-align: left; margin: 0; padding: 0; z-index: 30; }
+.system div h1 span { display: inline-block; width: 100%; font-size: 18px; line-height: 32px; color: #fff; font-weight: lighter; text-align: left; margin: 0; padding: 10px 0 0 0; letter-spacing: -0.5px; }
+.system div h2 { position: absolute; left: 110px; top: 585px; letter-spacing: -0.5px; z-index: 50; }
+.system div ul { display: inline-block; width: 860px; height: 740px; background: #f6f9fb; font-size: 0; margin: 25px 0 0 90px; }
+.system div ul > li { display: inline-block; width: 50%; margin: 70px 0 0 0; }
+.system div ul > li h3 { font-size: 25px; line-height: 25px; color: #222; font-weight: bold; text-align: left; margin: 0; padding: 0; letter-spacing: -0.5px; }
+.system div ul > li ol { margin: 15px 0 0 0; }
+.system div ul > li ol li { position: relative; font-size: 15px; line-height: 32px; color: #222; text-align: left; margin: 0; padding: 0 0 0 10px; }
+.system div ul > li ol li:after { content: ''; position: absolute; left: 1px; top: 15px; width: 2px; height: 2px; background: #a0a0a0; }
+
+.video { width: 100%; height: 450px; background: #11100f url("../images/mainVideobg.png") 50% top no-repeat; text-align: center; font-size: 0; }
+.video > div { display: block; width: 1300px; margin: 0 auto; text-align: left; }
+.video > div > div { display: inline-block; width: 480px; margin: 115px 0 0 0; vertical-align: top; }
+.video > div > div h1 { width: 480px; font-size: 44px; line-height: 44px; color: #fff; font-weight: 200; text-align: left; margin: 0; padding: 0 0 20px; }
+.video > div > div > ul { width: 480px; font-size: 0; text-align: left; margin: 20px 0 0 0; }
+.video > div > div > ul li { display: inline-block; width: 300px; vertical-align: top; cursor: pointer; }
+.video > div > div > ul li h2 { position: relative; font-size: 14px; line-height: 26px; color: #a4a4a4; font-weight: 200; text-align: left; margin: 0; padding: 0 0 20px 25px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.video > div > div > ul li h2:after { content: ''; position: absolute; left: 0; top: 5px; width: 2px; height: 44px; background: #a4a4a4; }
+.video > div > div > ul li.videoMain { display: inline-block; width: 150px; font-size: 16px; line-height: 26px; color: #fff; font-weight: 200; text-align: center; margin: 0; padding: 0 30px 0 0; }
+.video > div > div > ul li.videoMain img { display: inline-block; }
+.video > div > div > ul li.videoMain span { display: inline-block; width: 100%; margin: 15px 0 0 0; }
+.video > div > ul { display: inline-block; width: 820px; font-size: 0; margin: 100px 0 0 0; }
+.video > div > ul li { display: inline-block; width: 400px; background: rgba(0, 0, 0, 0.6) url("../images/videoPlay.png") 11px 50% no-repeat; cursor: pointer; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 14px; line-height: 14px; color: #dadada; font-weight: 200; text-align: left; margin: 0 10px 10px 0; padding: 12px 0 12px 30px; }
+.video > div > ul li span { font-size: 14px; line-height: 14px; color: #9b9b9b; font-weight: 200; text-align: left; padding: 0 0 0 0px; }
+
+.videoPop { position: fixed; display: none; left: 50%; top: 50%; width: 960px; height: 540px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; z-index: 60; }
+.videoPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.column { width: 1300px; margin: 140px auto 0; font-size: 0; }
+.column div { display: inline-block; width: 180px; margin: 50px 0 0 0; }
+.column div h1 { display: block; font-size: 36px; line-height: 36px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 0 0 0px; }
+.column div a.more { display: inline-block; width: 36px; height: 36px; background: #373839 url("../images/plus.png") 50% 50% no-repeat; margin: 30px 0 0 100px; }
+.column ul { display: inline-block; width: 1120px; font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; vertical-align: top; }
+.column ul li { position: relative; display: inline-block; width: 370px; height: 300px; margin: 0 0 0 0; border-right: 1px solid #dadada; vertical-align: top; }
+.column ul li h2 { font-size: 20px; line-height: 30px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 50px 50px 20px 50px; }
+.column ul li h3 { font-size: 14px; line-height: 24px; color: #111; font-weight: normal; text-align: left; margin: 0; padding: 0px 50px 0px 50px; }
+.column ul li h3 strong { font-weight: normal; }
+.column ul li h4 { font-size: 13px; line-height: 13px; color: #888; font-weight: normal; text-align: left; margin: 0; padding: 35px 50px 10px 50px; }
+.column ul li:last-child { border: 0; }
+
+.counseling { width: 1300px; margin: 90px auto 130px; font-size: 0; }
+.counseling div { display: inline-block; width: 180px; margin: 50px 0 0 0; }
+.counseling div h1 { display: block; font-size: 36px; line-height: 36px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 0 0 0px; }
+.counseling div a.more { display: inline-block; width: 36px; height: 36px; background: #373839 url("../images/plus.png") 50% 50% no-repeat; margin: 30px 0 0 100px; }
+.counseling ul { display: inline-block; width: 1120px; font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; vertical-align: top; }
+.counseling ul li { position: relative; display: inline-block; width: 370px; height: 300px; margin: 0 0 0 0; border-right: 1px solid #dadada; vertical-align: top; }
+.counseling ul li h2 { position: relative; font-size: 20px; line-height: 30px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 50px 50px 20px 90px; }
+.counseling ul li h2:after { content: 'Q'; position: absolute; left: 50px; top: 50px; width: 28px; height: 28px; font-size: 36px; line-height: 30px; color: #111; font-weight: bold; text-align: left; }
+.counseling ul li h3 { position: relative; font-size: 13px; line-height: 24px; color: #666; font-weight: normal; text-align: left; margin: 0; padding: 0px 50px 0px 90px; }
+.counseling ul li h3:after { content: 'A'; position: absolute; left: 50px; top: 0; width: 28px; height: 28px; font-size: 36px; line-height: 30px; color: #ddd; font-weight: bold; text-align: left; }
+.counseling ul li:last-child { border: 0; }
+
+.counselingPop { position: fixed; display: none; left: 50%; top: 50%; width: 700px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 0 50px 0; z-index: 60; }
+.counselingPop .qWrap { background: #166bb5; height: 90px; font-size: 0; text-align: center; }
+.counselingPop .qWrap span { display: inline-block; width: 60px; height: 30px; border-right: 2px solid #fff; font-size: 45px; line-height: 27px; color: #fff; font-weight: bold; text-align: center; margin: 30px 15px 0 0px; padding: 0; }
+.counselingPop .qWrap h1 { display: inline-block; width: 560px; height: 80px; font-size: 20px; line-height: 92px; color: #fff; font-weight: bold; text-align: left; margin: 0 0 0 0; padding: 0 0 0 0px; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -1px; }
+.counselingPop .aWrap { font-size: 0; text-align: center; }
+.counselingPop .aWrap span { display: inline-block; width: 60px; height: 30px; border-right: 2px solid #444; font-size: 45px; line-height: 27px; color: #444; font-weight: bold; text-align: center; margin: 30px 15px 0 0px; padding: 0; }
+.counselingPop .aWrap span.blank { border: 0; }
+.counselingPop .aWrap h2 { display: inline-block; width: 560px; font-size: 14px; line-height: 26px; color: #444; font-weight: normal; text-align: left; margin: 0 auto; padding: 30px 0 0 0px; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -0.5px; }
+.counselingPop .aWrap h2 strong { display: inline-block; padding: 8px 0 0 0; }
+.counselingPop .aWrap h3 { display: inline-block; width: 560px; font-size: 14px; line-height: 26px; color: #728a9f; font-weight: normal; text-align: left; margin: 0 auto; padding: 30px 0 0 0px; vertical-align: top; -webkit-box-sizing: border-box; box-sizing: border-box; letter-spacing: -0.5px; }
+.counselingPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.review { position: relative; width: 100%; height: 880px; margin: 0 auto; background: #f4f4f4; overflow: hidden; }
+.review div.title { position: absolute; left: 50%; margin: 160px 0 0 280px; }
+.review div.title h1 { font-size: 42px; line-height: 42px; color: #222; font-weight: bold; text-align: left; margin: 0; padding: 0 0 15px 0; letter-spacing: -0.5px; }
+.review div.title h2 { font-size: 15px; line-height: 15px; color: #777; font-weight: normal; text-align: left; margin: 0; padding: 0; letter-spacing: -0.5px; }
+.review .review-con { width: 1400px; margin: 0 auto 0; padding: 120px 0 0 0; }
+.review .review-main { width: 900px; }
+.review .review-sub { overflow: hidden; position: absolute; left: 50%; top: 400px; height: 300px; margin: 0 0 0 370px; cursor: pointer; }
+.review .review-sub .slick-list { margin-left: -330px; }
+.review .review-text { position: absolute; left: 50%; top: 400px; width: 450px; height: 300px; background: #fff url("../images/null") 360px 320px no-repeat; margin: 0 0 0 -110px; }
+.review .review-text h1 { width: 340px; font-size: 16px; line-height: 16px; color: #111; font-weight: normal; text-align: left; margin: 0 auto; padding: 50px 0 5px 0; letter-spacing: -0.5px; }
+.review .review-text h3 { width: 340px; font-size: 19px; line-height: 28px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 15px 0 10px 0; letter-spacing: -0.5px; }
+.review .review-text h4 { width: 340px; font-size: 15px; line-height: 26px; color: #111; font-weight: normal; text-align: left; margin: 0 auto; padding: 0; letter-spacing: -0.5px; }
+.review button { position: absolute; width: 60px; height: 60px; border: 1px solid #dadada; text-indent: -99999px; }
+.review button.slick-prev { left: 980px; top: 150px; background: #fff url("../images/btnLeft.png") 50% 50% no-repeat; }
+.review button.slick-next { left: 1039px; top: 150px; background: #fff url("../images/btnRight.png") 50% 50% no-repeat; }
+
+.company { position: relative; width: 100%; height: 480px; background: #3a526c; overflow: hidden; }
+.company div { width: 1300px; margin: 0 auto; }
+.company div img { float: left; margin: 90px 0 0 0; }
+.company div h2 { float: left; width: 550px; font-size: 34px; line-height: 54px; color: #fff; font-weight: normal; text-align: left; margin: 0; padding: 120px 0px 10px 40px; letter-spacing: -0.5px; }
+.company div h3 { float: left; width: 550px; font-size: 18px; line-height: 32px; color: #fff; font-weight: normal; text-align: left; margin: 0; padding: 0px 50px 0px 40px; letter-spacing: -0.5px; }
+.company p { position: absolute; left: 50%; top: 0; width: 100%; height: 480px; margin: 0 0 0 370px; background: url("../images/companyBg.png") left top no-repeat; }
+
+.location { position: relative; width: 100%; background: #f9fdff; }
+.location div.locationCon { width: 1400px; height: 800px; margin: 0 auto; background: url("../images/locationBg.png") right 115px no-repeat; }
+.location div.locationCon h1 { font-size: 40px; line-height: 40px; color: #111; font-weight: bold; text-align: left; margin: 0; padding: 110px 0px 30px 0px; letter-spacing: -0.5px; }
+.location div.locationCon h2 { font-size: 24px; line-height: 24px; color: #222; font-weight: 200; text-align: left; margin: 0; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.location div.locationCon ul { width: 840px; font-size: 0; margin: 70px 0 0 0; }
+.location div.locationCon ul li { display: inline-block; width: 260px; height: 60px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 3px solid #d9e2e7; background: #f9fdff; cursor: pointer; font-size: 18px; line-height: 57px; color: #1b2124; font-weight: normal; text-align: left; margin: 0px 20px 20px 0; padding: 0 0 0 30px; }
+.location div.locationCon ul li span { position: relative; float: right; margin: 23px 25px 0px 0px; font-size: 12px; line-height: 12px; color: #7d8a91; font-weight: normal; text-align: left; }
+.location div.locationCon ul li span:after { content: ''; position: absolute; left: -18px; top: -3px; width: 13px; height: 17px; background: url("../images/locationIcon.png") left top no-repeat; }
+
+.locationPop { position: fixed; display: none; left: 50%; top: 50%; width: 600px; padding: 0 0 30px 0; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background: #fff; z-index: 60; }
+.locationPop h1 { width: 500px; font-size: 22px; line-height: 22px; color: #111; font-weight: bold; text-align: left; margin: 0 auto; padding: 40px 0 20px 0; letter-spacing: -0.5px; }
+.locationPop h1 span { display: inline-block; vertical-align: middle; font-size: 14px; line-height: 12px; color: #111; font-weight: normal; text-align: left; margin: 0; padding: 0 0 0 10px; }
+.locationPop h2 { width: 500px; font-size: 16px; line-height: 32px; color: #222; font-weight: normal; text-align: left; margin: 0 auto; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.locationPop h2 li strong { display: inline-block; width: 50px; }
+.locationPop a { display: inline-block; width: 200px; height: 70px; }
+.locationPop a span { font-size: 18px; line-height: 70px; color: #fff; font-weight: normal; text-align: left; margin: 0 0 0 130px; padding: 0; }
+.locationPop a.chat { width: 300px; background: #166bb5 url("../images/companyChat.png") 90px 50% no-repeat; margin: 30px 0 0 140px; }
+.locationPop a.call { background: #222 url("../images/companyCall.png") 40px 50% no-repeat; }
+.locationPop p.close { position: absolute; display: block; right: 0; top: -60px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.4) url("../images/close.png") 50% 50% no-repeat; cursor: pointer; }
+
+.mask { position: fixed; display: none; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+
+.people { margin: 0 auto 100px; }
+.people h1 { font-size: 40px; line-height: 40px; color: #111; font-weight: bold; text-align: center; margin: 0; padding: 90px 0px 40px 0px; letter-spacing: -0.5px; }
+.people h2 { font-size: 24px; line-height: 24px; color: #111; font-weight: 200; text-align: center; margin: 0; padding: 0px 0px 75px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock { width: 1400px; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0 auto; }
+.people div.tabBlock ul { font-size: 0; border: 1px solid #dadada; }
+.people div.tabBlock ul li { display: inline-block; width: 231.8px; height: 100px; border-right: 1px solid #dadada; cursor: pointer; vertical-align: top; }
+.people div.tabBlock ul li span { position: relative; display: inline-block; width: 50%; font-size: 18px; line-height: 28px; color: #555; font-weight: bold; text-align: center; margin: 25px 0 0 0; }
+.people div.tabBlock ul li span strong { color: #166bb5; display: block; font-size: 15px; }
+.people div.tabBlock ul li span:first-child:after { content: ''; position: absolute; left: 115px; top: 7px; width: 1px; height: 40px; background: #bbcad7; }
+.people div.tabBlock ul li:last-child { border-right: 0; }
+.people div.tabBlock ul li.solo span { width: 100%; margin: 40px 0 0 0; }
+.people div.tabBlock ul li.solo span strong { display: inline-block; font-size: 18px; font-weight: bold; margin-right: 10px; }
+.people div.tabBlock ul li.solo span:first-child:after { display: none; }
+.people div.tabBlock ul li.is-active { background: #166bb5; }
+.people div.tabBlock ul li.is-active span { color: #fff; }
+.people div.tabBlock ul li.is-active span strong { color: #fff; }
+.people div.tabBlock-pane { width: 1400px; height: 580px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; margin: 40px auto 0; font-size: 0; }
+.people div.tabBlock-pane div { position: relative; display: inline-block; width: 50%; height: 578px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; background: url("../images/peopleBg.png") left bottom no-repeat; overflow: hidden; }
+.people div.tabBlock-pane div img { position: absolute; left: 20px; top: 50px; }
+.people div.tabBlock-pane div:last-child { border-right: 0; }
+.people div.tabBlock-pane div h3 { display: inline-block; font-size: 30px; line-height: 30px; color: #444; font-weight: 200; text-align: left; margin: 0 0 0 370px; padding: 120px 0px 15px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock-pane div h4 { display: inline-block; font-size: 30px; line-height: 28px; color: #444; font-weight: bold; text-align: left; margin: 0 0 0 10px; padding: 0px 0px 0px 0px; letter-spacing: -0.5px; }
+.people div.tabBlock-pane div h5 { font-size: 15px; line-height: 30px; color: #666; font-weight: normal; text-align: left; margin: 20px 0 0 370px; padding: 0; letter-spacing: -0.5px; }
+.people div.tabBlock-pane div h5 strong { color: #555; font-size: 15px; }
+.people div.tabBlock-pane div div.label { position: absolute; display: inline-block; left: 215px; top: 250px; width: 101px; height: 135px; background: url("../images/peopleLabel.png") left top no-repeat; text-align: center; }
+.people div.tabBlock-pane div div.label > p { font-size: 14px; line-height: 13px; color: #fff; font-weight: normal; text-align: center; margin: 0; padding: 20px 0px 10px 0px; }
+.people div.tabBlock-pane div div.label > p.labelText { font-size: 16px; line-height: 26px; color: #fff; font-weight: bold; text-align: center; margin: 0; padding: 30px 0px 10px 0px; }
+.people div.tabBlock-pane div div.label span { height: 40px; font-size: 40px; line-height: 40px; color: #fff; font-weight: bold; text-align: center; vertical-align: middle; }
+.people div.tabBlock-pane div div.label span:last-child { font-size: 18px; line-height: 18px; color: #fff; font-weight: bold; text-align: center; margin: 0 0 0 3px; padding: 0; }
+.people div.tabBlock-pane div.solo { width: 100%; border-right: none; }
+.people div.tabBlock-pane div.solo img { position: absolute; left: 100px; top: 50px; }
+.people div.tabBlock-pane div.solo h3 { margin: 0 0 0 500px; }
+.people div.tabBlock-pane div.solo h4 { margin: 0 0 0 10px; }
+.people div.tabBlock-pane div.solo h5 { display: inline-block; width: 320px; margin: 20px 0 0 500px; }
+.people div.tabBlock-pane div.solo h6 { display: inline-block; width: 320px; font-size: 14px; line-height: 28px; color: #777; font-weight: normal; text-align: left; margin: 20px 0 0 60px; padding: 0; letter-spacing: -0.5px; vertical-align: top; }
+.people div.tabBlock-pane div.solo h6 strong.book { color: #166bb5; font-size: 16px; font-weight: normal; }
+.people div.tabBlock-pane div.solo div.label { left: 320px; }
+
+.allpeople { position: relative; width: 100%; height: 480px; background: url("../images/allpeopleBg.png") 50% bottom no-repeat; }
+.allpeople div { position: absolute; width: 100%; height: 180px; left: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); }
+.allpeople div h1 { font-size: 36px; line-height: 36px; color: #fff; font-weight: bold; text-align: center; margin: 0 auto; padding: 50px 0 20px 0; letter-spacing: -0.5px; }
+.allpeople div h2 { font-size: 24px; line-height: 24px; color: #fff; font-weight: 200; text-align: center; margin: 0 auto; padding: 0; letter-spacing: -0.5px; }
+
+.china { width: 100%; height: 760px; background: url("../images/chinaBg.png") 50% top no-repeat; }
+.china div { position: relative; width: 1300px; margin: 0 auto; }
+.china div img { position: absolute; left: 718px; top: -24px; }
+.china div h1 { font-size: 42px; line-height: 42px; color: #fff; font-weight: normal; text-align: left; margin: 0 0 0 0px; padding: 125px 0px 35px 0px; letter-spacing: -0.5px; }
+.china div h2 { font-size: 30px; line-height: 30px; color: #fff; font-weight: 200; text-align: left; margin: 0 0 0 0px; padding: 0px 0px 30px 0px; letter-spacing: -0.5px; }
+.china div h3 { font-size: 18px; line-height: 34px; color: #fff; font-weight: 200; text-align: left; margin: 0; padding: 0; letter-spacing: -0.5px; }
+.china div ul { font-size: 0; margin: 85px 0 0 0; }
+.china div ul li { display: inline-block; width: 245px; height: 180px; background: #590e15; margin: 0 18px 0 0; text-align: center; }
+.china div ul li span { display: inline-block; font-size: 20px; line-height: 34px; color: #fff; font-weight: normal; text-align: center; margin: 0 0 0 0px; padding: 55px 0px 0px 0px; }
+.china div ul li:nth-child(even) { background: #271114; }
+.china div ul li:last-child { margin: 0; }
+
+.catalogue { width: 1400px; height: 500px; margin: 70px auto; background: #fafafa url("../images/catalogue.png") 75px 90px no-repeat; }
+.catalogue ul { width: 50%; float: right; font-size: 0; margin: 90px 0 0 0; }
+.catalogue ul li { display: inline-block; font-size: 18px; line-height: 18px; color: #555; font-weight: bold; text-align: left; margin: 0 0 0 70px; padding: 30px 0px 0px 0px; }
+.catalogue ul li a { display: block; width: 225px; height: 55px; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; font-size: 15px; line-height: 55px; color: #888; font-weight: normal; text-align: left; margin: 20px 0 0px 160px; padding: 0 0 0 30px; }
+.catalogue ul li a img { float: right; margin: 20px 30px 0 0; }
+.catalogue ul li:last-child { margin: 15px 0 0 70px; }
+
+.customer { width: 1400px; margin: 70px auto; }
+.customer ul { font-size: 0; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dadada; }
+.customer ul li { position: relative; display: inline-block; width: 350px; height: 220px; -webkit-box-sizing: border-box; box-sizing: border-box; border-right: 1px solid #dadada; vertical-align: top; }
+.customer ul li img { position: absolute; left: 70px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.customer ul li h1 { font-size: 26px; line-height: 26px; color: #222; font-weight: bold; text-align: left; margin: 0 0 0 230px; padding: 45px 0px 15px 0px; letter-spacing: -0.5px; }
+.customer ul li h2 { font-size: 16px; line-height: 26px; color: #222; font-weight: normal; text-align: left; margin: 0 0 0 230px; padding: 0px 0px 10px 0px; letter-spacing: -0.5px; }
+.customer ul li h3 { font-size: 30px; line-height: 26px; color: #222; font-weight: bold; text-align: left; margin: 0 0 0 230px; padding: 0; letter-spacing: -0.5px; }
+.customer ul li h3 strong { display: inline-block; font-size: 14px; vertical-align: 6px; margin: 0 10px 0 0; }
+.customer ul li h4 { width: 240px; font-size: 22px; line-height: 26px; color: #222; font-weight: bold; text-align: left; margin: 0 auto; padding: 35px 0px 10px 0px; letter-spacing: -0.5px; }
+.customer ul li h5 { width: 240px; font-size: 16px; line-height: 26px; color: #222; font-weight: normal; text-align: left; margin: 0 auto; padding: 0; letter-spacing: -0.5px; }
+.customer ul li span { display: inline-block; width: 90px; height: 36px; border-radius: 18px; background: #222; font-size: 14px; line-height: 36px; color: #fff; font-weight: noraml; text-align: center; margin: 45px 0 0 45px; padding: 0; }
+.customer ul li:last-child { border: 0; }
+.customer ul li.tel { width: 698px; }
+
+
+.group { width: 100%; border-bottom: 1px solid #e6e6e6; margin: 0 0 90px 0; }
+.group ul { font-size: 0; width: 1200px; margin: 30px auto 80px; }
+.group ul a { display: inline-block; margin: 0 130px 0 0; text-align: left; vertical-align: top; background: url("../images/group01.png") left bottom no-repeat; }
+.group ul a h1{ font-size:16px; color:#bbb; letter-spacing:-2px; margin:40px 0 0 40px; font-weight:bold;}
+.group ul a h2{ font-size:16px; color:#111; letter-spacing:-2px; margin:5px 0 0 40px; font-weight:bold;}
+.group ul a img { margin: 45px 0 0 0; }
+.group ul a span { display: block; font-size: 13px; line-height: 23px; color: #777; font-weight: noraml; text-align: center; margin: 0; padding: 10px 0 0 0; letter-spacing: -0.5px; }
+.group ul a:last-child { margin: 0; }
+
+footer { width: 1400px; margin: 0 auto; }
+footer ul { font-size: 0; }
+footer ul li { display: inline-block; position: relative; font-size: 13px; line-height: 13px; color: #777; font-weight: normal; text-align: center; padding: 0 30px 0 0; }
+footer ul li:after { content: ''; position: absolute; right: 15px; top: 1px; width: 1px; height: 12px; background: #bbb; }
+footer ul li:last-child:after { display: none; }
+footer h3 { font-size: 13px; line-height: 13px; color: #777; font-weight: normal; text-align: left; margin: 0; padding: 20px 0 120px 0; }

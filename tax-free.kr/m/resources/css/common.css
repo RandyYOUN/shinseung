@@ -1,0 +1,190 @@
+/* Scss Document */
+#wrap { width: 100%; min-height: 100%; max-height: 100%; height: 100%; }
+
+.mask { position: fixed; display: none; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.50px; }
+
+.mquick a, .review .swiper-container .swiper-wrapper div a, .people .swiper-container .swiper-wrapper .swiper-slide > a, .customer ul li.chat a { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; }
+
+.recommend h1, .exemption h1, .qna h1 { width: 90%; font-size: 20px; line-height: 20px; color: #333; font-weight: bold; text-align: left; margin: 0 auto; padding: 35px 0 20px; }
+
+.period h1, .review h1, .people h1 { width: 90%; font-size: 20px; line-height: 20px; color: #333; font-weight: bold; text-align: left; margin: 0 auto; padding: 35px 0 10px; }
+
+#wrap { width: 100%; min-height: 100%; max-height: 100%; height: 100%; }
+
+.mquick { position: fixed; right: 10px; bottom: 20px; width: 60px; height: 100px; z-index: 600; }
+.mquick p { position: absolute; display: inline-block; right: 0px; bottom: 0px; width: 60px; height: 60px; border-radius: 50%; background: #dde0e5; z-index: 10; }
+.mquick div { position: absolute; display: inline-block; right: 0px; bottom: 0px; width: 60px; height: 100px; border-radius: 0 0 120px 120px; -webkit-box-sizing: border-box; box-sizing: border-box; overflow: hidden; z-index: 12; }
+.mquick div img { position: absolute; left: 0px; bottom: -25px; width: 60px; }
+.mquick ul { position: absolute; }
+.mquick ul li { opacity: 0; position: absolute; top: 40px; left: 10px; width: 52px; border-radius: 10px; background: #3c5a98; font-size: 11px; line-height: 11px; color: #fff; font-weight: normal; text-align: center; padding: 5px 2px; z-index: 15; }
+.mquick ul li span { position: absolute; left: 10px; top: 18px; width: 0; height: 0; border-top: 10px solid #3c5a98; border-right: 10px solid transparent; z-index: 15; }
+.mquick ul li:nth-child(2n) { background: #b85708; }
+.mquick ul li:nth-child(2n) span { border-top: 10px solid #b85708; border-right: 10px solid transparent; }
+.mquick a { z-index: 30; }
+
+#ch-plugin-core  { bottom: 105px !important; display: none  !important; }
+
+.mainVisual { position: relative; background: #333; }
+.mainVisual header { position: absolute; left: 0; top: 0; width: 100%; z-index: 33; }
+.mainVisual header h1 { display: block; margin: 30px 0 0; text-align: center; }
+.mainVisual header h1 img { display: inline-block; width: 240px; }
+.mainVisual .swiper-container ul.swiper-wrapper { height: 580px; }
+.mainVisual .swiper-container ul.swiper-wrapper li.swiper-slide { width: 100% !important; height: auto; }
+.mainVisual .swiper-container ul.swiper-wrapper li.swiper-slide h2 { position: absolute; left: 5%; top: 165px; font-size: 28px; line-height: 42px; color: #fff; font-weight: bold; text-align: left; margin: 0; padding: 0; }
+.mainVisual .swiper-container ul.swiper-wrapper li.swiper-slide h3 { position: absolute; left: 5%; top: 260px; width: 80%; font-size: 16px; line-height: 26px; color: #fff; font-weight: 200; text-align: left; margin: 0; padding: 0; }
+.mainVisual .swiper-container ul.swiper-wrapper li.swiper-slide h4 { position: absolute; left: 5%; top: 260px; width: 100%; font-size: 14px; line-height: 24px; color: #fff; font-weight: 200; text-align: left; margin: 0; padding: 0; }
+.mainVisual .swiper-container ul.swiper-wrapper li.swiper-slide img { width: 100%; height: auto; }
+.mainVisual .swiper-container .swiper-pagination { width: 90%; left: 5%; bottom: 240px; font-size: 0; text-align: left; }
+.mainVisual .swiper-container .swiper-pagination span { position: relative; display: inline-block; width: 35px; height: 6px; background: rgba(255, 255, 255, 0.4); margin: 0 5px 0 0; border-radius: 0; opacity: 1; }
+.mainVisual .swiper-container .swiper-pagination span:last-child { margin: 0; }
+.mainVisual .swiper-container .swiper-pagination span:after { content: ""; display: block; width: 0; height: 100%; }
+.mainVisual .swiper-container .swiper-pagination span.swiper-pagination-bullet-active:after { width: 100%; background: #fff; border-radius: 0; -webkit-transition: width 3s linear; transition: width 3s linear; }
+.mainVisual .mainlink { position: absolute; left: 5%; bottom: 50px; width: 90%; z-index: 44; }
+.mainVisual .mainlink div { font-size: 0; }
+.mainVisual .mainlink div a { display: inline-block; width: 49%; height: 50px; background: rgba(255, 255, 255, 0.2); font-size: 15px; line-height: 50px; color: #fff; font-weight: bold; text-align: center; margin: 0 2% 5px 0; padding: 0; }
+.mainVisual .mainlink div a:nth-child(even) { margin: 0; }
+
+.twopower { width: 100%; }
+.twopower li:nth-child(1) { display: inline-block; width: 100%; height: 240px; background: #e8ebf1; }
+.twopower li:nth-child(1) h1 { width: 90%; font-size: 27px; line-height: 40px; color: #444; font-weight: bold; text-align: center; margin: 0 auto; padding: 35px 0 15px; letter-spacing: -0.25px; }
+.twopower li:nth-child(1) dl { width: 90%; margin: 0 auto; }
+.twopower li:nth-child(1) dl dd { font-size: 15px; line-height: 15px; color: #494c52; text-align: center; margin: 0 0 16px 0; padding: 0; letter-spacing: -0.5px; }
+.twopower li:nth-child(1) dl dd span { padding: 0 5px; }
+.twopower li:nth-child(1) dl dd span.on { background: #d4dae7; }
+.twopower li:nth-child(2) { display: inline-block; width: 100%; height: 240px; background: #748199; }
+.twopower li:nth-child(2) h1 { width: 90%; font-size: 27px; line-height: 40px; color: #fff; font-weight: bold; text-align: center; margin: 0 auto; padding: 35px 0 15px; letter-spacing: -0.25px; }
+.twopower li:nth-child(2) dl { width: 90%; margin: 0 auto; }
+.twopower li:nth-child(2) dl dd { font-size: 15px; line-height: 15px; color: #fff; text-align: center; margin: 0 0 16px 0; padding: 0; letter-spacing: -0.5px; }
+.twopower li:nth-child(2) dl dd span { padding: 0px 5px; }
+.twopower li:nth-child(2) dl dd span.on { background: #5b667c; }
+
+.recommend { height: 330px; }
+.recommend ul { width: 90%; margin: 0 auto; }
+.recommend ul li { position: relative; width: 100%; font-size: 14px; line-height: 26px; color: #333; margin: 0 0 7px 0; padding: 0 0 0px 25px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.recommend ul li img { position: absolute; left: 0; top: 2px; width: 19.5px; vertical-align: middle; }
+.recommend ul li span { color: #1665b5; }
+
+.exemption { width: 100%; background: #eff3f9; }
+.exemption ul { width: 90%; margin: 0 auto; overflow: hidden; }
+.exemption ul li { border-radius: 6px; margin: 0 0 10px 0; padding: 20px 0 20px; }
+.exemption ul li h2 { width: 85%; font-size: 20px; line-height: 20px; color: #fff; font-weight: bold; margin: 0 auto; padding: 0 0 10px; }
+.exemption ul li ol { position: relative; width: 85%; font-size: 13px; line-height: 22px; color: #fff; margin: 0 auto; padding: 0 0 0px 7px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.exemption ul li ol:after { content: ''; position: absolute; left: 0; top: 9px; width: 2px; height: 2px; background: #fff; }
+.exemption ul li:nth-child(1) { background: #748199; }
+.exemption ul li:nth-child(2) { background: #52678e; }
+.exemption ul li:nth-child(3) { background: #1b3c78; }
+
+.period { width: 100%; background: #eff3f9; overflow: hidden; }
+.period h2 { width: 90%; font-size: 13px; line-height: 22px; color: #444; font-weight: bold; margin: 0 auto; }
+.period ul { width: 90%; margin: 15px auto 45px; }
+.period ul li { border-radius: 6px; margin: 0 0 10px 0; padding: 17px 0 13px  0px; background: #fff; border: 1px solid #ebebeb; }
+.period ul li h3 { width: 85%; font-size: 16px; line-height: 16px; color: #333; font-weight: bold; margin: 0 auto; padding: 0 0 6px; }
+.period ul li h4 { width: 85%; font-size: 12px; line-height: 20px; color: #555; margin: 0 auto; padding: 0 0 8px; }
+.period ul li h5 { width: 85%; font-size: 14px; line-height: 24px; color: #2972b2; font-weight: bold; margin: 0 auto; }
+
+.review { height: 420px; background: url("../images/reviewBg.png") 0 0/cover no-repeat; }
+.review h1 { color: #fff; }
+.review h2 { width: 90%; font-size: 13px; line-height: 22px; color: #fff; margin: 0 auto; }
+.review .swiper-container { width: 95%; margin: 30px 0 0 5%; }
+.review .swiper-container .swiper-wrapper { height: 260px; }
+.review .swiper-container .swiper-wrapper div { position: relative; width: 70%; height: 215px; border-radius: 6px; background: #fff url("../images/plus.png") 90% 173px/14px auto no-repeat; }
+.review .swiper-container .swiper-wrapper div h3 { display: inline-block; background: #384261; font-size: 14px; line-height: 14px; color: #fff; font-weight: bold; margin: 23px 0 5px 10%; padding: 7px 14px 6px; border-radius: 3px; }
+.review .swiper-container .swiper-wrapper div h4 { width: 80%; font-size: 15px; line-height: 22px; color: #333; font-weight: bold; margin: 0 auto; padding: 7px 0 13px 0; }
+.review .swiper-container .swiper-wrapper div ul { width: 80%; margin: 0 auto; }
+.review .swiper-container .swiper-wrapper div ul li { position: relative; font-size: 13px; line-height: 13px; color: #333; margin: 0 0 6px 0; padding: 0 0 0 0; }
+.review .swiper-container .swiper-wrapper div ul li strong { display: inline-block; font-size: 13px; line-height: 13px; color: #384261; font-weight: bold; margin: 0 10px 7px 0; padding: 0; vertical-align: middle; }
+.review .swiper-pagination { width: 85%; text-align: right; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 13px; line-height: 13px; color: #fff; margin: 0 auto; padding: 0 0 0 0; }
+
+.tax { width: 100%; }
+.tax > div > li { border-bottom: 1px solid #DFDFDF; }
+.tax > div > li > a { display: inline-block; color: #fff; padding: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 65px; background: #eff3f9; box-sizing: border-box; font-size: 20px; line-height: 65px; color: #333; font-weight: bold; margin: ull; padding: 0 0 0 5%; letter-spacing: -1px; }
+.tax > div > li > a span { display: inline-block; width: 17.5px; height: 12px; background: url("../images/taxarrow.png") left top/17.5px auto no-repeat; -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: -webkit-transform 0.3s ease-in-out; transition: -webkit-transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; margin: 0 0 0 11px; vertical-align: 1px; }
+.tax > div > li > ul { width: 100%; display: none; }
+.tax > div > li > ul > li > a { display: inline-block; width: 100%; height: 60px; -webkit-box-sizing: border-box; box-sizing: border-box; background: url("../images/taxPlus.png") 94% 23px/15px auto no-repeat; font-size: 16px; line-height: 60px; color: #444; font-weight: bold; margin: 0 auto; padding: 0 0 0 5%; }
+.tax > div > li > ul > li > ul { width: 100%; display: none; }
+.tax > div > li > ul > li:nth-child(2) { border-top: 1px solid #DFDFDF; }
+.tax > div > li > ul li.active > a { background: url("../images/taxMinus.png") 94% 23px/15px auto no-repeat; }
+.tax > div > li > ul dl { margin: 0 0 3px 0; }
+.tax > div > li > ul dl dt { width: 90%; font-size: 12px; line-height: 20px; color: #666; font-weight: bold; margin: 0 auto; padding: 0 0 13px; }
+.tax > div > li > ul dl dd { width: 90%; font-size: 12px; line-height: 20px; color: #666; margin: 0 auto; padding: 0 0 6px; }
+.tax > div > li > ul h2 { width: 90%; font-size: 18px; line-height: 22px; color: #0e3f6a; font-weight: bold; margin: 0 auto; padding: 20px 0 8px; }
+.tax > div > li > ul h3 { width: 90%; font-size: 16px; line-height: 22px; color: #333; font-weight: bold; margin: 0 auto; padding: 0 0 5px; }
+.tax > div > li > ul h4 { width: 90%; font-size: 12px; line-height: 22px; color: #666; margin: 0 auto 18px; }
+.tax > div > li.active > a > span { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); -webkit-transition: -webkit-transform 0.3s ease-in-out; transition: -webkit-transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+
+.people { width: 100%; height: 380px; }
+.people h2 { width: 90%; font-size: 13px; line-height: 22px; color: #444; font-weight: bold; margin: 0 auto; }
+.people .swiper-container { width: 95%; margin: 30px 0 0 5%; }
+.people .swiper-container .swiper-wrapper .swiper-slide { position: relative; width: 150px; height: 220px; margin: 0 1px 0 0; background: #F2F2F2; overflow: hidden; background: #F2F2F2; border-radius: 6px; }
+.people .swiper-container .swiper-wrapper .swiper-slide img { position: absolute; width: 135px; top: 15px; left: -22px; }
+.people .swiper-container .swiper-wrapper .swiper-slide > div { position: absolute; left: 0; bottom: 0; width: 160px; height: 75px; background: rgba(0, 0, 0, 0.5) url("../images/peopleArrow.png") 130px 50%/11.5px auto no-repeat; }
+.people .swiper-container .swiper-wrapper .swiper-slide > div h3 { width: 80%; font-size: 16px; line-height: 20px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 17px 0 0 0; }
+.people .swiper-container .swiper-wrapper .swiper-slide > div h4 { width: 80%; font-size: 13px; line-height: 13px; color: #fff; font-weight: normal; text-align: left; margin: 0 auto; padding: 5px 0 20px 0; }
+
+.qna { width: 100%; background: #f9f9f9; }
+.qna ul { width: 90%; margin: 0 auto; }
+.qna ul li { display: none; width: 100%; margin: 0 auto 5px; border: 1px solid #cfcfcf; border-radius: 6px; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 15px; }
+.qna ul li a { position: relative; display: inline-block; width: 100%; }
+.qna ul li a:after { content: ''; position: absolute; left: 89%; top: 15px; width: 19.5px; height: 11.5px; background: url("../images/qnaArrow.png") no-repeat left top/19.5px auto; }
+.qna ul li a span { display: inline-block; vertical-align: middle; }
+.qna ul li a span:first-child { width: 11%; font-size: 24px; line-height: 24px; color: #111; font-weight: bold; text-align: center; margin: 0 auto; padding: 0 0 0px; }
+.qna ul li a span:last-child { width: 70%; font-size: 13px; line-height: 19px; color: #111; font-weight: bold; margin: 0 auto; padding: 0 0 0 5px; }
+.qna ul li a:after { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+.qna ul li div { display: none; font-size: 12px; line-height: 22px; color: #222; font-weight: normal; text-align: left; margin: 14px auto 0; padding: 13px 0 0 0; border-top: 1px dashed #707070; letter-spacing: -1px; }
+.qna ul li div strong { color: #15558e; }
+.qna ul li.active a:after { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); -webkit-transition: -webkit-transform 0.3s ease-in-out; transition: -webkit-transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+.qna > a { display: inline-block; width: 100%; height: 60px; font-size: 14px; line-height: 60px; color: #333; text-align: center; padding: 10px 0; }
+.qna > a span { font-size: 12px; line-height: 58px; margin: 0 5px 0 0; vertical-align: top; letter-spacing: 1; }
+
+.customer { width: 100%; height: 600px; background: url("../images/customerBg.png") center top/cover no-repeat; }
+.customer h1 { width: 90%; font-size: 20px; line-height: 20px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 115px 0 20px; }
+.customer h2 { width: 90%; font-size: 13px; line-height: 22px; color: #fff; margin: 0 auto; }
+.customer ul { margin: 45px 0 0 0; }
+.customer ul li { width: 90%; height: 160px; border-radius: 6px; margin: 0 auto; }
+.customer ul li.call { position: relative; background: rgba(56, 73, 95, 0.9); }
+.customer ul li.call h2 { width: 80%; font-size: 18px; line-height: 18px; color: #fff; font-weight: bold; margin: 0 auto; padding: 23px 0 8px; }
+.customer ul li.call h3 { width: 80%; font-size: 13px; line-height: 22px; color: #fff; margin: 0 auto; }
+.customer ul li.call h4 { width: 80%; font-size: 29px; line-height: 29px; color: #fff; font-weight: bold; margin: 0 auto; padding: 9px 0 5px; letter-spacing: 1px; }
+.customer ul li.call a { position: absolute; display: inline-block; right: 0; top: 0; width: 32%; height: 160px; background: rgba(66, 87, 113, 0.7) url("../images/call.png") center 48px/35.5px auto no-repeat; font-size: 13px; line-height: 225px; color: #fff; font-weight: bold; text-align: center; border-radius: 0 6px 6px 0; }
+.customer ul li.chat { position: relative; background: rgba(27, 60, 120, 0.9); margin: 10px auto 0; }
+.customer ul li.chat h2 { width: 80%; font-size: 18px; line-height: 18px; color: #fff; font-weight: bold; margin: 0 auto; padding: 23px 0 8px; }
+.customer ul li.chat h3 { width: 80%; font-size: 13px; line-height: 22px; color: #fff; margin: 0 auto; }
+.customer ul li.chat h4 { display: inline-block; background: #fff; border-radius: 30px; font-size: 15px; line-height: 15px; color: #28467d; font-weight: bold; margin: 13px 0 0 10%; padding: 9px 20px; letter-spacing: 1px; }
+
+footer ul { width: 90%; margin: 30px auto 60px; font-size: 0; }
+footer ul li { display: inline-block; width: 50%; font-size: 11px; line-height: 11px; color: #777; text-align: left; margin: 0 0 10px 0; padding: 0; }
+footer ul li span { line-height: 20px; }
+footer ul li:nth-child(6) { width: 100%; }
+footer ul li:nth-child(7) { width: 100%; }
+
+.subpeopleTitle { width: 100%; height: 180px; background: url("../images/subpeople.png") center top/cover no-repeat; }
+.subpeopleTitle h1 { width: 85%; font-size: 20px; line-height: 30px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 60px 0 0 0; }
+.subpeopleTitle h2 { width: 85%; font-size: 13px; line-height: 22px; color: #fff; font-weight: normal; text-align: left; margin: 0 auto; padding: 5px 0 20px 0; }
+
+.subpeopleCon { width: 100%; }
+.subpeopleCon ul { width: 100%; }
+.subpeopleCon ul > li { position: relative; overflow: hidden; border-bottom: 1px solid #ddd; }
+.subpeopleCon ul > li img { width: 125px; margin: 20px 0 0 -10px; }
+.subpeopleCon ul > li dl { position: absolute; left: 40%; top: 40px; display: inline-block; width: 100%; }
+.subpeopleCon ul > li dl dt { font-size: 18px; line-height: 18px; color: #333; font-weight: normal; text-align: left; margin: 0 auto; padding: 15px 0 20px 0; }
+.subpeopleCon ul > li dl dt span { font-size: 20px; line-height: 20px; color: #333; font-weight: bold; text-align: left; margin: 0 auto; padding: 0 0 0 6px; }
+.subpeopleCon ul > li dl > li { font-size: 11px; line-height: 16px; color: #555; font-weight: normal; text-align: left; margin: 0 auto; padding: 0 0 8px 0; letter-spacing: -1px; }
+
+.subreviewTitle { width: 100%; height: 180px; background: url("../images/subreview.png") center top/cover no-repeat; }
+.subreviewTitle h1 { width: 85%; font-size: 20px; line-height: 30px; color: #fff; font-weight: bold; text-align: left; margin: 0 auto; padding: 60px 0 0 0; }
+.subreviewTitle h2 { width: 85%; font-size: 13px; line-height: 22px; color: #fff; font-weight: normal; text-align: left; margin: 0 auto; padding: 5px 0 20px 0; }
+
+.subreviewCon { width: 100%; background: #f9f9f9; overflow: hidden; }
+.subreviewCon span { display: none; }
+.subreviewCon ul { width: 90%; margin: 0 auto; }
+.subreviewCon ul div { position: relative; background: #fff; border-radius: 6px; border: 1px solid #ddd; margin: 20px 0; }
+.subreviewCon ul div h3 { display: inline-block; background: #384261; font-size: 13px; line-height: 13px; color: #fff; margin: 23px 0 5px 7.5%; padding: 7px 10px; }
+.subreviewCon ul div h4 { width: 85%; font-size: 17px; line-height: 17px; color: #333; font-weight: bold; margin: 0 auto; padding: 10px 0 20px 0; }
+.subreviewCon ul div ul { width: 85%; margin: 0 auto; }
+.subreviewCon ul div ul li { font-size: 14px; line-height: 16px; color: #555; font-weight: normal; text-align: left; margin: 0 auto; padding: 0 0 10px 0; letter-spacing: -1px; }
+.subreviewCon ul div ul li strong { color: #384261; margin: 0 10px 0 0; }
+.subreviewCon ul div h5 { width: 85%; font-size: 12px; line-height: 22px; color: #555; margin: 0 auto; }
+.subreviewCon a { display: inline-block; width: 100%; height: 50px; background: url("../images/reviewsubArrow.png") center 50%/19.5px auto no-repeat; -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: -webkit-transform 0.3s ease-in-out; transition: -webkit-transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out; transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+.subreviewCon a.active { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
